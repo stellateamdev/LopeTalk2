@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFC34A511FE53D880079111B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A501FE53D880079111B /* AppDelegate.swift */; };
+		EFC34A531FE53D880079111B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A521FE53D880079111B /* ViewController.swift */; };
+		EFC34A561FE53D880079111B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC34A541FE53D880079111B /* Main.storyboard */; };
+		EFC34A581FE53D880079111B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC34A571FE53D880079111B /* Assets.xcassets */; };
+		EFC34A5B1FE53D880079111B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC34A591FE53D880079111B /* LaunchScreen.storyboard */; };
+		EFC34A661FE53D890079111B /* lopetalk2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A651FE53D890079111B /* lopetalk2Tests.swift */; };
+		EFC34A711FE53D890079111B /* lopetalk2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A701FE53D890079111B /* lopetalk2UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFC34A621FE53D890079111B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFC34A451FE53D880079111B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC34A4C1FE53D880079111B;
+			remoteInfo = lopetalk2;
+		};
+		EFC34A6D1FE53D890079111B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFC34A451FE53D880079111B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC34A4C1FE53D880079111B;
+			remoteInfo = lopetalk2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFC34A4D1FE53D880079111B /* lopetalk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lopetalk2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC34A501FE53D880079111B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFC34A521FE53D880079111B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFC34A551FE53D880079111B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFC34A571FE53D880079111B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFC34A5A1FE53D880079111B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFC34A5C1FE53D880079111B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC34A611FE53D890079111B /* lopetalk2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lopetalk2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC34A651FE53D890079111B /* lopetalk2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lopetalk2Tests.swift; sourceTree = "<group>"; };
+		EFC34A671FE53D890079111B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC34A6C1FE53D890079111B /* lopetalk2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lopetalk2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC34A701FE53D890079111B /* lopetalk2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lopetalk2UITests.swift; sourceTree = "<group>"; };
+		EFC34A721FE53D890079111B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFC34A4A1FE53D880079111B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC34A5E1FE53D890079111B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC34A691FE53D890079111B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFC34A441FE53D880079111B = {
+			isa = PBXGroup;
+			children = (
+				EFC34A4F1FE53D880079111B /* lopetalk2 */,
+				EFC34A641FE53D890079111B /* lopetalk2Tests */,
+				EFC34A6F1FE53D890079111B /* lopetalk2UITests */,
+				EFC34A4E1FE53D880079111B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFC34A4E1FE53D880079111B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFC34A4D1FE53D880079111B /* lopetalk2.app */,
+				EFC34A611FE53D890079111B /* lopetalk2Tests.xctest */,
+				EFC34A6C1FE53D890079111B /* lopetalk2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFC34A4F1FE53D880079111B /* lopetalk2 */ = {
+			isa = PBXGroup;
+			children = (
+				EFC34A501FE53D880079111B /* AppDelegate.swift */,
+				EFC34A521FE53D880079111B /* ViewController.swift */,
+				EFC34A541FE53D880079111B /* Main.storyboard */,
+				EFC34A571FE53D880079111B /* Assets.xcassets */,
+				EFC34A591FE53D880079111B /* LaunchScreen.storyboard */,
+				EFC34A5C1FE53D880079111B /* Info.plist */,
+			);
+			path = lopetalk2;
+			sourceTree = "<group>";
+		};
+		EFC34A641FE53D890079111B /* lopetalk2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EFC34A651FE53D890079111B /* lopetalk2Tests.swift */,
+				EFC34A671FE53D890079111B /* Info.plist */,
+			);
+			path = lopetalk2Tests;
+			sourceTree = "<group>";
+		};
+		EFC34A6F1FE53D890079111B /* lopetalk2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFC34A701FE53D890079111B /* lopetalk2UITests.swift */,
+				EFC34A721FE53D890079111B /* Info.plist */,
+			);
+			path = lopetalk2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFC34A4C1FE53D880079111B /* lopetalk2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC34A751FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2" */;
+			buildPhases = (
+				EFC34A491FE53D880079111B /* Sources */,
+				EFC34A4A1FE53D880079111B /* Frameworks */,
+				EFC34A4B1FE53D880079111B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lopetalk2;
+			productName = lopetalk2;
+			productReference = EFC34A4D1FE53D880079111B /* lopetalk2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFC34A601FE53D890079111B /* lopetalk2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC34A781FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2Tests" */;
+			buildPhases = (
+				EFC34A5D1FE53D890079111B /* Sources */,
+				EFC34A5E1FE53D890079111B /* Frameworks */,
+				EFC34A5F1FE53D890079111B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFC34A631FE53D890079111B /* PBXTargetDependency */,
+			);
+			name = lopetalk2Tests;
+			productName = lopetalk2Tests;
+			productReference = EFC34A611FE53D890079111B /* lopetalk2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFC34A6B1FE53D890079111B /* lopetalk2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC34A7B1FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2UITests" */;
+			buildPhases = (
+				EFC34A681FE53D890079111B /* Sources */,
+				EFC34A691FE53D890079111B /* Frameworks */,
+				EFC34A6A1FE53D890079111B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFC34A6E1FE53D890079111B /* PBXTargetDependency */,
+			);
+			name = lopetalk2UITests;
+			productName = lopetalk2UITests;
+			productReference = EFC34A6C1FE53D890079111B /* lopetalk2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFC34A451FE53D880079111B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "marky RE";
+				TargetAttributes = {
+					EFC34A4C1FE53D880079111B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EFC34A601FE53D890079111B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFC34A4C1FE53D880079111B;
+					};
+					EFC34A6B1FE53D890079111B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFC34A4C1FE53D880079111B;
+					};
+				};
+			};
+			buildConfigurationList = EFC34A481FE53D880079111B /* Build configuration list for PBXProject "lopetalk2" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFC34A441FE53D880079111B;
+			productRefGroup = EFC34A4E1FE53D880079111B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFC34A4C1FE53D880079111B /* lopetalk2 */,
+				EFC34A601FE53D890079111B /* lopetalk2Tests */,
+				EFC34A6B1FE53D890079111B /* lopetalk2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFC34A4B1FE53D880079111B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC34A5B1FE53D880079111B /* LaunchScreen.storyboard in Resources */,
+				EFC34A581FE53D880079111B /* Assets.xcassets in Resources */,
+				EFC34A561FE53D880079111B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC34A5F1FE53D890079111B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC34A6A1FE53D890079111B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFC34A491FE53D880079111B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC34A531FE53D880079111B /* ViewController.swift in Sources */,
+				EFC34A511FE53D880079111B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC34A5D1FE53D890079111B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC34A661FE53D890079111B /* lopetalk2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC34A681FE53D890079111B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC34A711FE53D890079111B /* lopetalk2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFC34A631FE53D890079111B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC34A4C1FE53D880079111B /* lopetalk2 */;
+			targetProxy = EFC34A621FE53D890079111B /* PBXContainerItemProxy */;
+		};
+		EFC34A6E1FE53D890079111B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC34A4C1FE53D880079111B /* lopetalk2 */;
+			targetProxy = EFC34A6D1FE53D890079111B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFC34A541FE53D880079111B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC34A551FE53D880079111B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFC34A591FE53D880079111B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC34A5A1FE53D880079111B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFC34A731FE53D890079111B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFC34A741FE53D890079111B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFC34A761FE53D890079111B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 877839YT4B;
+				INFOPLIST_FILE = lopetalk2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFC34A771FE53D890079111B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 877839YT4B;
+				INFOPLIST_FILE = lopetalk2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFC34A791FE53D890079111B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 877839YT4B;
+				INFOPLIST_FILE = lopetalk2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lopetalk2.app/lopetalk2";
+			};
+			name = Debug;
+		};
+		EFC34A7A1FE53D890079111B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 877839YT4B;
+				INFOPLIST_FILE = lopetalk2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lopetalk2.app/lopetalk2";
+			};
+			name = Release;
+		};
+		EFC34A7C1FE53D890079111B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 877839YT4B;
+				INFOPLIST_FILE = lopetalk2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lopetalk2;
+			};
+			name = Debug;
+		};
+		EFC34A7D1FE53D890079111B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 877839YT4B;
+				INFOPLIST_FILE = lopetalk2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lopetalk2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFC34A481FE53D880079111B /* Build configuration list for PBXProject "lopetalk2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC34A731FE53D890079111B /* Debug */,
+				EFC34A741FE53D890079111B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC34A751FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC34A761FE53D890079111B /* Debug */,
+				EFC34A771FE53D890079111B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC34A781FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC34A791FE53D890079111B /* Debug */,
+				EFC34A7A1FE53D890079111B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC34A7B1FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC34A7C1FE53D890079111B /* Debug */,
+				EFC34A7D1FE53D890079111B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFC34A451FE53D880079111B /* Project object */;
+}
