@@ -1,0 +1,27 @@
+PODS:
+  - Gallery (1.2.0)
+  - Hokusai (0.4.0)
+  - LGButton (1.0.2)
+  - PMAlertController (2.1.2)
+  - SkyFloatingLabelTextField (3.2.0)
+  - SlidingTabBar (0.2.1)
+
+DEPENDENCIES:
+  - Gallery
+  - Hokusai
+  - LGButton
+  - PMAlertController
+  - SkyFloatingLabelTextField (~> 3.0)
+  - SlidingTabBar
+
+SPEC CHECKSUMS:
+  Gallery: 925b8133efa9d8fe933918f242b64110c6478b98
+  Hokusai: aa3c38a5f02af0eff35aa69fdd8249c234c956c0
+  LGButton: 44ce49b10deb84a2a8bd6fe5c763a65ff78a3180
+  PMAlertController: 0fbcc3d1cee86ee0bd85f693ca85f6388e504ec8
+  SkyFloatingLabelTextField: 4e2d2f7160af660ed1da6bb9d0027b5c474b4b79
+  SlidingTabBar: 027224f312efeb1a76de93e1d9a108b8318d6494
+
+PODFILE CHECKSUM: cf910b65a4f32ed39046321ffa07529c5f0d1fc4
+
+COCOAPODS: 1.3.1

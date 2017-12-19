@@ -1,0 +1,2164 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02AAB639357D873163659D89E994EAF3 /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B829EBDC789BC18819798AA2BD8045F /* PagesController.swift */; };
+		02E376A3BB1FBA1BCD8E98C70C180AED /* map-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 406A06BE5AE2688B66CCABCFFB1D096B /* map-icons.ttf */; };
+		0326BD2C59A81CEBA84550BBEC6C0D71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		03A2DE972C3D3AB13CE4A3C5AE9BBB0D /* SlidingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99701F622B6A0D05611E522824271020 /* SlidingTabBar.swift */; };
+		0408B84CA618413ECD07BDD07CF80723 /* PMAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC57D4D0CEF9FB981DF5A5D6C020EBF7 /* PMAlertController-dummy.m */; };
+		0675A4A6F0C78BC7A6418D2E71327D82 /* DropdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF3A880EF569EBED438FEE1053ADF0 /* DropdownController.swift */; };
+		0BDC764353B8D9BD538B044A64C84EF4 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5CD2CE1F52AB32DFE9E065773B7C1E /* ShutterButton.swift */; };
+		12902DD691D529BACC1DB2D3A2639320 /* EventHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5F8931E2AAB333F1939C978281DA2 /* EventHub.swift */; };
+		1338F42DF5D1FA2F2DF1087E58F0B521 /* GalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDAC009E2806A1CC888A23A99F38492 /* GalleryController.swift */; };
+		15DE53148B2EDB24F053D8D7EFA3FEEB /* PMAlertController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A57CFF6269CE60E7E41A491E08C552AA /* PMAlertController.bundle */; };
+		17A3D7C8EDBB67AD61EB1B7275521E69 /* LGButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E38A871E595E220B8C3C042ADA11E853 /* LGButton-dummy.m */; };
+		188E5B064EDB18BF22296EE2265DD0C9 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB5E787F289B2531E91E920DE7EB993 /* Fetcher.swift */; };
+		18CBF8547F164D735DEE0DB40A84CEB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		1E7A8094D89416D56AF4FF4B3D37FA61 /* Pods-lopetalk2UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9566FFAAE1EE907FEED53434F3622DF /* Pods-lopetalk2UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EA43895FFFA8B57AE7DA63863BC50B0 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8159CFC5F3F9EE86D1DF763699F0B198 /* Ionicons.ttf */; };
+		20695F8E611C9B2A079E04D3BFC73054 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C90EEC1CE8B476735D5DDD52F25D56 /* FrameView.swift */; };
+		2117768CA6FF6B675A00F6B46DD2C966 /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1D2A3A832DF4A77A6CBAE1284E99EF /* PermissionView.swift */; };
+		217AFBC3B0190F7F4FC0D580E54DF4BD /* Octicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E770A3BCD9F25E6D427FE95E7DA1A5E /* Octicon.swift */; };
+		21E12319F5064BB57F98CA33B0136E1C /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C99F1B42217706187D26E4B448067 /* UIImageView+Extensions.swift */; };
+		276734362182ABFD9D81A28E3FDEAE9E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206E8FA5F3BD0B4FCE13189E4687D1B /* Image.swift */; };
+		29474B192F6BD9474D0DE706E2CF1371 /* Pods-lopetalk2Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F85CCC94B8414A3B43D0202CC17D7AD /* Pods-lopetalk2Tests-dummy.m */; };
+		2CA9DEAA09631DCF18CBC030447A73C7 /* PermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBAA34011328BA4814F43136BA6B62B /* PermissionController.swift */; };
+		2EB734E54A20A2038F0674FB97F9A34F /* ArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F451F354F58F253B1F2AF96B55EF33BB /* ArrowButton.swift */; };
+		31BC657F8A8532AC58B3133F82268A6F /* PMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B77839FD362F1483BE844299975948 /* PMAlertController.swift */; };
+		3518FC99010430CA97FE668804F79F77 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEEE207890012E61EC891BDE8EE450 /* String+Extensions.swift */; };
+		3E9213E13A0A4DA3E4EDDB275B3630CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		4125416DC02C26CD94C5DC73F7C6B412 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922BC4F5625D0309AF706DDCF9C95C2 /* Array+Extensions.swift */; };
+		4134ED569B2D48593AFD0CF9058BB4CB /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02210777F8447939FFE331B5573675B9 /* PMAlertController.xib */; };
+		4219E593B6311A41637A279ED8F4C72F /* Pods-lopetalk2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD1121E0C84A49F5210BB6DD88DFB15 /* Pods-lopetalk2-dummy.m */; };
+		44AEFF45456179479A235221460E0C3B /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF676AA9D0AD93D3817E78F277C259E5 /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46AA17BA27F20EFCE5D0065298B1F112 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B3E917F157E4DC2A9B506B2351F96 /* Cart.swift */; };
+		4748F9E5E5C271DAE541AB2FBDF688C5 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F26A1ABC176BF9ED6318AC79ACFADB /* VideoCell.swift */; };
+		4A4B94CA34D61DD04052014AF0DE2645 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A180372F4F214A4DB35B1AE4D663A /* Album.swift */; };
+		5159D59724BDD166CCB121F1689345C8 /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F889067B7148D0A8CC51F254FB16F014 /* MaterialIcons-Regular.ttf */; };
+		51FB3516CD13726EE6C657663E5F6BF1 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0ACC952F2B95801EB3EBF901B94F69 /* Photos.framework */; };
+		53B35EF4F372C50982D3FB14FEC0E1D6 /* SlidingTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815162A4FE5878491BD235356A731F8E /* SlidingTabBarItem.swift */; };
+		5436738876707F72F261FF0F1A26F4C6 /* SwiftIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAF81442F28758BCA239B8C61776A15 /* SwiftIconFont.swift */; };
+		560A2A0209486380AE31E5209B986421 /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAB0988D5E69AB5ED84F080AEFAF4C9 /* VideoEditor.swift */; };
+		58E177E59CFAD187F7055461DBE995C9 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349324FCF1E650CAB6752444C318D9DC /* Permission.swift */; };
+		5A5C78553CE0FCA9FDEC2C470FE02920 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB66FCDAFEA179BC79393C0099BD8FC /* FontAwesome.swift */; };
+		5B5538175381EAC7BB57396DDBDFAAB3 /* MapIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B1084CFF46DD15F28A0CD66106CDAA /* MapIcon.swift */; };
+		5BCED4239155BD78DBB2D24BB850732C /* SlidingTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D47A8A0C602538089E345E88881C1C99 /* SlidingTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D29E2D1A652C0C90BCBA06DDE3577B1 /* ImagesLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F46076DD4619E8FF45502312DCD70 /* ImagesLibrary.swift */; };
+		5EBB2DCC0DA15FA858A0F26D318876B0 /* SlidingTabAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFDC7AF0C5F1090FED58AAD99D19CA /* SlidingTabAnimationController.swift */; };
+		66C82F0AFDF186F1CBA4DBF244B33341 /* CameraMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3EF82EDC547D55815AA0E99184FD4 /* CameraMan.swift */; };
+		68035E2A793C23E569F0CAFC7964BD0C /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE7B90295F6E7B5292B8FFD80847E3 /* AlbumCell.swift */; };
+		68F133B1B41B6FFE3CA88688710EAF25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		6E3AC87210E501415E7334CD6993CD1A /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB27A11A98010DB96A2FCEC7FD4B47B /* GridView.swift */; };
+		6FF78B02CEA53D89C4877F9C021C750F /* ThemifyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC916E5008667B562B4A54D6767ABF7 /* ThemifyIcon.swift */; };
+		7A14B056BA3C5F8D9660B3D9046D013C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		7B401DF6BE13AE1567A2DAAC2A085576 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C97AA8F5E06FDEB231298588FE2D84 /* Bundle.swift */; };
+		7C09D74788B3D10DCF42597D80E14252 /* open-iconic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E604EFEBD00F5795C3C1DE666F27DBA5 /* open-iconic.ttf */; };
+		81ACDB43E64146E8184CA668D7C29627 /* VideoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D9A8AF0D67E89C2842EE31DDD796D /* VideoBox.swift */; };
+		82045A02CC90E9F536C0601F57C82834 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669FC936745A3D176DACE69152E99EE /* UIKit.framework */; };
+		82ECA531D76055385141B2CDDD6AF35B /* ImagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799A21E77FBF85CB14BE02D442C8A227 /* ImagesController.swift */; };
+		836B959325E222D376FD5FAE05745FF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669FC936745A3D176DACE69152E99EE /* UIKit.framework */; };
+		8680EEC518E7C0D686FE46A1504EC4BF /* Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF699976510DC70B73E61F5F95EB15FF /* Once.swift */; };
+		86A7478E85635C58DD5431AB2B92B4F7 /* PageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3CA709A7129DE2C19708B09EFAEB0 /* PageIndicator.swift */; };
+		872B7E53A3FCE3B34F4228BEE416FF32 /* VideosLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F568444B42DBA0BCBFE9DAA50E374A3 /* VideosLibrary.swift */; };
+		875D44D0D3AF7A48260CB159D9443AE7 /* FontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA8D42539D76A7734A27ACA3CA00FB9 /* FontLoader.swift */; };
+		8DA4F296D3E1C47DEEA28D636C474A9D /* LGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC854CFD38D84691E3AB560E18E4B11E /* LGButton.swift */; };
+		8E077BF01D960B626E368172B8B6D489 /* Gallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B51649CCBE98695D79E9C82362CEBDB /* Gallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9017EB99C6AF6C8CECD651DF68A1576A /* LGButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEBB20887554AF848B06098DDEC4631 /* LGButton.xib */; };
+		9337197918DE96D021ED9447222C6C6A /* AdvancedVideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9816D5310E4E1CFD4D74F831D7AC3F2 /* AdvancedVideoEditor.swift */; };
+		939F6A4E287A79CC60B9EF1CB8D15D99 /* Hokusai-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B1E4BF68D14EA63203329A53356DC20 /* Hokusai-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		961B556D81601BD99546C99765C47FD3 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 998292FC6443C59D51E0F667FB3E4737 /* FontAwesome.ttf */; };
+		99E2CCEA6135DFDD832BC013D6F8BEA4 /* Pods-lopetalk2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0BE231640FCC5EBD79BB22810A576FE /* Pods-lopetalk2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A246E818D805D68BF70697FBD28E6E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669FC936745A3D176DACE69152E99EE /* UIKit.framework */; };
+		9AF80190C21EC7B58E3E06C86B95F73A /* Pods-lopetalk2UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 465AC55DEED453E445FDE1833D211EE4 /* Pods-lopetalk2UITests-dummy.m */; };
+		9D2D97B9047755727B00213C57927C3C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09539B8990DCA7A132DF075A2D592F24 /* Config.swift */; };
+		A1F7FC0D639D589DF8977B6191AB2517 /* TripleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE466165DF54F34AE4A097B730DF5B8 /* TripleButton.swift */; };
+		A2BAF61B42A41186C5903A1570750456 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B893C131391BBCF2CA8A2FF93E356B2B /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		A42DE97EEA52963D795C008041738217 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		A53C2B9C71B52DC7C3CE4B159ACA533A /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AF79F3362FB52E981E1A5E716B99C /* SkyFloatingLabelTextField.swift */; };
+		A54CE83F186968B5B721CF7230DDB6E4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5F0ADF5E5D9671D688B8683E0FDEAE /* Utils.swift */; };
+		A5763D0ED2FD9C3D11C125D47DFC07D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		AA5EEE2D7453F5439795446E9713C56A /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155302C587B2BAF8E9880F7A250DF67 /* PMAlertAction.swift */; };
+		AD4FE32C6C325EC8E2408417D6359DA6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A958912D440598D0C7D6E2AFF85C1E /* UIViewController+Extensions.swift */; };
+		AED178145B2A2D8B41A7502AE6FBFE90 /* IonIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62743AB90D98878E4676656D4EB49857 /* IonIcons.swift */; };
+		AF198558F21676A1C2320D98AEA9FC52 /* themify.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9164B4D104D8BCCD51FC89886CA844AA /* themify.ttf */; };
+		B18CBC8812B3E2D113B057F4860F48FD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE24E27AAE6F03B58248B0EB2F401F7 /* AVFoundation.framework */; };
+		B1AB0E4408293786219BAA75F615C117 /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C9EABE33E9317668DFC3B417180D8 /* SkyFloatingLabelTextField-dummy.m */; };
+		B39241A85B66BC68871DD1D8224B95BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		B3D4C1B39EDECDA0BDF24339ED23E395 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F9744F55EDB13276BE6081BBFCA58 /* Video.swift */; };
+		B68FD5C7DF6AF149B6046BA6F45F032F /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A87830FAE5EFF85D6B9C5741887EF8 /* EmptyView.swift */; };
+		BCB51D3E02EF9C538B1C3C083445769C /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CAF96945A4383084DCF8367A517E6D /* ImageCell.swift */; };
+		BFCFA2549033B72A664D20F5A7197659 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FEC29CD4AEFB58F3B2E4DACD71F80 /* CameraView.swift */; };
+		C09F6C274764165CB74CB11B580881F5 /* MaterialIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299650C92F3A0E829E8CE4777C641200 /* MaterialIcon.swift */; };
+		C0AC9ACC0B04C60D06E18B8B46EE5188 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E8F80DCF608589D7295881E20B8D83 /* CameraController.swift */; };
+		C102714D16D6BA4B970509C4A437B26D /* VideoEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DFEB072946D67D5CD59B997B2C63 /* VideoEditing.swift */; };
+		C4405424851B2FBB3DE3A348AFEFE476 /* AVAsset+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF01571C0E5F423072208A893358B6 /* AVAsset+Extensions.swift */; };
+		CCA33F4AC63B2F4E21BD18D164639656 /* PMAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E3C05F87E2A8DE3895762F24BD08401 /* PMAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3C07574AA883A36ADE39F0840840E79 /* PMAlertController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 02210777F8447939FFE331B5573675B9 /* PMAlertController.xib */; };
+		D4321F7F1FAFF8D0554D4633F4FCAA17 /* Hokusai-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E4B766FA36905918281B09AE06FD1 /* Hokusai-dummy.m */; };
+		D4C05CDBD0565A7128F3CD388309C703 /* Pods-lopetalk2Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B03D078E3E0F7C424A234419404A3F9C /* Pods-lopetalk2Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95C9B052E472E7633F65C6BBD472D82 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3A0D44EDAF14B9EF1CE95F5BFB736 /* UITextField+fixCaretPosition.swift */; };
+		E0AB01C792C2F3E9BDD22AB821EF0C02 /* Iconic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8857D6F7AFCF110F2DE540034C72C43 /* Iconic.swift */; };
+		E48243C364A6FBC679D740B7258B5ADD /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA9FE20A555426F23C46A157D32693E /* PhotosUI.framework */; };
+		E49109BCF06D826CA9D167E19DB611D2 /* Gallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5F830D4E312CCABEE757817D0F0AD /* Gallery-dummy.m */; };
+		E575A589CA02BD49A3A3893C52F37DC6 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69884EAE1DFDAE7422CE05D6FB78021C /* UIScrollView+Extensions.swift */; };
+		E746DCF9CA29857E5C865024CC7A0B01 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63629D038774069CC6E9B37529A23AC1 /* AVKit.framework */; };
+		E81B107B06C1AC312AA7636B1E1301DE /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 098BDB7D1DAE5CC7945FF07039F5D9D2 /* octicons.ttf */; };
+		E8EAEF696649918698E7DFD81202C51D /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C011B28B5226DED9E3B22F21ECA1393 /* Constraints.swift */; };
+		EAF3BB6E82CCA6E3144E3AEA3C214B2B /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ADC6A80B087E0AEEE986DFE1892446 /* StackView.swift */; };
+		EC1B69F907EC01229EB7655701C22F38 /* SwiftIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062CC3626C58346D4095264BC2E849C /* SwiftIconLabel.swift */; };
+		ED25623262FC1AA37B82A57C78971F7E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E174990A5306D7A7F369868AEEC68822 /* CoreLocation.framework */; };
+		EEBE27FBECEA3786E07CA52EEECC5432 /* Hokusai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA914F7BAD0E741A629A2F3C54B32A6 /* Hokusai.swift */; };
+		F0DD9D6384733B882FCA29220211FC2C /* VideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23211849680C74552A45B664203BF4F7 /* VideosController.swift */; };
+		F130F6AB8CDE7765ADBDC1F815BD6CE0 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC50FE9913AB8EDFA6CC80694B2893 /* UIView+Extensions.swift */; };
+		F49C868393998D089C761A511DB359C4 /* SlidingTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB369F3ACB8022E848FCCFA14569A5 /* SlidingTabBar-dummy.m */; };
+		F4AE204EAEB3B526F04157A32888A1B4 /* LGButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4023BA1F0537527C56756C4ABD19256 /* LGButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA760993F5AB2A69EE67A5A47B491427 /* EditInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666AB09B509823811B8EC4E0A6038582 /* EditInfo.swift */; };
+		FB2289B023002E1D6951678345C0D983 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */; };
+		FC1F39ED9A5977B3AE31BA217905EA78 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325DAE8711204097AF5B5B8AB4EFEF3C /* LocationManager.swift */; };
+		FEB8FBF5F2B5C3D4BE655ABF941F0493 /* Gallery.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 011488DCB60CE8C381080C8D1945AD56 /* Gallery.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		39290506174A98000A2E0A6A285AD819 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D54FDD5C741942E89778C6F1AD56A429;
+			remoteInfo = "PMAlertController-PMAlertController";
+		};
+		424ADB6FD0AB1B76F020060066E7092C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9DD15F742F261C9DBB4C4190F9B444C;
+			remoteInfo = SkyFloatingLabelTextField;
+		};
+		A2DB5B16D11834CCC207C57759D61F1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCB2B03C26F284864226302AFAEC546C;
+			remoteInfo = LGButton;
+		};
+		AABDADD53CF34A7DA93C7B401E14E071 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 028779274FA06F0868016E7F529F1206;
+			remoteInfo = SlidingTabBar;
+		};
+		CC79937A6125A76A6EFB59D7147D8AAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62BBD36E8977C1B748A4631839EF01D7;
+			remoteInfo = Hokusai;
+		};
+		D5936324E59647E563CC82EAAE95E019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99183593E3C04F0C7720EF0DA4A0159B;
+			remoteInfo = PMAlertController;
+		};
+		D6742A7E1C229947B998505E5816DC96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB4E12B19311EF52068B16873A21E70D;
+			remoteInfo = Gallery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		011488DCB60CE8C381080C8D1945AD56 /* Gallery.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Gallery.bundle; path = Resources/Gallery.bundle; sourceTree = "<group>"; };
+		02210777F8447939FFE331B5573675B9 /* PMAlertController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PMAlertController.xib; path = Library/PMAlertController.xib; sourceTree = "<group>"; };
+		030935C5CC1EA95C07D73B238D7CEF28 /* Pods-lopetalk2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lopetalk2-acknowledgements.markdown"; sourceTree = "<group>"; };
+		07DFDC7AF0C5F1090FED58AAD99D19CA /* SlidingTabAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingTabAnimationController.swift; path = Pod/Classes/SlidingTabAnimationController.swift; sourceTree = "<group>"; };
+		08328087ED462DF169D7DE5055A490C2 /* Pods-lopetalk2UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lopetalk2UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		094D0CA3AD3893051009937F2E995C80 /* Pods-lopetalk2-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lopetalk2-resources.sh"; sourceTree = "<group>"; };
+		09539B8990DCA7A132DF075A2D592F24 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Sources/Utils/Config.swift; sourceTree = "<group>"; };
+		098BDB7D1DAE5CC7945FF07039F5D9D2 /* octicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = octicons.ttf; path = LGButton/Resources/octicons.ttf; sourceTree = "<group>"; };
+		0C011B28B5226DED9E3B22F21ECA1393 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = Sources/Utils/Constraints.swift; sourceTree = "<group>"; };
+		0D38E6A5BE29D69A67DCB1330640A77F /* Pods_lopetalk2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lopetalk2UITests.framework; path = "Pods-lopetalk2UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E770A3BCD9F25E6D427FE95E7DA1A5E /* Octicon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Octicon.swift; path = LGButton/Classes/SwiftIconFont/Octicon.swift; sourceTree = "<group>"; };
+		0F072092E6C52432C2651E24F08AA270 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		116A180372F4F214A4DB35B1AE4D663A /* Album.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Album.swift; path = Sources/Images/Album.swift; sourceTree = "<group>"; };
+		11B632CA4E195D2C771A28648471528E /* LGButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LGButton.framework; path = LGButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BF01571C0E5F423072208A893358B6 /* AVAsset+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVAsset+Extensions.swift"; path = "Sources/Utils/Extensions/AVAsset+Extensions.swift"; sourceTree = "<group>"; };
+		15CDC97C957806FA4AA6EB4A7CBC0C2E /* Pods-lopetalk2UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-lopetalk2UITests.modulemap"; sourceTree = "<group>"; };
+		1669FC936745A3D176DACE69152E99EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		182997BC98F5FF2880F260D6115C1BA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		194EB29CC9CDF08559E1E60A156AB518 /* Hokusai-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hokusai-prefix.pch"; sourceTree = "<group>"; };
+		1CFA3077607C9320184A13457374D6D4 /* Hokusai.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Hokusai.modulemap; sourceTree = "<group>"; };
+		1D6F46076DD4619E8FF45502312DCD70 /* ImagesLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagesLibrary.swift; path = Sources/Images/ImagesLibrary.swift; sourceTree = "<group>"; };
+		1F5CD2CE1F52AB32DFE9E065773B7C1E /* ShutterButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShutterButton.swift; path = Sources/Camera/ShutterButton.swift; sourceTree = "<group>"; };
+		21DE7B90295F6E7B5292B8FFD80847E3 /* AlbumCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlbumCell.swift; path = Sources/Utils/View/AlbumCell.swift; sourceTree = "<group>"; };
+		23211849680C74552A45B664203BF4F7 /* VideosController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideosController.swift; path = Sources/Videos/VideosController.swift; sourceTree = "<group>"; };
+		23C90EEC1CE8B476735D5DDD52F25D56 /* FrameView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = Sources/Utils/View/FrameView.swift; sourceTree = "<group>"; };
+		24B3A0D44EDAF14B9EF1CE95F5BFB736 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+fixCaretPosition.swift"; path = "Sources/UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		252AFE9B6C9BEACF9DBB9D2BE73DC4BB /* Pods-lopetalk2Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lopetalk2Tests-frameworks.sh"; sourceTree = "<group>"; };
+		2636A85EFCA7E15FBFF98E60841B3FB5 /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
+		26B77839FD362F1483BE844299975948 /* PMAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMAlertController.swift; path = Library/PMAlertController.swift; sourceTree = "<group>"; };
+		299650C92F3A0E829E8CE4777C641200 /* MaterialIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialIcon.swift; path = LGButton/Classes/SwiftIconFont/MaterialIcon.swift; sourceTree = "<group>"; };
+		2AA914F7BAD0E741A629A2F3C54B32A6 /* Hokusai.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hokusai.swift; path = Classes/Hokusai.swift; sourceTree = "<group>"; };
+		2CFC887D9C635CA0B1A082E6A13DDB72 /* Pods-lopetalk2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lopetalk2.debug.xcconfig"; sourceTree = "<group>"; };
+		2FEBB20887554AF848B06098DDEC4631 /* LGButton.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LGButton.xib; path = LGButton/Resources/LGButton.xib; sourceTree = "<group>"; };
+		31BC0EF5BF490380DCFEAE1AF2BC1313 /* Pods-lopetalk2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-lopetalk2.modulemap"; sourceTree = "<group>"; };
+		325DAE8711204097AF5B5B8AB4EFEF3C /* LocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Sources/Utils/LocationManager.swift; sourceTree = "<group>"; };
+		349324FCF1E650CAB6752444C318D9DC /* Permission.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Permission.swift; path = Sources/Utils/Permission/Permission.swift; sourceTree = "<group>"; };
+		360F0288F01243D145B64769F5AF3C1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380207DA6A5395352214FAC029C8CFC3 /* Pods-lopetalk2Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lopetalk2Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3AD1121E0C84A49F5210BB6DD88DFB15 /* Pods-lopetalk2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lopetalk2-dummy.m"; sourceTree = "<group>"; };
+		3AE466165DF54F34AE4A097B730DF5B8 /* TripleButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TripleButton.swift; path = Sources/Camera/TripleButton.swift; sourceTree = "<group>"; };
+		3BA9FE20A555426F23C46A157D32693E /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/PhotosUI.framework; sourceTree = DEVELOPER_DIR; };
+		3BDAC009E2806A1CC888A23A99F38492 /* GalleryController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GalleryController.swift; path = Sources/Gallery/GalleryController.swift; sourceTree = "<group>"; };
+		3CF08FCD2F6ADF1A49AE089A888DFF80 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DCB369F3ACB8022E848FCCFA14569A5 /* SlidingTabBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlidingTabBar-dummy.m"; sourceTree = "<group>"; };
+		3F85CCC94B8414A3B43D0202CC17D7AD /* Pods-lopetalk2Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lopetalk2Tests-dummy.m"; sourceTree = "<group>"; };
+		3F8AF79F3362FB52E981E1A5E716B99C /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextField.swift; path = Sources/SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		406A06BE5AE2688B66CCABCFFB1D096B /* map-icons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "map-icons.ttf"; path = "LGButton/Resources/map-icons.ttf"; sourceTree = "<group>"; };
+		4134DC7A5299976AF3B18181534B5A47 /* Gallery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gallery.xcconfig; sourceTree = "<group>"; };
+		44E8F80DCF608589D7295881E20B8D83 /* CameraController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraController.swift; path = Sources/Camera/CameraController.swift; sourceTree = "<group>"; };
+		459419B267B900A9362EE401964DB792 /* SlidingTabBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlidingTabBar.xcconfig; sourceTree = "<group>"; };
+		465AC55DEED453E445FDE1833D211EE4 /* Pods-lopetalk2UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lopetalk2UITests-dummy.m"; sourceTree = "<group>"; };
+		470F8C58742C71D351AF4992025D48AA /* Pods-lopetalk2Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lopetalk2Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		47A5F830D4E312CCABEE757817D0F0AD /* Gallery-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gallery-dummy.m"; sourceTree = "<group>"; };
+		49E6810B77CBED2012CB3CFF2688AB84 /* PMAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PMAlertController.xcconfig; sourceTree = "<group>"; };
+		4DAEEE207890012E61EC891BDE8EE450 /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Sources/Utils/Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		51A958912D440598D0C7D6E2AFF85C1E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Sources/Utils/Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		51C439372497DE242C3BD53A6CA3353F /* LGButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGButton-prefix.pch"; sourceTree = "<group>"; };
+		52C48ADA83A136351E35ED2D7870708C /* LGButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LGButton.xcconfig; sourceTree = "<group>"; };
+		5EB66FCDAFEA179BC79393C0099BD8FC /* FontAwesome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = LGButton/Classes/SwiftIconFont/FontAwesome.swift; sourceTree = "<group>"; };
+		5F568444B42DBA0BCBFE9DAA50E374A3 /* VideosLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideosLibrary.swift; path = Sources/Videos/VideosLibrary.swift; sourceTree = "<group>"; };
+		62743AB90D98878E4676656D4EB49857 /* IonIcons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IonIcons.swift; path = LGButton/Classes/SwiftIconFont/IonIcons.swift; sourceTree = "<group>"; };
+		63629D038774069CC6E9B37529A23AC1 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
+		63ADC6A80B087E0AEEE986DFE1892446 /* StackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackView.swift; path = Sources/Camera/StackView.swift; sourceTree = "<group>"; };
+		666AB09B509823811B8EC4E0A6038582 /* EditInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EditInfo.swift; path = Sources/Utils/VideoEditor/EditInfo.swift; sourceTree = "<group>"; };
+		68A87830FAE5EFF85D6B9C5741887EF8 /* EmptyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyView.swift; path = Sources/Utils/View/EmptyView.swift; sourceTree = "<group>"; };
+		69884EAE1DFDAE7422CE05D6FB78021C /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Extensions.swift"; path = "Sources/Utils/Extensions/UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
+		6A55EDF9DC8CE8415471E1718CC188F7 /* Pods-lopetalk2UITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lopetalk2UITests-resources.sh"; sourceTree = "<group>"; };
+		6E65EC8733B934FE5B4BB23874AC5E92 /* ResourceBundle-PMAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PMAlertController-Info.plist"; sourceTree = "<group>"; };
+		6F1EC70B0B9BC43036F5E2872A621FDC /* Pods-lopetalk2UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lopetalk2UITests-frameworks.sh"; sourceTree = "<group>"; };
+		7483D35E8DFB841A430B6E1AA973AC7B /* PMAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PMAlertController.modulemap; sourceTree = "<group>"; };
+		7633BEC23AD63A0A2621D0B25F913E44 /* Pods-lopetalk2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lopetalk2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7882CB125E711C4E41FDCB48D8DE9663 /* SkyFloatingLabelTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-prefix.pch"; sourceTree = "<group>"; };
+		799A21E77FBF85CB14BE02D442C8A227 /* ImagesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagesController.swift; path = Sources/Images/ImagesController.swift; sourceTree = "<group>"; };
+		7A3DACAFC18355B23EAECDE436EEA716 /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
+		7D74A24E04A89325751E35EDBC6CA689 /* Pods-lopetalk2-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lopetalk2-frameworks.sh"; sourceTree = "<group>"; };
+		8062CC3626C58346D4095264BC2E849C /* SwiftIconLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftIconLabel.swift; path = LGButton/Classes/SwiftIconFont/SwiftIconLabel.swift; sourceTree = "<group>"; };
+		815162A4FE5878491BD235356A731F8E /* SlidingTabBarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingTabBarItem.swift; path = Pod/Classes/SlidingTabBarItem.swift; sourceTree = "<group>"; };
+		8159CFC5F3F9EE86D1DF763699F0B198 /* Ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = Ionicons.ttf; path = LGButton/Resources/Ionicons.ttf; sourceTree = "<group>"; };
+		852A07812E5CC5F5E0395CFBBD0365F8 /* Hokusai.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hokusai.xcconfig; sourceTree = "<group>"; };
+		87B1084CFF46DD15F28A0CD66106CDAA /* MapIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapIcon.swift; path = LGButton/Classes/SwiftIconFont/MapIcon.swift; sourceTree = "<group>"; };
+		892667EDAB9A71F8A8CEA462FCABDB80 /* Pods-lopetalk2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lopetalk2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		8A4508B1FD8163BBAB67772F6C603AF0 /* LGButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LGButton.modulemap; sourceTree = "<group>"; };
+		8B51649CCBE98695D79E9C82362CEBDB /* Gallery-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gallery-umbrella.h"; sourceTree = "<group>"; };
+		8B829EBDC789BC18819798AA2BD8045F /* PagesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagesController.swift; path = Sources/Utils/Pages/PagesController.swift; sourceTree = "<group>"; };
+		8CC916E5008667B562B4A54D6767ABF7 /* ThemifyIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemifyIcon.swift; path = LGButton/Classes/SwiftIconFont/ThemifyIcon.swift; sourceTree = "<group>"; };
+		8E3C05F87E2A8DE3895762F24BD08401 /* PMAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PMAlertController-umbrella.h"; sourceTree = "<group>"; };
+		8E8CF9DFA960823C5C8C0005FBB633C9 /* Pods-lopetalk2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lopetalk2.release.xcconfig"; sourceTree = "<group>"; };
+		8FB5E787F289B2531E91E920DE7EB993 /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Sources/Utils/Fetcher.swift; sourceTree = "<group>"; };
+		901FC681D083C030B07239BFE99B366A /* Pods_lopetalk2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lopetalk2Tests.framework; path = "Pods-lopetalk2Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91231F4459E3C96954B6E1988F8C7FDE /* Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Gallery.framework; path = Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9164B4D104D8BCCD51FC89886CA844AA /* themify.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = themify.ttf; path = LGButton/Resources/themify.ttf; sourceTree = "<group>"; };
+		92FF3A880EF569EBED438FEE1053ADF0 /* DropdownController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropdownController.swift; path = Sources/Utils/Dropdown/DropdownController.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9922BC4F5625D0309AF706DDCF9C95C2 /* Array+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "Sources/Utils/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
+		99701F622B6A0D05611E522824271020 /* SlidingTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingTabBar.swift; path = Pod/Classes/SlidingTabBar.swift; sourceTree = "<group>"; };
+		998292FC6443C59D51E0F667FB3E4737 /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.ttf; path = LGButton/Resources/FontAwesome.ttf; sourceTree = "<group>"; };
+		99D3CA709A7129DE2C19708B09EFAEB0 /* PageIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageIndicator.swift; path = Sources/Utils/Pages/PageIndicator.swift; sourceTree = "<group>"; };
+		9B1E4BF68D14EA63203329A53356DC20 /* Hokusai-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hokusai-umbrella.h"; sourceTree = "<group>"; };
+		9DAF81442F28758BCA239B8C61776A15 /* SwiftIconFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftIconFont.swift; path = LGButton/Classes/SwiftIconFont/SwiftIconFont.swift; sourceTree = "<group>"; };
+		9E1D2A3A832DF4A77A6CBAE1284E99EF /* PermissionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PermissionView.swift; path = Sources/Utils/Permission/PermissionView.swift; sourceTree = "<group>"; };
+		9EE24E27AAE6F03B58248B0EB2F401F7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9F90699CA54791678D057A0DE179ACDD /* Pods-lopetalk2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lopetalk2-acknowledgements.plist"; sourceTree = "<group>"; };
+		A206E8FA5F3BD0B4FCE13189E4687D1B /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Images/Image.swift; sourceTree = "<group>"; };
+		A32FEC29CD4AEFB58F3B2E4DACD71F80 /* CameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Sources/Camera/CameraView.swift; sourceTree = "<group>"; };
+		A33AB6A31C5CAAE19ED905C7E13ABB45 /* SlidingTabBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlidingTabBar-prefix.pch"; sourceTree = "<group>"; };
+		A4023BA1F0537527C56756C4ABD19256 /* LGButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGButton-umbrella.h"; sourceTree = "<group>"; };
+		A4CAF96945A4383084DCF8367A517E6D /* ImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCell.swift; path = Sources/Images/ImageCell.swift; sourceTree = "<group>"; };
+		A57268F744BBC6D19132BD93C0E7FA9B /* Pods-lopetalk2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lopetalk2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A57CFF6269CE60E7E41A491E08C552AA /* PMAlertController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PMAlertController.bundle; path = PMAlertController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5F0ADF5E5D9671D688B8683E0FDEAE /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/Utils/Utils.swift; sourceTree = "<group>"; };
+		AC0ACC952F2B95801EB3EBF901B94F69 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
+		ACD281115ABD7815D862C8C24F435FDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF699976510DC70B73E61F5F95EB15FF /* Once.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Once.swift; path = Sources/Utils/Once.swift; sourceTree = "<group>"; };
+		B03D078E3E0F7C424A234419404A3F9C /* Pods-lopetalk2Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lopetalk2Tests-umbrella.h"; sourceTree = "<group>"; };
+		B8857D6F7AFCF110F2DE540034C72C43 /* Iconic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Iconic.swift; path = LGButton/Classes/SwiftIconFont/Iconic.swift; sourceTree = "<group>"; };
+		B893C131391BBCF2CA8A2FF93E356B2B /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		BCBAA34011328BA4814F43136BA6B62B /* PermissionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PermissionController.swift; path = Sources/Utils/Permission/PermissionController.swift; sourceTree = "<group>"; };
+		C004B217F30A179AFBCF061A217CC629 /* Hokusai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hokusai.framework; path = Hokusai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F9F45A4D264418987BD6F7DA12A4F3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C97AA8F5E06FDEB231298588FE2D84 /* Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bundle.swift; path = Sources/Utils/Bundle.swift; sourceTree = "<group>"; };
+		C9566FFAAE1EE907FEED53434F3622DF /* Pods-lopetalk2UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lopetalk2UITests-umbrella.h"; sourceTree = "<group>"; };
+		C9A57C12A7E3B538823C9E42E25DC6F9 /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SkyFloatingLabelTextField.framework; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA8D42539D76A7734A27ACA3CA00FB9 /* FontLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontLoader.swift; path = LGButton/Classes/SwiftIconFont/FontLoader.swift; sourceTree = "<group>"; };
+		CCA99837B246D1E8BE814F944DF9DCA7 /* Gallery.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Gallery.modulemap; sourceTree = "<group>"; };
+		CD103A77EDDE9DCBE6093B33ED6A662B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE33D89C0F043C68616D23239502D817 /* Pods-lopetalk2Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-lopetalk2Tests.modulemap"; sourceTree = "<group>"; };
+		CF2C9EABE33E9317668DFC3B417180D8 /* SkyFloatingLabelTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkyFloatingLabelTextField-dummy.m"; sourceTree = "<group>"; };
+		CFC3EF82EDC547D55815AA0E99184FD4 /* CameraMan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraMan.swift; path = Sources/Camera/CameraMan.swift; sourceTree = "<group>"; };
+		D155302C587B2BAF8E9880F7A250DF67 /* PMAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMAlertAction.swift; path = Library/PMAlertAction.swift; sourceTree = "<group>"; };
+		D2F26A1ABC176BF9ED6318AC79ACFADB /* VideoCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = Sources/Videos/VideoCell.swift; sourceTree = "<group>"; };
+		D47A8A0C602538089E345E88881C1C99 /* SlidingTabBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlidingTabBar-umbrella.h"; sourceTree = "<group>"; };
+		D47C4407077FF514FE290AE1BFC4C985 /* Pods-lopetalk2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lopetalk2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9816D5310E4E1CFD4D74F831D7AC3F2 /* AdvancedVideoEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdvancedVideoEditor.swift; path = Sources/Utils/VideoEditor/AdvancedVideoEditor.swift; sourceTree = "<group>"; };
+		DA25DFEB072946D67D5CD59B997B2C63 /* VideoEditing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoEditing.swift; path = Sources/Utils/VideoEditor/VideoEditing.swift; sourceTree = "<group>"; };
+		DAB27A11A98010DB96A2FCEC7FD4B47B /* GridView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GridView.swift; path = Sources/Utils/View/GridView.swift; sourceTree = "<group>"; };
+		DB913E2F9D0250C6060000699636D0BF /* Gallery-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gallery-prefix.pch"; sourceTree = "<group>"; };
+		DC854CFD38D84691E3AB560E18E4B11E /* LGButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGButton.swift; path = LGButton/Classes/LGButton.swift; sourceTree = "<group>"; };
+		E0088767FFEFDDA82AEECFACF431DD4F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04C99F1B42217706187D26E4B448067 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extensions.swift"; path = "Sources/Utils/Extensions/UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		E0604A6AA36DEB7B0FDFDD0C9F57DAE2 /* SlidingTabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SlidingTabBar.framework; path = SlidingTabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0BE231640FCC5EBD79BB22810A576FE /* Pods-lopetalk2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lopetalk2-umbrella.h"; sourceTree = "<group>"; };
+		E174990A5306D7A7F369868AEEC68822 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		E38A871E595E220B8C3C042ADA11E853 /* LGButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LGButton-dummy.m"; sourceTree = "<group>"; };
+		E3BC50FE9913AB8EDFA6CC80694B2893 /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Sources/Utils/Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E604EFEBD00F5795C3C1DE666F27DBA5 /* open-iconic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "open-iconic.ttf"; path = "LGButton/Resources/open-iconic.ttf"; sourceTree = "<group>"; };
+		E861E79601DCF2D944DB96A137D2DE3C /* Pods-lopetalk2UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lopetalk2UITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E89A0E65CCAE6B46D97EE2161D94FF24 /* Pods-lopetalk2Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lopetalk2Tests-resources.sh"; sourceTree = "<group>"; };
+		E8F5F8931E2AAB333F1939C978281DA2 /* EventHub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventHub.swift; path = Sources/Utils/EventHub.swift; sourceTree = "<group>"; };
+		E97E4B766FA36905918281B09AE06FD1 /* Hokusai-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hokusai-dummy.m"; sourceTree = "<group>"; };
+		EE5286E45A39C1F847ACB5B583D86E1D /* SlidingTabBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SlidingTabBar.modulemap; sourceTree = "<group>"; };
+		EF4D9A8AF0D67E89C2842EE31DDD796D /* VideoBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoBox.swift; path = Sources/Videos/VideoBox.swift; sourceTree = "<group>"; };
+		F1EDC79296E4109962B9F4B3545FC046 /* Pods_lopetalk2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lopetalk2.framework; path = "Pods-lopetalk2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31DD501880DDB56321B732AE476547C /* PMAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PMAlertController.framework; path = PMAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F451F354F58F253B1F2AF96B55EF33BB /* ArrowButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrowButton.swift; path = Sources/Utils/View/ArrowButton.swift; sourceTree = "<group>"; };
+		F889067B7148D0A8CC51F254FB16F014 /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "MaterialIcons-Regular.ttf"; path = "LGButton/Resources/MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
+		FA8F9744F55EDB13276BE6081BBFCA58 /* Video.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Video.swift; path = Sources/Videos/Video.swift; sourceTree = "<group>"; };
+		FBBBA09242DEDFE702E29D72410DF3DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC57D4D0CEF9FB981DF5A5D6C020EBF7 /* PMAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PMAlertController-dummy.m"; sourceTree = "<group>"; };
+		FF28FF7C59EEDAB3448F96C59CCB7085 /* PMAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PMAlertController-prefix.pch"; sourceTree = "<group>"; };
+		FF676AA9D0AD93D3817E78F277C259E5 /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
+		FF7B3E917F157E4DC2A9B506B2351F96 /* Cart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cart.swift; path = Sources/Images/Cart.swift; sourceTree = "<group>"; };
+		FFAB0988D5E69AB5ED84F080AEFAF4C9 /* VideoEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoEditor.swift; path = Sources/Utils/VideoEditor/VideoEditor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		092AB8A72FF16117D0C7DCF0594718D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18CBC8812B3E2D113B057F4860F48FD /* AVFoundation.framework in Frameworks */,
+				E746DCF9CA29857E5C865024CC7A0B01 /* AVKit.framework in Frameworks */,
+				ED25623262FC1AA37B82A57C78971F7E /* CoreLocation.framework in Frameworks */,
+				0326BD2C59A81CEBA84550BBEC6C0D71 /* Foundation.framework in Frameworks */,
+				51FB3516CD13726EE6C657663E5F6BF1 /* Photos.framework in Frameworks */,
+				E48243C364A6FBC679D740B7258B5ADD /* PhotosUI.framework in Frameworks */,
+				836B959325E222D376FD5FAE05745FF0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33D308CE8EF1EF37F920ECFAA9279D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2289B023002E1D6951678345C0D983 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35DBA4E118044558D9423099117CC5CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A42DE97EEA52963D795C008041738217 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D3E784313F9A474A8432E30B5A8BB8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9213E13A0A4DA3E4EDDB275B3630CF /* Foundation.framework in Frameworks */,
+				9A246E818D805D68BF70697FBD28E6E8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		817753536877A3D56FB5B6D2DE8C4794 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A14B056BA3C5F8D9660B3D9046D013C /* Foundation.framework in Frameworks */,
+				82045A02CC90E9F536C0601F57C82834 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A6640FF05D0EA7BBECE8550DA2536A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CBF8547F164D735DEE0DB40A84CEB3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E3374DAE3B9624C766260D41BA2397C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39241A85B66BC68871DD1D8224B95BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58F21BA44DE39838C2B6308BD55B731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5763D0ED2FD9C3D11C125D47DFC07D7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C633A814710FE8151817F439032007BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68F133B1B41B6FFE3CA88688710EAF25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE5550B3A069BB4C003B79256BE7E576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06D060FB3874716ADA4F7D8C8B4C997D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				360F0288F01243D145B64769F5AF3C1F /* Info.plist */,
+				EE5286E45A39C1F847ACB5B583D86E1D /* SlidingTabBar.modulemap */,
+				459419B267B900A9362EE401964DB792 /* SlidingTabBar.xcconfig */,
+				3DCB369F3ACB8022E848FCCFA14569A5 /* SlidingTabBar-dummy.m */,
+				A33AB6A31C5CAAE19ED905C7E13ABB45 /* SlidingTabBar-prefix.pch */,
+				D47A8A0C602538089E345E88881C1C99 /* SlidingTabBar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SlidingTabBar";
+			sourceTree = "<group>";
+		};
+		0C9493D57AB15B731093E7207C531C40 /* Pods-lopetalk2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E0088767FFEFDDA82AEECFACF431DD4F /* Info.plist */,
+				CE33D89C0F043C68616D23239502D817 /* Pods-lopetalk2Tests.modulemap */,
+				380207DA6A5395352214FAC029C8CFC3 /* Pods-lopetalk2Tests-acknowledgements.markdown */,
+				470F8C58742C71D351AF4992025D48AA /* Pods-lopetalk2Tests-acknowledgements.plist */,
+				3F85CCC94B8414A3B43D0202CC17D7AD /* Pods-lopetalk2Tests-dummy.m */,
+				252AFE9B6C9BEACF9DBB9D2BE73DC4BB /* Pods-lopetalk2Tests-frameworks.sh */,
+				E89A0E65CCAE6B46D97EE2161D94FF24 /* Pods-lopetalk2Tests-resources.sh */,
+				B03D078E3E0F7C424A234419404A3F9C /* Pods-lopetalk2Tests-umbrella.h */,
+				A57268F744BBC6D19132BD93C0E7FA9B /* Pods-lopetalk2Tests.debug.xcconfig */,
+				7633BEC23AD63A0A2621D0B25F913E44 /* Pods-lopetalk2Tests.release.xcconfig */,
+			);
+			name = "Pods-lopetalk2Tests";
+			path = "Target Support Files/Pods-lopetalk2Tests";
+			sourceTree = "<group>";
+		};
+		0FFE94C28FB7195BF0181E411B1968AF /* SlidingTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				07DFDC7AF0C5F1090FED58AAD99D19CA /* SlidingTabAnimationController.swift */,
+				99701F622B6A0D05611E522824271020 /* SlidingTabBar.swift */,
+				815162A4FE5878491BD235356A731F8E /* SlidingTabBarItem.swift */,
+				06D060FB3874716ADA4F7D8C8B4C997D /* Support Files */,
+			);
+			name = SlidingTabBar;
+			path = SlidingTabBar;
+			sourceTree = "<group>";
+		};
+		10DA6A33868134B574EAC9919A81C544 /* SkyFloatingLabelTextField */ = {
+			isa = PBXGroup;
+			children = (
+				3F8AF79F3362FB52E981E1A5E716B99C /* SkyFloatingLabelTextField.swift */,
+				B893C131391BBCF2CA8A2FF93E356B2B /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				24B3A0D44EDAF14B9EF1CE95F5BFB736 /* UITextField+fixCaretPosition.swift */,
+				C244043FD97AA72103CFD0227C3FFAB0 /* Support Files */,
+			);
+			name = SkyFloatingLabelTextField;
+			path = SkyFloatingLabelTextField;
+			sourceTree = "<group>";
+		};
+		175C6D3253D84DF72017B3D3643DCF4C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CFA3077607C9320184A13457374D6D4 /* Hokusai.modulemap */,
+				852A07812E5CC5F5E0395CFBBD0365F8 /* Hokusai.xcconfig */,
+				E97E4B766FA36905918281B09AE06FD1 /* Hokusai-dummy.m */,
+				194EB29CC9CDF08559E1E60A156AB518 /* Hokusai-prefix.pch */,
+				9B1E4BF68D14EA63203329A53356DC20 /* Hokusai-umbrella.h */,
+				0F072092E6C52432C2651E24F08AA270 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Hokusai";
+			sourceTree = "<group>";
+		};
+		18A70E5E1D9391A6667B6AB59BE150A6 /* PMAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				D155302C587B2BAF8E9880F7A250DF67 /* PMAlertAction.swift */,
+				26B77839FD362F1483BE844299975948 /* PMAlertController.swift */,
+				02210777F8447939FFE331B5573675B9 /* PMAlertController.xib */,
+				3382C2BC2B6C201743B8885EFCF8846C /* Resources */,
+				382767081C481B4512440037F6332297 /* Support Files */,
+			);
+			name = PMAlertController;
+			path = PMAlertController;
+			sourceTree = "<group>";
+		};
+		20E467BA52FE7D42A377C9D60BF88A21 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCA99837B246D1E8BE814F944DF9DCA7 /* Gallery.modulemap */,
+				4134DC7A5299976AF3B18181534B5A47 /* Gallery.xcconfig */,
+				47A5F830D4E312CCABEE757817D0F0AD /* Gallery-dummy.m */,
+				DB913E2F9D0250C6060000699636D0BF /* Gallery-prefix.pch */,
+				8B51649CCBE98695D79E9C82362CEBDB /* Gallery-umbrella.h */,
+				C5F9F45A4D264418987BD6F7DA12A4F3 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Gallery";
+			sourceTree = "<group>";
+		};
+		3382C2BC2B6C201743B8885EFCF8846C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		382767081C481B4512440037F6332297 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				182997BC98F5FF2880F260D6115C1BA0 /* Info.plist */,
+				7483D35E8DFB841A430B6E1AA973AC7B /* PMAlertController.modulemap */,
+				49E6810B77CBED2012CB3CFF2688AB84 /* PMAlertController.xcconfig */,
+				FC57D4D0CEF9FB981DF5A5D6C020EBF7 /* PMAlertController-dummy.m */,
+				FF28FF7C59EEDAB3448F96C59CCB7085 /* PMAlertController-prefix.pch */,
+				8E3C05F87E2A8DE3895762F24BD08401 /* PMAlertController-umbrella.h */,
+				6E65EC8733B934FE5B4BB23874AC5E92 /* ResourceBundle-PMAlertController-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PMAlertController";
+			sourceTree = "<group>";
+		};
+		4CF9AA7D261D4F67BEA4856EEC5A05F2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CF08FCD2F6ADF1A49AE089A888DFF80 /* Info.plist */,
+				8A4508B1FD8163BBAB67772F6C603AF0 /* LGButton.modulemap */,
+				52C48ADA83A136351E35ED2D7870708C /* LGButton.xcconfig */,
+				E38A871E595E220B8C3C042ADA11E853 /* LGButton-dummy.m */,
+				51C439372497DE242C3BD53A6CA3353F /* LGButton-prefix.pch */,
+				A4023BA1F0537527C56756C4ABD19256 /* LGButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LGButton";
+			sourceTree = "<group>";
+		};
+		4E250AAC37092DB6F4F661DC4E4F6C86 /* Hokusai */ = {
+			isa = PBXGroup;
+			children = (
+				2AA914F7BAD0E741A629A2F3C54B32A6 /* Hokusai.swift */,
+				175C6D3253D84DF72017B3D3643DCF4C /* Support Files */,
+			);
+			name = Hokusai;
+			path = Hokusai;
+			sourceTree = "<group>";
+		};
+		52BFD98535EFB503FD5A25586532AAAD /* Pods-lopetalk2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD103A77EDDE9DCBE6093B33ED6A662B /* Info.plist */,
+				15CDC97C957806FA4AA6EB4A7CBC0C2E /* Pods-lopetalk2UITests.modulemap */,
+				08328087ED462DF169D7DE5055A490C2 /* Pods-lopetalk2UITests-acknowledgements.markdown */,
+				E861E79601DCF2D944DB96A137D2DE3C /* Pods-lopetalk2UITests-acknowledgements.plist */,
+				465AC55DEED453E445FDE1833D211EE4 /* Pods-lopetalk2UITests-dummy.m */,
+				6F1EC70B0B9BC43036F5E2872A621FDC /* Pods-lopetalk2UITests-frameworks.sh */,
+				6A55EDF9DC8CE8415471E1718CC188F7 /* Pods-lopetalk2UITests-resources.sh */,
+				C9566FFAAE1EE907FEED53434F3622DF /* Pods-lopetalk2UITests-umbrella.h */,
+				D47C4407077FF514FE290AE1BFC4C985 /* Pods-lopetalk2UITests.debug.xcconfig */,
+				892667EDAB9A71F8A8CEA462FCABDB80 /* Pods-lopetalk2UITests.release.xcconfig */,
+			);
+			name = "Pods-lopetalk2UITests";
+			path = "Target Support Files/Pods-lopetalk2UITests";
+			sourceTree = "<group>";
+		};
+		53A55462C752C8344E80C59DCF2D7FA3 /* Pods-lopetalk2 */ = {
+			isa = PBXGroup;
+			children = (
+				ACD281115ABD7815D862C8C24F435FDA /* Info.plist */,
+				31BC0EF5BF490380DCFEAE1AF2BC1313 /* Pods-lopetalk2.modulemap */,
+				030935C5CC1EA95C07D73B238D7CEF28 /* Pods-lopetalk2-acknowledgements.markdown */,
+				9F90699CA54791678D057A0DE179ACDD /* Pods-lopetalk2-acknowledgements.plist */,
+				3AD1121E0C84A49F5210BB6DD88DFB15 /* Pods-lopetalk2-dummy.m */,
+				7D74A24E04A89325751E35EDBC6CA689 /* Pods-lopetalk2-frameworks.sh */,
+				094D0CA3AD3893051009937F2E995C80 /* Pods-lopetalk2-resources.sh */,
+				E0BE231640FCC5EBD79BB22810A576FE /* Pods-lopetalk2-umbrella.h */,
+				2CFC887D9C635CA0B1A082E6A13DDB72 /* Pods-lopetalk2.debug.xcconfig */,
+				8E8CF9DFA960823C5C8C0005FBB633C9 /* Pods-lopetalk2.release.xcconfig */,
+			);
+			name = "Pods-lopetalk2";
+			path = "Target Support Files/Pods-lopetalk2";
+			sourceTree = "<group>";
+		};
+		6B5A2CDC5D0A07C9DB1F933323073E97 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				D9816D5310E4E1CFD4D74F831D7AC3F2 /* AdvancedVideoEditor.swift */,
+				116A180372F4F214A4DB35B1AE4D663A /* Album.swift */,
+				21DE7B90295F6E7B5292B8FFD80847E3 /* AlbumCell.swift */,
+				9922BC4F5625D0309AF706DDCF9C95C2 /* Array+Extensions.swift */,
+				F451F354F58F253B1F2AF96B55EF33BB /* ArrowButton.swift */,
+				15BF01571C0E5F423072208A893358B6 /* AVAsset+Extensions.swift */,
+				C6C97AA8F5E06FDEB231298588FE2D84 /* Bundle.swift */,
+				44E8F80DCF608589D7295881E20B8D83 /* CameraController.swift */,
+				CFC3EF82EDC547D55815AA0E99184FD4 /* CameraMan.swift */,
+				A32FEC29CD4AEFB58F3B2E4DACD71F80 /* CameraView.swift */,
+				FF7B3E917F157E4DC2A9B506B2351F96 /* Cart.swift */,
+				09539B8990DCA7A132DF075A2D592F24 /* Config.swift */,
+				0C011B28B5226DED9E3B22F21ECA1393 /* Constraints.swift */,
+				92FF3A880EF569EBED438FEE1053ADF0 /* DropdownController.swift */,
+				666AB09B509823811B8EC4E0A6038582 /* EditInfo.swift */,
+				68A87830FAE5EFF85D6B9C5741887EF8 /* EmptyView.swift */,
+				E8F5F8931E2AAB333F1939C978281DA2 /* EventHub.swift */,
+				8FB5E787F289B2531E91E920DE7EB993 /* Fetcher.swift */,
+				23C90EEC1CE8B476735D5DDD52F25D56 /* FrameView.swift */,
+				3BDAC009E2806A1CC888A23A99F38492 /* GalleryController.swift */,
+				DAB27A11A98010DB96A2FCEC7FD4B47B /* GridView.swift */,
+				A206E8FA5F3BD0B4FCE13189E4687D1B /* Image.swift */,
+				A4CAF96945A4383084DCF8367A517E6D /* ImageCell.swift */,
+				799A21E77FBF85CB14BE02D442C8A227 /* ImagesController.swift */,
+				1D6F46076DD4619E8FF45502312DCD70 /* ImagesLibrary.swift */,
+				325DAE8711204097AF5B5B8AB4EFEF3C /* LocationManager.swift */,
+				AF699976510DC70B73E61F5F95EB15FF /* Once.swift */,
+				99D3CA709A7129DE2C19708B09EFAEB0 /* PageIndicator.swift */,
+				8B829EBDC789BC18819798AA2BD8045F /* PagesController.swift */,
+				349324FCF1E650CAB6752444C318D9DC /* Permission.swift */,
+				BCBAA34011328BA4814F43136BA6B62B /* PermissionController.swift */,
+				9E1D2A3A832DF4A77A6CBAE1284E99EF /* PermissionView.swift */,
+				1F5CD2CE1F52AB32DFE9E065773B7C1E /* ShutterButton.swift */,
+				63ADC6A80B087E0AEEE986DFE1892446 /* StackView.swift */,
+				4DAEEE207890012E61EC891BDE8EE450 /* String+Extensions.swift */,
+				3AE466165DF54F34AE4A097B730DF5B8 /* TripleButton.swift */,
+				E04C99F1B42217706187D26E4B448067 /* UIImageView+Extensions.swift */,
+				69884EAE1DFDAE7422CE05D6FB78021C /* UIScrollView+Extensions.swift */,
+				E3BC50FE9913AB8EDFA6CC80694B2893 /* UIView+Extensions.swift */,
+				51A958912D440598D0C7D6E2AFF85C1E /* UIViewController+Extensions.swift */,
+				AA5F0ADF5E5D9671D688B8683E0FDEAE /* Utils.swift */,
+				FA8F9744F55EDB13276BE6081BBFCA58 /* Video.swift */,
+				EF4D9A8AF0D67E89C2842EE31DDD796D /* VideoBox.swift */,
+				D2F26A1ABC176BF9ED6318AC79ACFADB /* VideoCell.swift */,
+				DA25DFEB072946D67D5CD59B997B2C63 /* VideoEditing.swift */,
+				FFAB0988D5E69AB5ED84F080AEFAF4C9 /* VideoEditor.swift */,
+				23211849680C74552A45B664203BF4F7 /* VideosController.swift */,
+				5F568444B42DBA0BCBFE9DAA50E374A3 /* VideosLibrary.swift */,
+				FE000865933A19CB36EA2C5A7E1E7C27 /* Resources */,
+				20E467BA52FE7D42A377C9D60BF88A21 /* Support Files */,
+			);
+			name = Gallery;
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		76C8237AFE032C8D0F79B6FBB775B644 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9EE24E27AAE6F03B58248B0EB2F401F7 /* AVFoundation.framework */,
+				63629D038774069CC6E9B37529A23AC1 /* AVKit.framework */,
+				E174990A5306D7A7F369868AEEC68822 /* CoreLocation.framework */,
+				9F56704FF802F1C71E36A3CDA568D464 /* Foundation.framework */,
+				AC0ACC952F2B95801EB3EBF901B94F69 /* Photos.framework */,
+				3BA9FE20A555426F23C46A157D32693E /* PhotosUI.framework */,
+				1669FC936745A3D176DACE69152E99EE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */,
+				F3921A610BC096A4A5A0C5D6B483EB1C /* Pods */,
+				AEBA6BBC350F2676DEA8677E9351EB4E /* Products */,
+				EAA73A582C76A62FCF65616CCCBEEFCF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9B45AC4E181E34218709E8CB3E7BE3D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				998292FC6443C59D51E0F667FB3E4737 /* FontAwesome.ttf */,
+				8159CFC5F3F9EE86D1DF763699F0B198 /* Ionicons.ttf */,
+				2FEBB20887554AF848B06098DDEC4631 /* LGButton.xib */,
+				406A06BE5AE2688B66CCABCFFB1D096B /* map-icons.ttf */,
+				F889067B7148D0A8CC51F254FB16F014 /* MaterialIcons-Regular.ttf */,
+				098BDB7D1DAE5CC7945FF07039F5D9D2 /* octicons.ttf */,
+				E604EFEBD00F5795C3C1DE666F27DBA5 /* open-iconic.ttf */,
+				9164B4D104D8BCCD51FC89886CA844AA /* themify.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AEBA6BBC350F2676DEA8677E9351EB4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91231F4459E3C96954B6E1988F8C7FDE /* Gallery.framework */,
+				C004B217F30A179AFBCF061A217CC629 /* Hokusai.framework */,
+				11B632CA4E195D2C771A28648471528E /* LGButton.framework */,
+				A57CFF6269CE60E7E41A491E08C552AA /* PMAlertController.bundle */,
+				F31DD501880DDB56321B732AE476547C /* PMAlertController.framework */,
+				F1EDC79296E4109962B9F4B3545FC046 /* Pods_lopetalk2.framework */,
+				901FC681D083C030B07239BFE99B366A /* Pods_lopetalk2Tests.framework */,
+				0D38E6A5BE29D69A67DCB1330640A77F /* Pods_lopetalk2UITests.framework */,
+				C9A57C12A7E3B538823C9E42E25DC6F9 /* SkyFloatingLabelTextField.framework */,
+				E0604A6AA36DEB7B0FDFDD0C9F57DAE2 /* SlidingTabBar.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8AF8E9341E1CF92EF74AC84E5E4B7EE /* LGButton */ = {
+			isa = PBXGroup;
+			children = (
+				5EB66FCDAFEA179BC79393C0099BD8FC /* FontAwesome.swift */,
+				CBA8D42539D76A7734A27ACA3CA00FB9 /* FontLoader.swift */,
+				B8857D6F7AFCF110F2DE540034C72C43 /* Iconic.swift */,
+				62743AB90D98878E4676656D4EB49857 /* IonIcons.swift */,
+				DC854CFD38D84691E3AB560E18E4B11E /* LGButton.swift */,
+				87B1084CFF46DD15F28A0CD66106CDAA /* MapIcon.swift */,
+				299650C92F3A0E829E8CE4777C641200 /* MaterialIcon.swift */,
+				0E770A3BCD9F25E6D427FE95E7DA1A5E /* Octicon.swift */,
+				9DAF81442F28758BCA239B8C61776A15 /* SwiftIconFont.swift */,
+				8062CC3626C58346D4095264BC2E849C /* SwiftIconLabel.swift */,
+				8CC916E5008667B562B4A54D6767ABF7 /* ThemifyIcon.swift */,
+				9B45AC4E181E34218709E8CB3E7BE3D1 /* Resources */,
+				4CF9AA7D261D4F67BEA4856EEC5A05F2 /* Support Files */,
+			);
+			name = LGButton;
+			path = LGButton;
+			sourceTree = "<group>";
+		};
+		C244043FD97AA72103CFD0227C3FFAB0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBBBA09242DEDFE702E29D72410DF3DC /* Info.plist */,
+				7A3DACAFC18355B23EAECDE436EEA716 /* SkyFloatingLabelTextField.modulemap */,
+				2636A85EFCA7E15FBFF98E60841B3FB5 /* SkyFloatingLabelTextField.xcconfig */,
+				CF2C9EABE33E9317668DFC3B417180D8 /* SkyFloatingLabelTextField-dummy.m */,
+				7882CB125E711C4E41FDCB48D8DE9663 /* SkyFloatingLabelTextField-prefix.pch */,
+				FF676AA9D0AD93D3817E78F277C259E5 /* SkyFloatingLabelTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SkyFloatingLabelTextField";
+			sourceTree = "<group>";
+		};
+		EAA73A582C76A62FCF65616CCCBEEFCF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				53A55462C752C8344E80C59DCF2D7FA3 /* Pods-lopetalk2 */,
+				0C9493D57AB15B731093E7207C531C40 /* Pods-lopetalk2Tests */,
+				52BFD98535EFB503FD5A25586532AAAD /* Pods-lopetalk2UITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F3921A610BC096A4A5A0C5D6B483EB1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B5A2CDC5D0A07C9DB1F933323073E97 /* Gallery */,
+				4E250AAC37092DB6F4F661DC4E4F6C86 /* Hokusai */,
+				B8AF8E9341E1CF92EF74AC84E5E4B7EE /* LGButton */,
+				18A70E5E1D9391A6667B6AB59BE150A6 /* PMAlertController */,
+				10DA6A33868134B574EAC9919A81C544 /* SkyFloatingLabelTextField */,
+				0FFE94C28FB7195BF0181E411B1968AF /* SlidingTabBar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76C8237AFE032C8D0F79B6FBB775B644 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE000865933A19CB36EA2C5A7E1E7C27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				011488DCB60CE8C381080C8D1945AD56 /* Gallery.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1129B178022B7B94DC9F0E82DB0E592D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA33F4AC63B2F4E21BD18D164639656 /* PMAlertController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247143850B409D083DAFDB21C52B443D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AE204EAEB3B526F04157A32888A1B4 /* LGButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2904971B722D70DF14921CD443070CB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99E2CCEA6135DFDD832BC013D6F8BEA4 /* Pods-lopetalk2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		326D7F0B6B9B21EF763A2FBDEF5B7860 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BCED4239155BD78DBB2D24BB850732C /* SlidingTabBar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E5437C87E0C9D32165A4084BAFE1F2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939F6A4E287A79CC60B9EF1CB8D15D99 /* Hokusai-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E18AF4513D53A323DAD9CB62734871D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AEFF45456179479A235221460E0C3B /* SkyFloatingLabelTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C400D6CCF8C3B1D895F3E5195B9A2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E077BF01D960B626E368172B8B6D489 /* Gallery-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37C260040DDA282EDEB4DA792819B05 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C05CDBD0565A7128F3CD388309C703 /* Pods-lopetalk2Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE037E3AEA03142643A56BD83FEF8A71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7A8094D89416D56AF4FF4B3D37FA61 /* Pods-lopetalk2UITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		028779274FA06F0868016E7F529F1206 /* SlidingTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 450B304B7B81368516659CB3F3B99811 /* Build configuration list for PBXNativeTarget "SlidingTabBar" */;
+			buildPhases = (
+				56CB99E6516EC19A1B69C0D653E8F7FF /* Sources */,
+				7D3E784313F9A474A8432E30B5A8BB8F /* Frameworks */,
+				326D7F0B6B9B21EF763A2FBDEF5B7860 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlidingTabBar;
+			productName = SlidingTabBar;
+			productReference = E0604A6AA36DEB7B0FDFDD0C9F57DAE2 /* SlidingTabBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1748428578D35F63EFF9E7DE1016C653 /* Pods-lopetalk2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C81E5149DA2EB2E6D234795A9F871D82 /* Build configuration list for PBXNativeTarget "Pods-lopetalk2" */;
+			buildPhases = (
+				A7CB4582EDA2EC90268DE8F752E1F330 /* Sources */,
+				C633A814710FE8151817F439032007BB /* Frameworks */,
+				2904971B722D70DF14921CD443070CB6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F519A344FA60090D8E2DCBCA617448B4 /* PBXTargetDependency */,
+				ADD4BDC3B75CE0F0ED2E53EF4CAF41A3 /* PBXTargetDependency */,
+				1D22A57BA5CD09020ECB01FE1DFED2BD /* PBXTargetDependency */,
+				4FAB6A60E67F4CF5414A0D0ECAAFD44D /* PBXTargetDependency */,
+				E6414D407477D0F524539A095C5DD72B /* PBXTargetDependency */,
+				6D9EF571D2915C27851D702223B79B07 /* PBXTargetDependency */,
+			);
+			name = "Pods-lopetalk2";
+			productName = "Pods-lopetalk2";
+			productReference = F1EDC79296E4109962B9F4B3545FC046 /* Pods_lopetalk2.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		62BBD36E8977C1B748A4631839EF01D7 /* Hokusai */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2503AE4FDF4B34E5E0782E230FD940B /* Build configuration list for PBXNativeTarget "Hokusai" */;
+			buildPhases = (
+				39F21D5553D92EF8C2FC2E0A7CA6201A /* Sources */,
+				35DBA4E118044558D9423099117CC5CE /* Frameworks */,
+				4E5437C87E0C9D32165A4084BAFE1F2A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hokusai;
+			productName = Hokusai;
+			productReference = C004B217F30A179AFBCF061A217CC629 /* Hokusai.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		65A8F8921CD27D4F0B20AADD66C94235 /* Pods-lopetalk2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AD8AD31F1B25B5705CBDE182EEC2162 /* Build configuration list for PBXNativeTarget "Pods-lopetalk2Tests" */;
+			buildPhases = (
+				584E43CF82410BBDE424FD67A52836C5 /* Sources */,
+				9E3374DAE3B9624C766260D41BA2397C /* Frameworks */,
+				C37C260040DDA282EDEB4DA792819B05 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-lopetalk2Tests";
+			productName = "Pods-lopetalk2Tests";
+			productReference = 901FC681D083C030B07239BFE99B366A /* Pods_lopetalk2Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6934B71C05A04FB841E877CD3D423928 /* Pods-lopetalk2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546FCAC67A923F05946AEE73E0A68D1E /* Build configuration list for PBXNativeTarget "Pods-lopetalk2UITests" */;
+			buildPhases = (
+				D5D8B05D959573BCDA2DD3202D598688 /* Sources */,
+				8A6640FF05D0EA7BBECE8550DA2536A0 /* Frameworks */,
+				FE037E3AEA03142643A56BD83FEF8A71 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-lopetalk2UITests";
+			productName = "Pods-lopetalk2UITests";
+			productReference = 0D38E6A5BE29D69A67DCB1330640A77F /* Pods_lopetalk2UITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		99183593E3C04F0C7720EF0DA4A0159B /* PMAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45F4DA72CC994E1F5D816BCC987D002E /* Build configuration list for PBXNativeTarget "PMAlertController" */;
+			buildPhases = (
+				F4F8F33D70FEF81C2EB14EF5D26C0857 /* Sources */,
+				817753536877A3D56FB5B6D2DE8C4794 /* Frameworks */,
+				A1ED80D9C6ECC273A81C889E1679BA97 /* Resources */,
+				1129B178022B7B94DC9F0E82DB0E592D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A480280D7E29C4E53B1D038EE5C8A6D /* PBXTargetDependency */,
+			);
+			name = PMAlertController;
+			productName = PMAlertController;
+			productReference = F31DD501880DDB56321B732AE476547C /* PMAlertController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BB4E12B19311EF52068B16873A21E70D /* Gallery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0569C16872FD74E4BB14FD259E1D3F /* Build configuration list for PBXNativeTarget "Gallery" */;
+			buildPhases = (
+				05AD8E109979C9B4854099E672A3D2F0 /* Sources */,
+				092AB8A72FF16117D0C7DCF0594718D0 /* Frameworks */,
+				3D1E851CD3539EA7DDCED1CC4DE8C212 /* Resources */,
+				A2C400D6CCF8C3B1D895F3E5195B9A2C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gallery;
+			productName = Gallery;
+			productReference = 91231F4459E3C96954B6E1988F8C7FDE /* Gallery.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D54FDD5C741942E89778C6F1AD56A429 /* PMAlertController-PMAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629A0B31F2491FAB7E6F2E4EFC16DDE5 /* Build configuration list for PBXNativeTarget "PMAlertController-PMAlertController" */;
+			buildPhases = (
+				BE4FC9CE18BCF688FF31E008D6408AA4 /* Sources */,
+				EE5550B3A069BB4C003B79256BE7E576 /* Frameworks */,
+				1CFBFF2ABDE191D87776F4DA9D0F479B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PMAlertController-PMAlertController";
+			productName = "PMAlertController-PMAlertController";
+			productReference = A57CFF6269CE60E7E41A491E08C552AA /* PMAlertController.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		DCB2B03C26F284864226302AFAEC546C /* LGButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8766A2CF71289D1BC5742D017FE27963 /* Build configuration list for PBXNativeTarget "LGButton" */;
+			buildPhases = (
+				8DB44C6DC0BA7890085BC078D495164E /* Sources */,
+				33D308CE8EF1EF37F920ECFAA9279D29 /* Frameworks */,
+				29427A1232A884F6E41E11932C2868E7 /* Resources */,
+				247143850B409D083DAFDB21C52B443D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LGButton;
+			productName = LGButton;
+			productReference = 11B632CA4E195D2C771A28648471528E /* LGButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F9DD15F742F261C9DBB4C4190F9B444C /* SkyFloatingLabelTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13CB315CA6D6BE22ECA2DD55860AAA17 /* Build configuration list for PBXNativeTarget "SkyFloatingLabelTextField" */;
+			buildPhases = (
+				701122F31324103914382B81BE4D4F4D /* Sources */,
+				C58F21BA44DE39838C2B6308BD55B731 /* Frameworks */,
+				6E18AF4513D53A323DAD9CB62734871D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyFloatingLabelTextField;
+			productName = SkyFloatingLabelTextField;
+			productReference = C9A57C12A7E3B538823C9E42E25DC6F9 /* SkyFloatingLabelTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AEBA6BBC350F2676DEA8677E9351EB4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB4E12B19311EF52068B16873A21E70D /* Gallery */,
+				62BBD36E8977C1B748A4631839EF01D7 /* Hokusai */,
+				DCB2B03C26F284864226302AFAEC546C /* LGButton */,
+				99183593E3C04F0C7720EF0DA4A0159B /* PMAlertController */,
+				D54FDD5C741942E89778C6F1AD56A429 /* PMAlertController-PMAlertController */,
+				1748428578D35F63EFF9E7DE1016C653 /* Pods-lopetalk2 */,
+				65A8F8921CD27D4F0B20AADD66C94235 /* Pods-lopetalk2Tests */,
+				6934B71C05A04FB841E877CD3D423928 /* Pods-lopetalk2UITests */,
+				F9DD15F742F261C9DBB4C4190F9B444C /* SkyFloatingLabelTextField */,
+				028779274FA06F0868016E7F529F1206 /* SlidingTabBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CFBFF2ABDE191D87776F4DA9D0F479B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4134ED569B2D48593AFD0CF9058BB4CB /* PMAlertController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29427A1232A884F6E41E11932C2868E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				961B556D81601BD99546C99765C47FD3 /* FontAwesome.ttf in Resources */,
+				1EA43895FFFA8B57AE7DA63863BC50B0 /* Ionicons.ttf in Resources */,
+				9017EB99C6AF6C8CECD651DF68A1576A /* LGButton.xib in Resources */,
+				02E376A3BB1FBA1BCD8E98C70C180AED /* map-icons.ttf in Resources */,
+				5159D59724BDD166CCB121F1689345C8 /* MaterialIcons-Regular.ttf in Resources */,
+				E81B107B06C1AC312AA7636B1E1301DE /* octicons.ttf in Resources */,
+				7C09D74788B3D10DCF42597D80E14252 /* open-iconic.ttf in Resources */,
+				AF198558F21676A1C2320D98AEA9FC52 /* themify.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D1E851CD3539EA7DDCED1CC4DE8C212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEB8FBF5F2B5C3D4BE655ABF941F0493 /* Gallery.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1ED80D9C6ECC273A81C889E1679BA97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DE53148B2EDB24F053D8D7EFA3FEEB /* PMAlertController.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05AD8E109979C9B4854099E672A3D2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9337197918DE96D021ED9447222C6C6A /* AdvancedVideoEditor.swift in Sources */,
+				4A4B94CA34D61DD04052014AF0DE2645 /* Album.swift in Sources */,
+				68035E2A793C23E569F0CAFC7964BD0C /* AlbumCell.swift in Sources */,
+				4125416DC02C26CD94C5DC73F7C6B412 /* Array+Extensions.swift in Sources */,
+				2EB734E54A20A2038F0674FB97F9A34F /* ArrowButton.swift in Sources */,
+				C4405424851B2FBB3DE3A348AFEFE476 /* AVAsset+Extensions.swift in Sources */,
+				7B401DF6BE13AE1567A2DAAC2A085576 /* Bundle.swift in Sources */,
+				C0AC9ACC0B04C60D06E18B8B46EE5188 /* CameraController.swift in Sources */,
+				66C82F0AFDF186F1CBA4DBF244B33341 /* CameraMan.swift in Sources */,
+				BFCFA2549033B72A664D20F5A7197659 /* CameraView.swift in Sources */,
+				46AA17BA27F20EFCE5D0065298B1F112 /* Cart.swift in Sources */,
+				9D2D97B9047755727B00213C57927C3C /* Config.swift in Sources */,
+				E8EAEF696649918698E7DFD81202C51D /* Constraints.swift in Sources */,
+				0675A4A6F0C78BC7A6418D2E71327D82 /* DropdownController.swift in Sources */,
+				FA760993F5AB2A69EE67A5A47B491427 /* EditInfo.swift in Sources */,
+				B68FD5C7DF6AF149B6046BA6F45F032F /* EmptyView.swift in Sources */,
+				12902DD691D529BACC1DB2D3A2639320 /* EventHub.swift in Sources */,
+				188E5B064EDB18BF22296EE2265DD0C9 /* Fetcher.swift in Sources */,
+				20695F8E611C9B2A079E04D3BFC73054 /* FrameView.swift in Sources */,
+				E49109BCF06D826CA9D167E19DB611D2 /* Gallery-dummy.m in Sources */,
+				1338F42DF5D1FA2F2DF1087E58F0B521 /* GalleryController.swift in Sources */,
+				6E3AC87210E501415E7334CD6993CD1A /* GridView.swift in Sources */,
+				276734362182ABFD9D81A28E3FDEAE9E /* Image.swift in Sources */,
+				BCB51D3E02EF9C538B1C3C083445769C /* ImageCell.swift in Sources */,
+				82ECA531D76055385141B2CDDD6AF35B /* ImagesController.swift in Sources */,
+				5D29E2D1A652C0C90BCBA06DDE3577B1 /* ImagesLibrary.swift in Sources */,
+				FC1F39ED9A5977B3AE31BA217905EA78 /* LocationManager.swift in Sources */,
+				8680EEC518E7C0D686FE46A1504EC4BF /* Once.swift in Sources */,
+				86A7478E85635C58DD5431AB2B92B4F7 /* PageIndicator.swift in Sources */,
+				02AAB639357D873163659D89E994EAF3 /* PagesController.swift in Sources */,
+				58E177E59CFAD187F7055461DBE995C9 /* Permission.swift in Sources */,
+				2CA9DEAA09631DCF18CBC030447A73C7 /* PermissionController.swift in Sources */,
+				2117768CA6FF6B675A00F6B46DD2C966 /* PermissionView.swift in Sources */,
+				0BDC764353B8D9BD538B044A64C84EF4 /* ShutterButton.swift in Sources */,
+				EAF3BB6E82CCA6E3144E3AEA3C214B2B /* StackView.swift in Sources */,
+				3518FC99010430CA97FE668804F79F77 /* String+Extensions.swift in Sources */,
+				A1F7FC0D639D589DF8977B6191AB2517 /* TripleButton.swift in Sources */,
+				21E12319F5064BB57F98CA33B0136E1C /* UIImageView+Extensions.swift in Sources */,
+				E575A589CA02BD49A3A3893C52F37DC6 /* UIScrollView+Extensions.swift in Sources */,
+				F130F6AB8CDE7765ADBDC1F815BD6CE0 /* UIView+Extensions.swift in Sources */,
+				AD4FE32C6C325EC8E2408417D6359DA6 /* UIViewController+Extensions.swift in Sources */,
+				A54CE83F186968B5B721CF7230DDB6E4 /* Utils.swift in Sources */,
+				B3D4C1B39EDECDA0BDF24339ED23E395 /* Video.swift in Sources */,
+				81ACDB43E64146E8184CA668D7C29627 /* VideoBox.swift in Sources */,
+				4748F9E5E5C271DAE541AB2FBDF688C5 /* VideoCell.swift in Sources */,
+				C102714D16D6BA4B970509C4A437B26D /* VideoEditing.swift in Sources */,
+				560A2A0209486380AE31E5209B986421 /* VideoEditor.swift in Sources */,
+				F0DD9D6384733B882FCA29220211FC2C /* VideosController.swift in Sources */,
+				872B7E53A3FCE3B34F4228BEE416FF32 /* VideosLibrary.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39F21D5553D92EF8C2FC2E0A7CA6201A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4321F7F1FAFF8D0554D4633F4FCAA17 /* Hokusai-dummy.m in Sources */,
+				EEBE27FBECEA3786E07CA52EEECC5432 /* Hokusai.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56CB99E6516EC19A1B69C0D653E8F7FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBB2DCC0DA15FA858A0F26D318876B0 /* SlidingTabAnimationController.swift in Sources */,
+				F49C868393998D089C761A511DB359C4 /* SlidingTabBar-dummy.m in Sources */,
+				03A2DE972C3D3AB13CE4A3C5AE9BBB0D /* SlidingTabBar.swift in Sources */,
+				53B35EF4F372C50982D3FB14FEC0E1D6 /* SlidingTabBarItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		584E43CF82410BBDE424FD67A52836C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29474B192F6BD9474D0DE706E2CF1371 /* Pods-lopetalk2Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		701122F31324103914382B81BE4D4F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AB0E4408293786219BAA75F615C117 /* SkyFloatingLabelTextField-dummy.m in Sources */,
+				A53C2B9C71B52DC7C3CE4B159ACA533A /* SkyFloatingLabelTextField.swift in Sources */,
+				A2BAF61B42A41186C5903A1570750456 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				D95C9B052E472E7633F65C6BBD472D82 /* UITextField+fixCaretPosition.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB44C6DC0BA7890085BC078D495164E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5C78553CE0FCA9FDEC2C470FE02920 /* FontAwesome.swift in Sources */,
+				875D44D0D3AF7A48260CB159D9443AE7 /* FontLoader.swift in Sources */,
+				E0AB01C792C2F3E9BDD22AB821EF0C02 /* Iconic.swift in Sources */,
+				AED178145B2A2D8B41A7502AE6FBFE90 /* IonIcons.swift in Sources */,
+				17A3D7C8EDBB67AD61EB1B7275521E69 /* LGButton-dummy.m in Sources */,
+				8DA4F296D3E1C47DEEA28D636C474A9D /* LGButton.swift in Sources */,
+				5B5538175381EAC7BB57396DDBDFAAB3 /* MapIcon.swift in Sources */,
+				C09F6C274764165CB74CB11B580881F5 /* MaterialIcon.swift in Sources */,
+				217AFBC3B0190F7F4FC0D580E54DF4BD /* Octicon.swift in Sources */,
+				5436738876707F72F261FF0F1A26F4C6 /* SwiftIconFont.swift in Sources */,
+				EC1B69F907EC01229EB7655701C22F38 /* SwiftIconLabel.swift in Sources */,
+				6FF78B02CEA53D89C4877F9C021C750F /* ThemifyIcon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7CB4582EDA2EC90268DE8F752E1F330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4219E593B6311A41637A279ED8F4C72F /* Pods-lopetalk2-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE4FC9CE18BCF688FF31E008D6408AA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D8B05D959573BCDA2DD3202D598688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AF80190C21EC7B58E3E06C86B95F73A /* Pods-lopetalk2UITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F8F33D70FEF81C2EB14EF5D26C0857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5EEE2D7453F5439795446E9713C56A /* PMAlertAction.swift in Sources */,
+				0408B84CA618413ECD07BDD07CF80723 /* PMAlertController-dummy.m in Sources */,
+				31BC657F8A8532AC58B3133F82268A6F /* PMAlertController.swift in Sources */,
+				D3C07574AA883A36ADE39F0840840E79 /* PMAlertController.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D22A57BA5CD09020ECB01FE1DFED2BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LGButton;
+			target = DCB2B03C26F284864226302AFAEC546C /* LGButton */;
+			targetProxy = A2DB5B16D11834CCC207C57759D61F1D /* PBXContainerItemProxy */;
+		};
+		4FAB6A60E67F4CF5414A0D0ECAAFD44D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PMAlertController;
+			target = 99183593E3C04F0C7720EF0DA4A0159B /* PMAlertController */;
+			targetProxy = D5936324E59647E563CC82EAAE95E019 /* PBXContainerItemProxy */;
+		};
+		6D9EF571D2915C27851D702223B79B07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlidingTabBar;
+			target = 028779274FA06F0868016E7F529F1206 /* SlidingTabBar */;
+			targetProxy = AABDADD53CF34A7DA93C7B401E14E071 /* PBXContainerItemProxy */;
+		};
+		8A480280D7E29C4E53B1D038EE5C8A6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PMAlertController-PMAlertController";
+			target = D54FDD5C741942E89778C6F1AD56A429 /* PMAlertController-PMAlertController */;
+			targetProxy = 39290506174A98000A2E0A6A285AD819 /* PBXContainerItemProxy */;
+		};
+		ADD4BDC3B75CE0F0ED2E53EF4CAF41A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Hokusai;
+			target = 62BBD36E8977C1B748A4631839EF01D7 /* Hokusai */;
+			targetProxy = CC79937A6125A76A6EFB59D7147D8AAF /* PBXContainerItemProxy */;
+		};
+		E6414D407477D0F524539A095C5DD72B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SkyFloatingLabelTextField;
+			target = F9DD15F742F261C9DBB4C4190F9B444C /* SkyFloatingLabelTextField */;
+			targetProxy = 424ADB6FD0AB1B76F020060066E7092C /* PBXContainerItemProxy */;
+		};
+		F519A344FA60090D8E2DCBCA617448B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Gallery;
+			target = BB4E12B19311EF52068B16873A21E70D /* Gallery */;
+			targetProxy = D6742A7E1C229947B998505E5816DC96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DC940D252B0C0AFC5585FD5DC71E1AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2636A85EFCA7E15FBFF98E60841B3FB5 /* SkyFloatingLabelTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SkyFloatingLabelTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField.modulemap";
+				PRODUCT_NAME = SkyFloatingLabelTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		203634EE471E0B0F5BE440F4285D2838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7633BEC23AD63A0A2621D0B25F913E44 /* Pods-lopetalk2Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lopetalk2Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lopetalk2Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		325D101E8B36E9913D52E7A8E1167B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 892667EDAB9A71F8A8CEA462FCABDB80 /* Pods-lopetalk2UITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lopetalk2UITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lopetalk2UITests/Pods-lopetalk2UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lopetalk2UITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		340D390F1DB40656C442A1DF99C8A7B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E8CF9DFA960823C5C8C0005FBB633C9 /* Pods-lopetalk2.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lopetalk2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lopetalk2/Pods-lopetalk2.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lopetalk2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		42A9B511DD598F322B6DDDDBEBE49526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E6810B77CBED2012CB3CFF2688AB84 /* PMAlertController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PMAlertController/PMAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PMAlertController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PMAlertController/PMAlertController.modulemap";
+				PRODUCT_NAME = PMAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		50DC346C1A9B067664123E1584A4238E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E6810B77CBED2012CB3CFF2688AB84 /* PMAlertController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PMAlertController";
+				INFOPLIST_FILE = "Target Support Files/PMAlertController/ResourceBundle-PMAlertController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = PMAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		58CF76A2D9E77555A38535090DA11CC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4134DC7A5299976AF3B18181534B5A47 /* Gallery.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Gallery/Gallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Gallery/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Gallery/Gallery.modulemap";
+				PRODUCT_NAME = Gallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B20AC0826649EACC07580DA278505D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D47C4407077FF514FE290AE1BFC4C985 /* Pods-lopetalk2UITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lopetalk2UITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lopetalk2UITests/Pods-lopetalk2UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lopetalk2UITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6F9224530522DD3C735EC96CF142642E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		743984A39A819DDD39BD23019940666F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459419B267B900A9362EE401964DB792 /* SlidingTabBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SlidingTabBar/SlidingTabBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlidingTabBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SlidingTabBar/SlidingTabBar.modulemap";
+				PRODUCT_NAME = SlidingTabBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		78EB0FA70C92228A11240B89683C0C81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E6810B77CBED2012CB3CFF2688AB84 /* PMAlertController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PMAlertController";
+				INFOPLIST_FILE = "Target Support Files/PMAlertController/ResourceBundle-PMAlertController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = PMAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		900E6D06E3F7C228D09FC0DA7D1DDB60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459419B267B900A9362EE401964DB792 /* SlidingTabBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SlidingTabBar/SlidingTabBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlidingTabBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SlidingTabBar/SlidingTabBar.modulemap";
+				PRODUCT_NAME = SlidingTabBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BEAF732E266FF365C9B2BDC99932A99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CFC887D9C635CA0B1A082E6A13DDB72 /* Pods-lopetalk2.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lopetalk2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lopetalk2/Pods-lopetalk2.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lopetalk2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AF93FC6DFA49F169CC543940B6A219DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2636A85EFCA7E15FBFF98E60841B3FB5 /* SkyFloatingLabelTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SkyFloatingLabelTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField.modulemap";
+				PRODUCT_NAME = SkyFloatingLabelTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B57951D085A1B98A97F8A1062A5E5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B5ABA37C049A6F785D6C4BB76EFF5123 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4134DC7A5299976AF3B18181534B5A47 /* Gallery.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Gallery/Gallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Gallery/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Gallery/Gallery.modulemap";
+				PRODUCT_NAME = Gallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC20DDD92E2881F76758C25CE5AA5AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C48ADA83A136351E35ED2D7870708C /* LGButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LGButton/LGButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LGButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LGButton/LGButton.modulemap";
+				PRODUCT_NAME = LGButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C0706C61B219ECC9888FA5F0DCFD31CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 852A07812E5CC5F5E0395CFBBD0365F8 /* Hokusai.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Hokusai/Hokusai-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hokusai/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Hokusai/Hokusai.modulemap";
+				PRODUCT_NAME = Hokusai;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DB1D64111FABE645862BC0AF6CA6BC60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A57268F744BBC6D19132BD93C0E7FA9B /* Pods-lopetalk2Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lopetalk2Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lopetalk2Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECF4FD9F86617F5F1F2D3E35610D06CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E6810B77CBED2012CB3CFF2688AB84 /* PMAlertController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PMAlertController/PMAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PMAlertController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PMAlertController/PMAlertController.modulemap";
+				PRODUCT_NAME = PMAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F2B10613607628060FF57555D06373DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 852A07812E5CC5F5E0395CFBBD0365F8 /* Hokusai.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Hokusai/Hokusai-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Hokusai/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Hokusai/Hokusai.modulemap";
+				PRODUCT_NAME = Hokusai;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F7B43CB0677C15F0DFBBBE96A358EDB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C48ADA83A136351E35ED2D7870708C /* LGButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LGButton/LGButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LGButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LGButton/LGButton.modulemap";
+				PRODUCT_NAME = LGButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13CB315CA6D6BE22ECA2DD55860AAA17 /* Build configuration list for PBXNativeTarget "SkyFloatingLabelTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF93FC6DFA49F169CC543940B6A219DC /* Debug */,
+				1DC940D252B0C0AFC5585FD5DC71E1AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AD8AD31F1B25B5705CBDE182EEC2162 /* Build configuration list for PBXNativeTarget "Pods-lopetalk2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB1D64111FABE645862BC0AF6CA6BC60 /* Debug */,
+				203634EE471E0B0F5BE440F4285D2838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57951D085A1B98A97F8A1062A5E5C5B /* Debug */,
+				6F9224530522DD3C735EC96CF142642E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		450B304B7B81368516659CB3F3B99811 /* Build configuration list for PBXNativeTarget "SlidingTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				900E6D06E3F7C228D09FC0DA7D1DDB60 /* Debug */,
+				743984A39A819DDD39BD23019940666F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45F4DA72CC994E1F5D816BCC987D002E /* Build configuration list for PBXNativeTarget "PMAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF4FD9F86617F5F1F2D3E35610D06CB /* Debug */,
+				42A9B511DD598F322B6DDDDBEBE49526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546FCAC67A923F05946AEE73E0A68D1E /* Build configuration list for PBXNativeTarget "Pods-lopetalk2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B20AC0826649EACC07580DA278505D9 /* Debug */,
+				325D101E8B36E9913D52E7A8E1167B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		629A0B31F2491FAB7E6F2E4EFC16DDE5 /* Build configuration list for PBXNativeTarget "PMAlertController-PMAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78EB0FA70C92228A11240B89683C0C81 /* Debug */,
+				50DC346C1A9B067664123E1584A4238E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8766A2CF71289D1BC5742D017FE27963 /* Build configuration list for PBXNativeTarget "LGButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC20DDD92E2881F76758C25CE5AA5AFB /* Debug */,
+				F7B43CB0677C15F0DFBBBE96A358EDB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD0569C16872FD74E4BB14FD259E1D3F /* Build configuration list for PBXNativeTarget "Gallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5ABA37C049A6F785D6C4BB76EFF5123 /* Debug */,
+				58CF76A2D9E77555A38535090DA11CC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C81E5149DA2EB2E6D234795A9F871D82 /* Build configuration list for PBXNativeTarget "Pods-lopetalk2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BEAF732E266FF365C9B2BDC99932A99 /* Debug */,
+				340D390F1DB40656C442A1DF99C8A7B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2503AE4FDF4B34E5E0782E230FD940B /* Build configuration list for PBXNativeTarget "Hokusai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B10613607628060FF57555D06373DE /* Debug */,
+				C0706C61B219ECC9888FA5F0DCFD31CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -7,13 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48B0D8F9BBF0061CB532E6D8 /* Pods_lopetalk2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7082443CFEB55835C96B4507 /* Pods_lopetalk2Tests.framework */; };
+		5C33C1F316C8457F280EB59B /* Pods_lopetalk2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5033E7EDB8006F9A4647D592 /* Pods_lopetalk2UITests.framework */; };
+		DC6908F73CC0E109B26C3879 /* Pods_lopetalk2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8D04716CB3476E881AA32 /* Pods_lopetalk2.framework */; };
+		EF0014581FE79B9200D5E992 /* SkyFloatingLabelTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0014591FE79B9200D5E992 /* SkyFloatingLabelTextField.framework */; };
+		EF00145B1FE79BA800D5E992 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF00145A1FE79BA800D5E992 /* ProfileViewController.swift */; };
+		EF212D161FE8FFBE00EAF5D7 /* LGButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF212D171FE8FFBE00EAF5D7 /* LGButton.framework */; };
+		EF5672031FE64E11001A2C73 /* SlidingTabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5672041FE64E11001A2C73 /* SlidingTabBar.framework */; };
+		EF5672061FE65352001A2C73 /* TabViewControllerBackUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5672051FE65352001A2C73 /* TabViewControllerBackUp.swift */; };
+		EF766CD41FE7E0D70019B167 /* KACircleCropCutterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF766CD11FE7E0D70019B167 /* KACircleCropCutterView.swift */; };
+		EF766CD51FE7E0D70019B167 /* KACircleCropScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF766CD21FE7E0D70019B167 /* KACircleCropScrollView.swift */; };
+		EF766CD61FE7E0D70019B167 /* KACircleCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF766CD31FE7E0D70019B167 /* KACircleCropViewController.swift */; };
+		EF7C491B1FE8C30E00B83D2E /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C491A1FE8C30E00B83D2E /* SendMessageViewController.swift */; };
+		EF7CE5621FE82282006123E4 /* PMAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7CE5631FE82282006123E4 /* PMAlertController.framework */; };
+		EF83636E1FE6C41F00274257 /* Hokusai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF83636F1FE6C41F00274257 /* Hokusai.framework */; };
+		EF8363731FE6CB6700274257 /* ActionSheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8363721FE6CB6700274257 /* ActionSheetModel.swift */; };
+		EF8363751FE6D48B00274257 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8363741FE6D48B00274257 /* NavigationViewController.swift */; };
+		EF9BFDB51FE805F90026FC2A /* BlockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BFDB41FE805F90026FC2A /* BlockListViewController.swift */; };
+		EF9BFDB71FE806F80026FC2A /* BlockListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BFDB61FE806F80026FC2A /* BlockListTableViewCell.swift */; };
 		EFC34A511FE53D880079111B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A501FE53D880079111B /* AppDelegate.swift */; };
-		EFC34A531FE53D880079111B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A521FE53D880079111B /* ViewController.swift */; };
+		EFC34A531FE53D880079111B /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A521FE53D880079111B /* FriendListViewController.swift */; };
 		EFC34A561FE53D880079111B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC34A541FE53D880079111B /* Main.storyboard */; };
 		EFC34A581FE53D880079111B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC34A571FE53D880079111B /* Assets.xcassets */; };
 		EFC34A5B1FE53D880079111B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC34A591FE53D880079111B /* LaunchScreen.storyboard */; };
 		EFC34A661FE53D890079111B /* lopetalk2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A651FE53D890079111B /* lopetalk2Tests.swift */; };
 		EFC34A711FE53D890079111B /* lopetalk2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A701FE53D890079111B /* lopetalk2UITests.swift */; };
+		EFC34A821FE540CE0079111B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A811FE540CE0079111B /* ChatViewController.swift */; };
+		EFC34A841FE540D70079111B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A831FE540D70079111B /* SettingViewController.swift */; };
+		EFC34A871FE5429E0079111B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A861FE5429E0079111B /* Extension.swift */; };
+		EFCC170B1FE7ACFC00560BD6 /* Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCC170C1FE7ACFC00560BD6 /* Gallery.framework */; };
+		EFEF48191FE67F13002E5A33 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF48181FE67F13002E5A33 /* FriendListTableViewCell.swift */; };
+		EFEF481B1FE685E8002E5A33 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF481A1FE685E8002E5A33 /* HeaderView.swift */; };
+		EFEF481D1FE6889D002E5A33 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF481C1FE6889D002E5A33 /* ChatTableViewCell.swift */; };
+		EFEF48221FE6A826002E5A33 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF48211FE6A826002E5A33 /* SettingViewModel.swift */; };
+		EFEF48261FE6BEAE002E5A33 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF48251FE6BEAE002E5A33 /* TabViewController.swift */; };
+		EFEF48281FE6C25B002E5A33 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF48271FE6C25B002E5A33 /* SettingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +62,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07190A396C8A30B032FD3DD6 /* Pods-lopetalk2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2UITests/Pods-lopetalk2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		43E75F1873AFFFC4CC1850B6 /* Pods-lopetalk2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2UITests/Pods-lopetalk2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		5033E7EDB8006F9A4647D592 /* Pods_lopetalk2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lopetalk2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D23D62D30C5614FFA0BD63A /* Pods-lopetalk2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2.debug.xcconfig"; sourceTree = "<group>"; };
+		7082443CFEB55835C96B4507 /* Pods_lopetalk2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lopetalk2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A8D04716CB3476E881AA32 /* Pods_lopetalk2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lopetalk2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6481C6055436E0DAFD5E986 /* Pods-lopetalk2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2.release.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2.release.xcconfig"; sourceTree = "<group>"; };
+		EE8347DC254867492132CBCF /* Pods-lopetalk2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF0014591FE79B9200D5E992 /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF00145A1FE79BA800D5E992 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EF212D171FE8FFBE00EAF5D7 /* LGButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LGButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5672041FE64E11001A2C73 /* SlidingTabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlidingTabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5672051FE65352001A2C73 /* TabViewControllerBackUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewControllerBackUp.swift; sourceTree = "<group>"; };
+		EF766CD11FE7E0D70019B167 /* KACircleCropCutterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropCutterView.swift; sourceTree = "<group>"; };
+		EF766CD21FE7E0D70019B167 /* KACircleCropScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropScrollView.swift; sourceTree = "<group>"; };
+		EF766CD31FE7E0D70019B167 /* KACircleCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropViewController.swift; sourceTree = "<group>"; };
+		EF7C491A1FE8C30E00B83D2E /* SendMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
+		EF7CE5631FE82282006123E4 /* PMAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PMAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF83636F1FE6C41F00274257 /* Hokusai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Hokusai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8363721FE6CB6700274257 /* ActionSheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetModel.swift; sourceTree = "<group>"; };
+		EF8363741FE6D48B00274257 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		EF9BFDB41FE805F90026FC2A /* BlockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListViewController.swift; sourceTree = "<group>"; };
+		EF9BFDB61FE806F80026FC2A /* BlockListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListTableViewCell.swift; sourceTree = "<group>"; };
+		EFB95F3C1FE8FD0B00C39E57 /* LGButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LGButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC34A4D1FE53D880079111B /* lopetalk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lopetalk2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC34A501FE53D880079111B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFC34A521FE53D880079111B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFC34A521FE53D880079111B /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		EFC34A551FE53D880079111B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFC34A571FE53D880079111B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFC34A5A1FE53D880079111B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +99,32 @@
 		EFC34A6C1FE53D890079111B /* lopetalk2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lopetalk2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC34A701FE53D890079111B /* lopetalk2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lopetalk2UITests.swift; sourceTree = "<group>"; };
 		EFC34A721FE53D890079111B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC34A811FE540CE0079111B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		EFC34A831FE540D70079111B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		EFC34A861FE5429E0079111B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EFCC170C1FE7ACFC00560BD6 /* Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEF47F91FE67845002E5A33 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		EFEF47FA1FE67846002E5A33 /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		EFEF47FB1FE67846002E5A33 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		EFEF48011FE67847002E5A33 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		EFEF48021FE67847002E5A33 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		EFEF48041FE67847002E5A33 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		EFEF48061FE67848002E5A33 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		EFEF48071FE67848002E5A33 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		EFEF48091FE67848002E5A33 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
+		EFEF480A1FE67848002E5A33 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
+		EFEF480E1FE67849002E5A33 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		EFEF480F1FE67849002E5A33 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		EFEF48121FE67849002E5A33 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		EFEF48131FE67849002E5A33 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		EFEF48141FE67849002E5A33 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		EFEF48181FE67F13002E5A33 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
+		EFEF481A1FE685E8002E5A33 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EFEF481C1FE6889D002E5A33 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		EFEF48211FE6A826002E5A33 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		EFEF48251FE6BEAE002E5A33 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		EFEF48271FE6C25B002E5A33 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		F2B051E39C3655744CAC2936 /* Pods-lopetalk2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +132,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF212D161FE8FFBE00EAF5D7 /* LGButton.framework in Frameworks */,
+				EF7CE5621FE82282006123E4 /* PMAlertController.framework in Frameworks */,
+				EFCC170B1FE7ACFC00560BD6 /* Gallery.framework in Frameworks */,
+				EF0014581FE79B9200D5E992 /* SkyFloatingLabelTextField.framework in Frameworks */,
+				EF83636E1FE6C41F00274257 /* Hokusai.framework in Frameworks */,
+				EF5672031FE64E11001A2C73 /* SlidingTabBar.framework in Frameworks */,
+				DC6908F73CC0E109B26C3879 /* Pods_lopetalk2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B0D8F9BBF0061CB532E6D8 /* Pods_lopetalk2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,19 +154,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C33C1F316C8457F280EB59B /* Pods_lopetalk2UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		297F032497CD7A0AA818700A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D23D62D30C5614FFA0BD63A /* Pods-lopetalk2.debug.xcconfig */,
+				B6481C6055436E0DAFD5E986 /* Pods-lopetalk2.release.xcconfig */,
+				EE8347DC254867492132CBCF /* Pods-lopetalk2Tests.debug.xcconfig */,
+				F2B051E39C3655744CAC2936 /* Pods-lopetalk2Tests.release.xcconfig */,
+				07190A396C8A30B032FD3DD6 /* Pods-lopetalk2UITests.debug.xcconfig */,
+				43E75F1873AFFFC4CC1850B6 /* Pods-lopetalk2UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8EE2BC49BA0D26D0FD47C4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF212D171FE8FFBE00EAF5D7 /* LGButton.framework */,
+				EFB95F3C1FE8FD0B00C39E57 /* LGButton.framework */,
+				EF7CE5631FE82282006123E4 /* PMAlertController.framework */,
+				EFCC170C1FE7ACFC00560BD6 /* Gallery.framework */,
+				EF0014591FE79B9200D5E992 /* SkyFloatingLabelTextField.framework */,
+				EF83636F1FE6C41F00274257 /* Hokusai.framework */,
+				EF5672041FE64E11001A2C73 /* SlidingTabBar.framework */,
+				83A8D04716CB3476E881AA32 /* Pods_lopetalk2.framework */,
+				7082443CFEB55835C96B4507 /* Pods_lopetalk2Tests.framework */,
+				5033E7EDB8006F9A4647D592 /* Pods_lopetalk2UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EFC34A441FE53D880079111B = {
 			isa = PBXGroup;
 			children = (
+				EFEF47F81FE67837002E5A33 /* Font */,
 				EFC34A4F1FE53D880079111B /* lopetalk2 */,
 				EFC34A641FE53D890079111B /* lopetalk2Tests */,
 				EFC34A6F1FE53D890079111B /* lopetalk2UITests */,
 				EFC34A4E1FE53D880079111B /* Products */,
+				297F032497CD7A0AA818700A /* Pods */,
+				B8EE2BC49BA0D26D0FD47C4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +217,10 @@
 		EFC34A4F1FE53D880079111B /* lopetalk2 */ = {
 			isa = PBXGroup;
 			children = (
-				EFC34A501FE53D880079111B /* AppDelegate.swift */,
-				EFC34A521FE53D880079111B /* ViewController.swift */,
+				EFEF48201FE6A80A002E5A33 /* ViewModel */,
+				EFEF48171FE67EFF002E5A33 /* View */,
+				EFC34A851FE542850079111B /* Model */,
+				EFC34A801FE540650079111B /* Controller */,
 				EFC34A541FE53D880079111B /* Main.storyboard */,
 				EFC34A571FE53D880079111B /* Assets.xcassets */,
 				EFC34A591FE53D880079111B /* LaunchScreen.storyboard */,
@@ -125,6 +247,77 @@
 			path = lopetalk2UITests;
 			sourceTree = "<group>";
 		};
+		EFC34A801FE540650079111B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFC34A811FE540CE0079111B /* ChatViewController.swift */,
+				EF5672051FE65352001A2C73 /* TabViewControllerBackUp.swift */,
+				EFC34A521FE53D880079111B /* FriendListViewController.swift */,
+				EFC34A831FE540D70079111B /* SettingViewController.swift */,
+				EFEF48251FE6BEAE002E5A33 /* TabViewController.swift */,
+				EF8363741FE6D48B00274257 /* NavigationViewController.swift */,
+				EF00145A1FE79BA800D5E992 /* ProfileViewController.swift */,
+				EF9BFDB41FE805F90026FC2A /* BlockListViewController.swift */,
+				EF7C491A1FE8C30E00B83D2E /* SendMessageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EFC34A851FE542850079111B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF766CD11FE7E0D70019B167 /* KACircleCropCutterView.swift */,
+				EF766CD21FE7E0D70019B167 /* KACircleCropScrollView.swift */,
+				EF766CD31FE7E0D70019B167 /* KACircleCropViewController.swift */,
+				EFC34A501FE53D880079111B /* AppDelegate.swift */,
+				EFC34A861FE5429E0079111B /* Extension.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFEF47F81FE67837002E5A33 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF48091FE67848002E5A33 /* SF-Pro-Display-Black.otf */,
+				EFEF48021FE67847002E5A33 /* SF-Pro-Display-Bold.otf */,
+				EFEF47F91FE67845002E5A33 /* SF-Pro-Display-Heavy.otf */,
+				EFEF48061FE67848002E5A33 /* SF-Pro-Display-Light.otf */,
+				EFEF47FB1FE67846002E5A33 /* SF-Pro-Display-Medium.otf */,
+				EFEF48011FE67847002E5A33 /* SF-Pro-Display-Regular.otf */,
+				EFEF48071FE67848002E5A33 /* SF-Pro-Display-Semibold.otf */,
+				EFEF480A1FE67848002E5A33 /* SF-Pro-Display-Thin.otf */,
+				EFEF47FA1FE67846002E5A33 /* SF-Pro-Display-Ultralight.otf */,
+				EFEF48121FE67849002E5A33 /* SF-Pro-Text-Bold.otf */,
+				EFEF480E1FE67849002E5A33 /* SF-Pro-Text-Heavy.otf */,
+				EFEF48041FE67847002E5A33 /* SF-Pro-Text-Light.otf */,
+				EFEF480F1FE67849002E5A33 /* SF-Pro-Text-Medium.otf */,
+				EFEF48131FE67849002E5A33 /* SF-Pro-Text-Regular.otf */,
+				EFEF48141FE67849002E5A33 /* SF-Pro-Text-Semibold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		EFEF48171FE67EFF002E5A33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF48181FE67F13002E5A33 /* FriendListTableViewCell.swift */,
+				EFEF481A1FE685E8002E5A33 /* HeaderView.swift */,
+				EFEF481C1FE6889D002E5A33 /* ChatTableViewCell.swift */,
+				EFEF48271FE6C25B002E5A33 /* SettingTableViewCell.swift */,
+				EF9BFDB61FE806F80026FC2A /* BlockListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFEF48201FE6A80A002E5A33 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF48211FE6A826002E5A33 /* SettingViewModel.swift */,
+				EF8363721FE6CB6700274257 /* ActionSheetModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +325,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFC34A751FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2" */;
 			buildPhases = (
+				F83C5990273F6C70F5EA9DFE /* [CP] Check Pods Manifest.lock */,
 				EFC34A491FE53D880079111B /* Sources */,
 				EFC34A4A1FE53D880079111B /* Frameworks */,
 				EFC34A4B1FE53D880079111B /* Resources */,
+				7071907A96C6C816FA16499D /* [CP] Embed Pods Frameworks */,
+				FBDCE1A03F41194C94D83062 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +345,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFC34A781FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2Tests" */;
 			buildPhases = (
+				F2CCDC6E2B7F00ECC19644A6 /* [CP] Check Pods Manifest.lock */,
 				EFC34A5D1FE53D890079111B /* Sources */,
 				EFC34A5E1FE53D890079111B /* Frameworks */,
 				EFC34A5F1FE53D890079111B /* Resources */,
+				4F67BA0B7627448143DBBE71 /* [CP] Embed Pods Frameworks */,
+				620496D37EE85B3C1BC3ACF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +366,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFC34A7B1FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2UITests" */;
 			buildPhases = (
+				1C5DD80C6E171DA3430DCF2A /* [CP] Check Pods Manifest.lock */,
 				EFC34A681FE53D890079111B /* Sources */,
 				EFC34A691FE53D890079111B /* Frameworks */,
 				EFC34A6A1FE53D890079111B /* Resources */,
+				1CA30A2F897924C349BD2D3A /* [CP] Embed Pods Frameworks */,
+				D6C39FD4781F60DDBE499759 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +456,192 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C5DD80C6E171DA3430DCF2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lopetalk2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CA30A2F897924C349BD2D3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2UITests/Pods-lopetalk2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F67BA0B7627448143DBBE71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		620496D37EE85B3C1BC3ACF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7071907A96C6C816FA16499D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Gallery/Gallery.framework",
+				"${BUILT_PRODUCTS_DIR}/Hokusai/Hokusai.framework",
+				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
+				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SlidingTabBar/SlidingTabBar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gallery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hokusai.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlidingTabBar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6C39FD4781F60DDBE499759 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2UITests/Pods-lopetalk2UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2CCDC6E2B7F00ECC19644A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lopetalk2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F83C5990273F6C70F5EA9DFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lopetalk2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBDCE1A03F41194C94D83062 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EFC34A491FE53D880079111B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC34A531FE53D880079111B /* ViewController.swift in Sources */,
+				EFEF48261FE6BEAE002E5A33 /* TabViewController.swift in Sources */,
+				EF9BFDB71FE806F80026FC2A /* BlockListTableViewCell.swift in Sources */,
+				EF5672061FE65352001A2C73 /* TabViewControllerBackUp.swift in Sources */,
+				EFC34A841FE540D70079111B /* SettingViewController.swift in Sources */,
+				EF9BFDB51FE805F90026FC2A /* BlockListViewController.swift in Sources */,
+				EFEF48191FE67F13002E5A33 /* FriendListTableViewCell.swift in Sources */,
+				EFEF481D1FE6889D002E5A33 /* ChatTableViewCell.swift in Sources */,
+				EFC34A531FE53D880079111B /* FriendListViewController.swift in Sources */,
+				EFC34A871FE5429E0079111B /* Extension.swift in Sources */,
+				EFC34A821FE540CE0079111B /* ChatViewController.swift in Sources */,
+				EFEF48281FE6C25B002E5A33 /* SettingTableViewCell.swift in Sources */,
+				EF766CD51FE7E0D70019B167 /* KACircleCropScrollView.swift in Sources */,
+				EFEF48221FE6A826002E5A33 /* SettingViewModel.swift in Sources */,
+				EF7C491B1FE8C30E00B83D2E /* SendMessageViewController.swift in Sources */,
+				EF8363731FE6CB6700274257 /* ActionSheetModel.swift in Sources */,
+				EF766CD41FE7E0D70019B167 /* KACircleCropCutterView.swift in Sources */,
 				EFC34A511FE53D880079111B /* AppDelegate.swift in Sources */,
+				EF766CD61FE7E0D70019B167 /* KACircleCropViewController.swift in Sources */,
+				EF00145B1FE79BA800D5E992 /* ProfileViewController.swift in Sources */,
+				EF8363751FE6D48B00274257 /* NavigationViewController.swift in Sources */,
+				EFEF481B1FE685E8002E5A33 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,11 +805,13 @@
 		};
 		EFC34A761FE53D890079111B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D23D62D30C5614FFA0BD63A /* Pods-lopetalk2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 877839YT4B;
 				INFOPLIST_FILE = lopetalk2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,11 +822,13 @@
 		};
 		EFC34A771FE53D890079111B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6481C6055436E0DAFD5E986 /* Pods-lopetalk2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 877839YT4B;
 				INFOPLIST_FILE = lopetalk2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +839,7 @@
 		};
 		EFC34A791FE53D890079111B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE8347DC254867492132CBCF /* Pods-lopetalk2Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +857,7 @@
 		};
 		EFC34A7A1FE53D890079111B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2B051E39C3655744CAC2936 /* Pods-lopetalk2Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +875,7 @@
 		};
 		EFC34A7C1FE53D890079111B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07190A396C8A30B032FD3DD6 /* Pods-lopetalk2UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +892,7 @@
 		};
 		EFC34A7D1FE53D890079111B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E75F1873AFFFC4CC1850B6 /* Pods-lopetalk2UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
