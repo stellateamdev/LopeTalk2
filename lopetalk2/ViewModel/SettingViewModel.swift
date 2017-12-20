@@ -11,7 +11,6 @@ import UIKit
 import MessageUI
 class SettingViewModel{
     var settings = [["Profile","Account"],["Invite","Block List"],["Privacy Policy","Terms","Open Source Libraries","Contact Us"],["Log Out"]]
-    var icons = [[UIImage(named:"profile"),UIImage(named:"")],[UIImage(named:""),UIImage(named:"")],[UIImage(named:""),UIImage(named:"")]]
     
    
 }

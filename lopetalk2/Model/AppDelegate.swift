@@ -12,9 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+   var login = false // just for testing , replace this with firebase login check
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if !login {
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "login")
+            self.window?.rootViewController = initialViewController
+        }
+        else{
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "tabView")
+            self.window?.rootViewController = initialViewController
+        }
+         self.window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }

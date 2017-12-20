@@ -372,7 +372,6 @@ public class LGButton: UIControl {
         setupShadow()
         setupLoadingView()
     }
-    
     fileprivate func setIconOrientation() {
         if verticalOrientation {
             mainStackView.axis = .vertical
@@ -431,7 +430,7 @@ public class LGButton: UIControl {
         if titleFontName != nil {
             titleLbl.font = UIFont.init(name:titleFontName! , size:titleFontSize)
         }else{
-            titleLbl.font = UIFont.systemFont(ofSize: titleFontSize)
+            titleLbl.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
         }
     }
     
@@ -577,7 +576,7 @@ public class LGButton: UIControl {
         leadingLoadingConstraint.isActive = false
         trailingLoadingConstraint.isActive = false
     }
-    
+ 
     fileprivate func loadViewFromNib() -> UIView {
         
         let bundle = Bundle(for: type(of: self))

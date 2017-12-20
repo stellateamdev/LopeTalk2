@@ -101,7 +101,8 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func confirmLogOut() {
         let alert = UIAlertController(title: "Are you sure you want to logout?", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Logout", style: .destructive, handler: {_ in
-            
+            let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
+            self.present(view, animated: true, completion: nil)
         })
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
             alert.dismiss(animated: true, completion: nil)
@@ -112,6 +113,7 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
 
 }
+
 extension SettingViewController:MFMailComposeViewControllerDelegate{
     func sendEmail(_ cell:SettingTableViewCell) {
         indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)

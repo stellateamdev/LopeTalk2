@@ -35,6 +35,8 @@
 		EFC34A821FE540CE0079111B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A811FE540CE0079111B /* ChatViewController.swift */; };
 		EFC34A841FE540D70079111B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A831FE540D70079111B /* SettingViewController.swift */; };
 		EFC34A871FE5429E0079111B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A861FE5429E0079111B /* Extension.swift */; };
+		EFCA747E1FEA7C2600276323 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA747D1FEA7C2600276323 /* LoginViewController.swift */; };
+		EFCA74801FEA952E00276323 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA747F1FEA952E00276323 /* SignUpViewController.swift */; };
 		EFCC170B1FE7ACFC00560BD6 /* Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCC170C1FE7ACFC00560BD6 /* Gallery.framework */; };
 		EFEF48191FE67F13002E5A33 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF48181FE67F13002E5A33 /* FriendListTableViewCell.swift */; };
 		EFEF481B1FE685E8002E5A33 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF481A1FE685E8002E5A33 /* HeaderView.swift */; };
@@ -102,6 +104,8 @@
 		EFC34A811FE540CE0079111B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		EFC34A831FE540D70079111B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		EFC34A861FE5429E0079111B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EFCA747D1FEA7C2600276323 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EFCA747F1FEA952E00276323 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EFCC170C1FE7ACFC00560BD6 /* Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEF47F91FE67845002E5A33 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
 		EFEF47FA1FE67846002E5A33 /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 				EF00145A1FE79BA800D5E992 /* ProfileViewController.swift */,
 				EF9BFDB41FE805F90026FC2A /* BlockListViewController.swift */,
 				EF7C491A1FE8C30E00B83D2E /* SendMessageViewController.swift */,
+				EFCA747D1FEA7C2600276323 /* LoginViewController.swift */,
+				EFCA747F1FEA952E00276323 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -623,9 +629,11 @@
 			files = (
 				EFEF48261FE6BEAE002E5A33 /* TabViewController.swift in Sources */,
 				EF9BFDB71FE806F80026FC2A /* BlockListTableViewCell.swift in Sources */,
+				EFCA747E1FEA7C2600276323 /* LoginViewController.swift in Sources */,
 				EF5672061FE65352001A2C73 /* TabViewControllerBackUp.swift in Sources */,
 				EFC34A841FE540D70079111B /* SettingViewController.swift in Sources */,
 				EF9BFDB51FE805F90026FC2A /* BlockListViewController.swift in Sources */,
+				EFCA74801FEA952E00276323 /* SignUpViewController.swift in Sources */,
 				EFEF48191FE67F13002E5A33 /* FriendListTableViewCell.swift in Sources */,
 				EFEF481D1FE6889D002E5A33 /* ChatTableViewCell.swift in Sources */,
 				EFC34A531FE53D880079111B /* FriendListViewController.swift in Sources */,
