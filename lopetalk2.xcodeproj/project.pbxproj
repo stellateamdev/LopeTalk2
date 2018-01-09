@@ -12,6 +12,8 @@
 		DC6908F73CC0E109B26C3879 /* Pods_lopetalk2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8D04716CB3476E881AA32 /* Pods_lopetalk2.framework */; };
 		EF0014581FE79B9200D5E992 /* SkyFloatingLabelTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0014591FE79B9200D5E992 /* SkyFloatingLabelTextField.framework */; };
 		EF00145B1FE79BA800D5E992 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF00145A1FE79BA800D5E992 /* ProfileViewController.swift */; };
+		EF030F072004CC900071C47C /* FriendRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF030F062004CC900071C47C /* FriendRequestTableViewCell.swift */; };
+		EF030F092004CD640071C47C /* FriendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF030F082004CD640071C47C /* FriendRequestViewController.swift */; };
 		EF094CD01FFFB31700FBD7E7 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF094CCF1FFFB31700FBD7E7 /* ActivityIndicator.swift */; };
 		EF212D161FE8FFBE00EAF5D7 /* LGButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF212D171FE8FFBE00EAF5D7 /* LGButton.framework */; };
 		EF3EF0C81FFE4BA200BB4353 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3EF0CB1FFE4BA200BB4353 /* Bolts.framework */; };
@@ -101,6 +103,8 @@
 		EE8347DC254867492132CBCF /* Pods-lopetalk2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF0014591FE79B9200D5E992 /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF00145A1FE79BA800D5E992 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EF030F062004CC900071C47C /* FriendRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestTableViewCell.swift; sourceTree = "<group>"; };
+		EF030F082004CD640071C47C /* FriendRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestViewController.swift; sourceTree = "<group>"; };
 		EF094CCF1FFFB31700FBD7E7 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		EF1DC0371FFE1EF300D8B138 /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF212D171FE8FFBE00EAF5D7 /* LGButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LGButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +326,7 @@
 				EFCA747D1FEA7C2600276323 /* LoginViewController.swift */,
 				EFCA747F1FEA952E00276323 /* SignUpViewController.swift */,
 				EF9BB9431FFF981900D47AB1 /* SetupProfileViewController.swift */,
+				EF030F082004CD640071C47C /* FriendRequestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				EFEF48271FE6C25B002E5A33 /* SettingTableViewCell.swift */,
 				EF9BFDB61FE806F80026FC2A /* BlockListTableViewCell.swift */,
 				EF094CCF1FFFB31700FBD7E7 /* ActivityIndicator.swift */,
+				EF030F062004CC900071C47C /* FriendRequestTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -741,9 +747,11 @@
 				EF094CD01FFFB31700FBD7E7 /* ActivityIndicator.swift in Sources */,
 				EF7C491B1FE8C30E00B83D2E /* SendMessageViewController.swift in Sources */,
 				EF8363731FE6CB6700274257 /* ActionSheetModel.swift in Sources */,
+				EF030F092004CD640071C47C /* FriendRequestViewController.swift in Sources */,
 				EF766CD41FE7E0D70019B167 /* KACircleCropCutterView.swift in Sources */,
 				EFC34A511FE53D880079111B /* AppDelegate.swift in Sources */,
 				EF766CD61FE7E0D70019B167 /* KACircleCropViewController.swift in Sources */,
+				EF030F072004CC900071C47C /* FriendRequestTableViewCell.swift in Sources */,
 				EF00145B1FE79BA800D5E992 /* ProfileViewController.swift in Sources */,
 				EF8363751FE6D48B00274257 /* NavigationViewController.swift in Sources */,
 				EFFD490E1FFE169700FA03AC /* CurrentUser.swift in Sources */,

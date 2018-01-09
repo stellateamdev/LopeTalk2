@@ -13,6 +13,7 @@ import UIKit
 protocol ActionSheetDelegate:class {
     func firstAction()-> Void
     func secondAction() -> Void
+    func thirdAction() -> Void
 }
 
 
@@ -22,7 +23,8 @@ class ActionSheetModel {
     let hokusai = Hokusai()
     var firstBtnTitle:String!
     var secondBtnTitle:String!
-    func setUp() -> Hokusai {
+    var thirdBtnTitle:String!
+    func setUp(_ third:Bool) -> Hokusai {
         
         hokusai.addButton(firstBtnTitle) {
 
@@ -30,6 +32,11 @@ class ActionSheetModel {
         }
         hokusai.addButton(secondBtnTitle){
             self.delegate?.secondAction()
+        }
+        if third {
+            hokusai.addButton(thirdBtnTitle){
+                self.delegate?.thirdAction()
+            }
         }
         
         hokusai.cancelButtonTitle = "Cancel"

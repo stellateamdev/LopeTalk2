@@ -41,6 +41,10 @@ class BlockListTableViewCell: UITableViewCell {
 
 }
 extension BlockListTableViewCell:ActionSheetDelegate{
+    func thirdAction() {
+        
+    }
+    
     func firstAction() {
         self.delegate?.firstAction()
     }
@@ -53,7 +57,7 @@ extension BlockListTableViewCell:ActionSheetDelegate{
         acsheetModel.delegate = self
         acsheetModel.firstBtnTitle = "Unblock"
         acsheetModel.secondBtnTitle = "Delete"
-        let acsheet = acsheetModel.setUp()
+        let acsheet = acsheetModel.setUp(false)
         acsheet.show()
     }
     

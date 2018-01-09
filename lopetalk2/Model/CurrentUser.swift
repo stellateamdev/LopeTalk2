@@ -23,6 +23,7 @@ class CurrentUser {
     private static var _messages:[String] = []
     private static var _blocklist:[[String:Any]] = []
     private static var blocklistUid:[String] = []
+    private static var _requestlist:[[String:Any]] = []
     
     class func isSignin() -> Bool {
         guard let uid = Auth.auth().currentUser?.uid else { return false }
@@ -300,6 +301,14 @@ class CurrentUser {
             return _username
         }set{
             _username = newValue
+        }
+    }
+    static var requestlist:[[String:Any]] {
+        get{
+            return _requestlist
+        }
+        set{
+            _requestlist = newValue
         }
     }
 }

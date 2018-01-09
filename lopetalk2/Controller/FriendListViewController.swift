@@ -50,7 +50,8 @@ extension FriendListViewController {
         acsheetModel.delegate = self
         acsheetModel.firstBtnTitle = "Add Friend"
         acsheetModel.secondBtnTitle = "Add Message"
-        let acsheet = acsheetModel.setUp()
+        acsheetModel.thirdBtnTitle = "Friend Request"
+        let acsheet = acsheetModel.setUp(true)
         acsheet.show()
     }
     @objc func edit() {
@@ -146,7 +147,6 @@ extension FriendListViewController:UITableViewDelegate,UITableViewDataSource {
 }
 
 extension FriendListViewController:ActionSheetDelegate {
-    
     func firstAction() {
         let alertVC = PMAlertController(title: "Add new friend", description: "Add new friend now \nso you and your friend can communicate!", image: UIImage(named:"addFriend"), style: .alert)
         alertVC.dismissWithBackgroudTouch = true
@@ -257,6 +257,9 @@ extension FriendListViewController:ActionSheetDelegate {
             }
         }))
         self.present(alertVC, animated: true, completion: nil)
+    }
+    func thirdAction() {
+        self.pushView(self, "friendRequest")
     }
 }
 

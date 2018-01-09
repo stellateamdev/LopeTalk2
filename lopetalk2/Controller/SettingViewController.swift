@@ -161,6 +161,10 @@ extension SettingViewController:MFMessageComposeViewControllerDelegate {
     }
 }
 extension SettingViewController:ActionSheetDelegate{
+    func thirdAction() {
+        
+    }
+    
     func firstAction() {
         if indexPath.section == 0 && indexPath.row == 1 {
             
@@ -185,7 +189,7 @@ extension SettingViewController:ActionSheetDelegate{
         acsheetModel.delegate = self
         acsheetModel.firstBtnTitle = first
         acsheetModel.secondBtnTitle = second
-        let acsheet = acsheetModel.setUp()
+        let acsheet = acsheetModel.setUp(false)
         acsheet.show()
     }
 }
