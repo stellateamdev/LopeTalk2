@@ -11,6 +11,8 @@ import Firebase
 import Alamofire
 import AlamofireImage
 
+typealias signInCompletion = (Bool) -> Void
+
 class CurrentUser {
     
     private static var _uid:String = ""
@@ -23,11 +25,14 @@ class CurrentUser {
     private static var blocklistUid:[String] = []
     
     class func isSignin() -> Bool {
-        if Auth.auth().currentUser != nil {
-            return true
-        } else {
-            return false
+        guard let uid = Auth.auth().currentUser?.uid else { return false }
+        Database.database().reference().child("Users/\(uid)").observeSingleEvent(of: .value) { (snapshot) in
+            guard let value = snapshot.value as? [String:Any] else { return }
+            self.email = value["email"] as! String
+            self.uid = uid
+            self.username = value["username"] as! String
         }
+        return true
     }
     class func getDisplayName(completion: @escaping(_ name:String) -> ()){
         Database.database().reference().child("Users/\(CurrentUser.uid)/displayName").observeSingleEvent(of: .value, with: {(snapshot) in
@@ -89,8 +94,6 @@ class CurrentUser {
                         completion(true)
                     }
                 })
-                
-                
             }
         })
     }

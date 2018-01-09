@@ -29,17 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        if !CurrentUser.isSignin() {
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "login")
-            self.window?.rootViewController = initialViewController
-        }
-        else{
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "tabView")
-            self.window?.rootViewController = initialViewController
-        }
-        
-         self.window?.makeKeyAndVisible()
+            if !CurrentUser.isSignin() {
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "login")
+                self.window?.rootViewController = initialViewController
+            }else {
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "tabView")
+                self.window?.rootViewController = initialViewController
+            }
+        self.window?.makeKeyAndVisible()
         return true
     }
     
