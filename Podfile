@@ -10,13 +10,21 @@ target 'lopetalk2' do
   pod 'Gallery'
   pod 'PMAlertController'
   pod 'LGButton'
-  # Pods for lopetalk2
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
+  pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
+  pod 'Bolts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'GoogleSignIn'
+  pod 'AlamofireImage', '~> 3.3'
 
   target 'lopetalk2Tests' do
     inherit! :search_paths
     # Pods for testing
   end
-
   target 'lopetalk2UITests' do
     inherit! :search_paths
     # Pods for testing

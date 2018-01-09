@@ -9,11 +9,14 @@
 import UIKit
 import SkyFloatingLabelTextField
 import Gallery
+import Firebase
+import SCLAlertView
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var currentUsername: UILabel!
     @IBOutlet weak var profileImage:UIImageView!
     @IBOutlet weak var editPhoto:UIButton!
-   @IBOutlet weak var name:SkyFloatingLabelTextField!
+    @IBOutlet weak var name:SkyFloatingLabelTextField!
     
     var gallery:GalleryController!
     var image = UIImage()
@@ -21,11 +24,14 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let nav = self.navigationController as! NavigationViewController
         nav.removeBigTitle()
-        name.becomeFirstResponder()
+        
         name.returnKeyType = UIReturnKeyType.done
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        name.becomeFirstResponder()
+        
         profileImage.layer.cornerRadius = profileImage.frame.size.height/2.0
         profileImage.clipsToBounds = true
         profileImage.contentMode = .scaleAspectFill
@@ -35,6 +41,9 @@ class ProfileViewController: UIViewController {
         editPhoto.setTitleColor(UIColor.lopeColor(), for: .normal)
         editPhoto.addTarget(self, action: #selector(ProfileViewController.openPhoto), for: .touchUpInside)
         
+        self.currentUsername.text = "Your username is \(CurrentUser.username)"
+        
+        
         name.placeholder = "Enter your display name"
         name.tintColor = UIColor.lopeColor()
         name.textColor = UIColor.darkGray
@@ -43,6 +52,12 @@ class ProfileViewController: UIViewController {
         name.selectedLineColor = UIColor.lopeColor()
         name.lineHeight = 1.0 // bottom line height in points
         name.selectedLineHeight = 2.0
+        CurrentUser.getDisplayName(completion: {(displayName) in
+            self.name.text = displayName
+        })
+        CurrentUser.getProfilePicture(profileImage.frame.size, completion: {(image) in
+            self.profileImage.image = image
+        })
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ProfileViewController.finishEdit))
         self.navigationItem.title = "Edit Profile"
@@ -51,10 +66,6 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     override func viewWillDisappear(_ animated: Bool) {
         if self.isMovingToParentViewController {
         let nav = self.navigationController as! NavigationViewController
@@ -73,15 +84,40 @@ class ProfileViewController: UIViewController {
         finishEdit()
         return true
     }
+    
     @objc func finishEdit() {
-        self.navigationController?.popViewController(animated: true)
+        if name.text == "" {
+            let appearance = SCLAlertView.SCLAppearance(
+                kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                showCloseButton: true
+            )
+            let alert = SCLAlertView(appearance: appearance)
+            alert.showError("Error", subTitle: "Please add your display name")
+            return
+        }
+        Database.database().reference().child("Users/\(CurrentUser.uid)/displayName").setValue(name.text, withCompletionBlock: {(error,ref) in
+            if error != nil {
+                let appearance = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                    kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                    kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                    showCloseButton: true
+                )
+                let alert = SCLAlertView(appearance: appearance)
+                 alert.showError("Error", subTitle: "Cannot change display name, please try again later")
+            }
+            else{
+                self.navigationController?.popViewController(animated: true)
+            }
+        })
     }
 }
 extension ProfileViewController:GalleryControllerDelegate {
     func galleryController(_ controller: GalleryController, didSelectImages images: [UIImage]) {
         gallery.cart.images.removeAll()
         gallery.dismiss(animated: true, completion: nil)
-        //refreshPhoto(images[0])
         image = images[0]
         gallery = nil
         presentCircleCrop()
@@ -101,9 +137,8 @@ extension ProfileViewController:GalleryControllerDelegate {
         gallery.dismiss(animated: true, completion: nil)
         gallery = nil
     }
-    
-    
 }
+
 extension ProfileViewController:KACircleCropViewControllerDelegate{
     func presentCircleCrop() {
         let circleCropController = KACircleCropViewController(withImage:image)

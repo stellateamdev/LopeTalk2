@@ -8,6 +8,8 @@
 
 import UIKit
 import MessageUI
+import Firebase
+import SCLAlertView
 class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
@@ -27,13 +29,7 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-        
-       // indicator = UIActivityIndicatorView(frame: CGRect(x: self.tableView.frame.midX-40, y: self.view.frame.height/2.0-40-self.headerView.frame.size.height, width: 80, height: 80))
-        indicator.layer.cornerRadius = 10.0
-        indicator.activityIndicatorViewStyle = .gray
-        indicator.backgroundColor = UIColor.white
-        
-        indicator.alpha = 1.0
+
  
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,9 +96,24 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     func confirmLogOut() {
         let alert = UIAlertController(title: "Are you sure you want to logout?", message: "", preferredStyle: .alert)
+        let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+            kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+            kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+            showCloseButton: true
+        )
+        let errorAlert = SCLAlertView(appearance: appearance)
         let action = UIAlertAction(title: "Logout", style: .destructive, handler: {_ in
-            let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
-            self.present(view, animated: true, completion: nil)
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
+                self.present(view, animated: true, completion: nil)
+            } catch let signOutError as NSError {
+                errorAlert.showError("Error", subTitle: "Error signing out, please try again.")
+                print ("Error signing out: %@", signOutError)
+            }
+            
         })
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
             alert.dismiss(animated: true, completion: nil)
@@ -116,9 +127,8 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
 extension SettingViewController:MFMailComposeViewControllerDelegate{
     func sendEmail(_ cell:SettingTableViewCell) {
-        indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        indicator = ActivityIndicator.showActivityIndicatory()
         cell.accessoryView = indicator
-        indicator.startAnimating()
         let composeVC = MFMailComposeViewController()
         composeVC.mailComposeDelegate = self
         // Configure the fields of the interface.

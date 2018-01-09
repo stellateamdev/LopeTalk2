@@ -8,6 +8,8 @@
 
 import UIKit
 import PMAlertController
+import Firebase
+import SCLAlertView
 
 class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -88,6 +90,7 @@ extension ChatViewController {
     }
 }
 extension ChatViewController:ActionSheetDelegate {
+    
     func firstAction() {
         let alertVC = PMAlertController(title: "Add new friend", description: "Add new friend now \nso you and your friend can communicate!", image: UIImage(named:"addFriend"), style: .alert)
         alertVC.dismissWithBackgroudTouch = true
@@ -99,19 +102,41 @@ extension ChatViewController:ActionSheetDelegate {
             print("Capture action Cancel")
         }))
         alertVC.addAction(PMAlertAction(title: "Add", style: .default, action: { () -> Void in
-            alertVC.dismiss(animated: true, completion: nil)
-            let passVC = PMAlertController(title: "Success!", description: "Successfully added.\nEnjoy a simple conversation with your friend!", image: UIImage(named:"checkmark"), style: .alert)
-            passVC.dismissWithBackgroudTouch = true
-            passVC.alertImage.tintColor = UIColor.checkmarkGreen()
-            passVC.dismissWithBackgroudTouch = true
-            passVC.addAction(PMAlertAction(title: "Great!", style: .default , action: { () -> Void in
-                passVC.dismiss(animated: true, completion: nil)
-            }))
-            self.present(passVC, animated: true, completion: nil)
+            CurrentUser.addFriend(alertVC.textFields[0].text!, completion: {(finish) in
+                let appearanceSuccess = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                    kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                    kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                    showCloseButton: false
+                )
+                let alertSuccess = SCLAlertView(appearance: appearanceSuccess)
+                if finish {
+                    alertSuccess.addButton("Done", action: {
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                            alertSuccess.dismiss(animated: true, completion: nil)
+                            alertVC.dismiss(animated: true, completion: nil)
+                        }
+                    })
+                    let passVC = PMAlertController(title: "Success!", description: "Successfully added.\nEnjoy a simple conversation with your friend!", image: UIImage(named:"checkmark"), style: .alert)
+                    passVC.dismissWithBackgroudTouch = true
+                    passVC.alertImage.tintColor = UIColor.checkmarkGreen()
+                    passVC.dismissWithBackgroudTouch = true
+                    passVC.addAction(PMAlertAction(title: "Great!", style: .default , action: { () -> Void in
+                        passVC.dismiss(animated: true, completion: nil)
+                    }))
+                    self.present(passVC, animated: true, completion: nil)
+                }
+                else{
+                    alertSuccess.addButton("Done", action: {
+                        alertSuccess.dismiss(animated: true, completion: nil)
+                    })
+                    alertSuccess.showError("Error", subTitle: "There's no user with this username")
+                }
+                
+            })
+            
         }))
-        
-        
-        
         self.present(alertVC, animated: true, completion: nil)
     }
     
@@ -126,19 +151,49 @@ extension ChatViewController:ActionSheetDelegate {
             print("Capture action Cancel")
         }))
         alertVC.addAction(PMAlertAction(title: "Add", style: .default, action: { () -> Void in
-            alertVC.dismiss(animated: true, completion: nil)
-            let passVC = PMAlertController(title: "Success!", description: "Successfully added.\nEnjoy your time with LopeTalk!", image: UIImage(named:"checkmark"), style: .alert)
-            passVC.dismissWithBackgroudTouch = true
-            passVC.alertImage.tintColor = UIColor.checkmarkGreen()
-            passVC.dismissWithBackgroudTouch = true
-            passVC.addAction(PMAlertAction(title: "Great!", style: .default , action: { () -> Void in
-                passVC.dismiss(animated: true, completion: nil)
-            }))
-            self.present(passVC, animated: true, completion: nil)
+            if alertVC.textFields[0].text == "" {
+                let appearanceSuccess = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                    kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                    kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                    showCloseButton: false
+                )
+                let alertSuccess = SCLAlertView(appearance: appearanceSuccess)
+                alertSuccess.addButton("Done", action: {
+                    alertSuccess.dismiss(animated: true, completion: nil)
+                })
+                alertSuccess.showError("Error", subTitle: "Please enter the message you want to save")
+            }
+            else{
+                CurrentUser.addMessage(alertVC.textFields[0].text!, completion: {(success) in
+                    if !success {
+                        let appearanceSuccess = SCLAlertView.SCLAppearance(
+                            kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                            kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                            kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                            showCloseButton: false
+                        )
+                        let alertSuccess = SCLAlertView(appearance: appearanceSuccess)
+                        alertSuccess.addButton("Done", action: {
+                            alertSuccess.dismiss(animated: true, completion: nil)
+                        })
+                        
+                        alertSuccess.showError("Error", subTitle: "Cannot add message, please try again")
+                    }
+                    else{
+                        alertVC.dismiss(animated: true, completion: nil)
+                        let passVC = PMAlertController(title: "Success!", description: "Successfully added.\nEnjoy your time with LopeTalk!", image: UIImage(named:"checkmark"), style: .alert)
+                        passVC.dismissWithBackgroudTouch = true
+                        passVC.alertImage.tintColor = UIColor.checkmarkGreen()
+                        passVC.dismissWithBackgroudTouch = true
+                        passVC.addAction(PMAlertAction(title: "Great!", style: .default , action: { () -> Void in
+                            passVC.dismiss(animated: true, completion: nil)
+                        }))
+                        self.present(passVC, animated: true, completion: nil)
+                    }
+                })
+            }
         }))
-        
-        
-        
         self.present(alertVC, animated: true, completion: nil)
     }
     
