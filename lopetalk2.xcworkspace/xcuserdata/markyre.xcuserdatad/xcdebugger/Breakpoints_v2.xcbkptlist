@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "lopetalk2/Model/CurrentUser.swift"
-            timestampString = "537186996.4410191"
+            filePath = "lopetalk2/Controller/BlockListViewController.swift"
+            timestampString = "537261793.418853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "addMessage(_:completion:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "firstAction()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "lopetalk2/Controller/BlockListViewController.swift"
-            timestampString = "537186996.441138"
+            filePath = "lopetalk2/Controller/FriendListViewController.swift"
+            timestampString = "537261793.41898"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "firstAction()"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

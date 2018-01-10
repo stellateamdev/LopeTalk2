@@ -12,6 +12,7 @@ target 'lopetalk2' do
   pod 'LGButton'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'

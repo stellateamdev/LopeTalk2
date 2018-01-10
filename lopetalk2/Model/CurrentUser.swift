@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 import Alamofire
 import AlamofireImage
+import SCLAlertView
 
 typealias signInCompletion = (Bool) -> Void
 
@@ -24,6 +25,7 @@ class CurrentUser {
     private static var _blocklist:[[String:Any]] = []
     private static var blocklistUid:[String] = []
     private static var _requestlist:[[String:Any]] = []
+    private static var _profilePicture:String = ""
     
     class func isSignin() -> Bool {
         guard let uid = Auth.auth().currentUser?.uid else { return false }
@@ -166,7 +168,6 @@ class CurrentUser {
             friendlist.removeAll()
             for user in value {
                 let uid = user
-                friendlistUid.append(uid.value as! String)
                 Database.database().reference().child("Users/\(uid.value)").observeSingleEvent(of: .value, with: { (snapshot) in
                     guard let user = snapshot.value as? [String:Any] else { return }
                     friendlist.append(user)
@@ -208,15 +209,113 @@ class CurrentUser {
             if snapshot.exists() {
                 guard let value = snapshot.value as? [String:Any] else { return }
                 friendlist.append(value as! [String:Any])
-                Database.database().reference().child("Users/\(CurrentUser.uid)/Friendlist/\(value.keys.first!)").setValue(value.keys.first!)
-                completion(true)
+                Database.database().reference().child("Users/\(CurrentUser.uid)/Friendlist/\(value.keys.first!)").setValue(value.keys.first!, withCompletionBlock: {(error,ref) in
+                    if error == nil {
+                        Database.database().reference().child("Users/\(value.keys.first!)/Friendrequest/\(CurrentUser.uid)").setValue(CurrentUser.uid, withCompletionBlock:{(error,ref) in
+                            if error == nil {
+                                completion(true)
+                            }
+                            else{
+                                completion(false)
+                                return
+                            }
+                        })
+                        
+                    }
+                    else{
+                        completion(false)
+                        return
+                    }
+                })
+                
             }
             else{
                 completion(false)
+                return
             }
         })
     }
-    
+    class func getRequestList(completion: @escaping(_ success:Bool)->()) {
+        Database.database().reference().child("Users/\(CurrentUser.uid)/Friendrequest").observeSingleEvent(of: .value) { (snap) in
+            guard let value = snap.value as? [String:Any] else {
+                completion(false)
+                return
+            }
+            requestlist.removeAll()
+            for user in value {
+                let uid = user
+                Database.database().reference().child("Users/\(uid.value)").observeSingleEvent(of: .value, with: { (snapshot) in
+                    guard let user = snapshot.value as? [String:Any] else { return }
+                    requestlist.append(user)
+                    
+                    if value.count == requestlist.count {
+                        completion(true);
+                    }
+                })
+            }
+        }
+    }
+    class func acceptRequest(_ uid:String,completion:@escaping(_ success:Bool)->()) {
+        Database.database().reference().child("Users/\(CurrentUser.uid)/Friendlist/\(uid)").setValue(uid, withCompletionBlock: {(error,ref) in
+            if error != nil {
+                completion(false)
+                return
+            }
+            else{
+                Database.database().reference().child("Users/\(CurrentUser.uid)/Friendrequest/\(uid)").removeValue(completionBlock:{(error,ref) in
+                    if error != nil {
+                        completion(false)
+                        return
+                    }
+                    else{
+                        requestlist.remove(at: requestlist.index(where: {$0["uid"] as! String == uid})!)
+                        completion(true)
+                    }
+                })
+                
+            }
+        })
+    }
+    class func rejectRequest(_ uid:String,completion:@escaping(_ success:Bool)->()) {
+        Database.database().reference().child("Users/\(CurrentUser.uid)/Friendrequest/\(uid)").removeValue(completionBlock:{(error,ref) in
+            if error != nil {
+                completion(false)
+                return
+            }
+            else{
+                requestlist.remove(at: requestlist.index(where: {$0["uid"] as! String == uid})!)
+                completion(true)
+            }
+        })
+    }
+    class func blockRequest(_ uid:String,completion: @escaping(_ success:Bool) -> ()){
+        Database.database().reference().child("Users/\(CurrentUser.uid)/Blocklist/\(uid)").setValue(uid, withCompletionBlock:{(error,ref) in
+            if error != nil {
+                completion(false)
+            }
+            else{
+                Database.database().reference().child("Users/\(CurrentUser.uid)/Friendrequest/\(uid)").removeValue(completionBlock: {(error,ref) in
+                    if error != nil {
+                        completion(false)
+                    }
+                    else{
+                        completion(true)
+                    }
+                })
+                
+                
+            }
+        })
+    }
+    class func removeUser() {
+        friendlist.removeAll()
+        blocklist.removeAll()
+        requestlist.removeAll()
+        friendlistUid.removeAll()
+        blocklistUid.removeAll()
+        messages.removeAll()
+        
+    }
     class func register(_ user:User,_ username:String?="", _ displayname:String?="") {
         let name = username
         Database.database().reference().child("Users").child(user.uid).setValue([
@@ -229,6 +328,7 @@ class CurrentUser {
     }
     class func setProfilePicture(_ url:String){
         Database.database().reference().child("Users/\(_uid)/profilePicture").setValue(url)
+        profilePicture = url
         
     }
     class func isUserRegistered(_ username: String, completion: @escaping (_ exists: Bool) -> ()) {
@@ -241,10 +341,29 @@ class CurrentUser {
         })
     }
     class func setUsername(_ username:String){
-        _username = username
+        self.username = username
         Database.database().reference().child("Users/\(_uid)/username").setValue(username)
         Database.database().reference().child("Users/\(_uid)/displayName").setValue(username)
     }
+    class func resetPassword() {
+        let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+            kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+            kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+            showCloseButton: true
+        )
+        let alert = SCLAlertView(appearance: appearance)
+        Auth.auth().sendPasswordReset(withEmail: CurrentUser.email, completion: { (error) in
+            if error != nil {
+                alert.showError("Error", subTitle: "Cannot sennd reset password email, please try again")
+            }
+            else{
+                alert.showSuccess("Success", subTitle: "reset password email sent, please check your email")
+            }
+        })
+
+    }
+
     static var uid:String{
         get{
             if _uid == "" {
@@ -301,6 +420,13 @@ class CurrentUser {
             return _username
         }set{
             _username = newValue
+        }
+    }
+    static var profilePicture:String {
+        get{
+            return _profilePicture
+        }set{
+            _profilePicture = newValue
         }
     }
     static var requestlist:[[String:Any]] {

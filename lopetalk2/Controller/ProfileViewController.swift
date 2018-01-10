@@ -11,6 +11,8 @@ import SkyFloatingLabelTextField
 import Gallery
 import Firebase
 import SCLAlertView
+import Alamofire
+import AlamofireImage
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var currentUsername: UILabel!
@@ -40,7 +42,8 @@ class ProfileViewController: UIViewController {
         
         editPhoto.setTitleColor(UIColor.lopeColor(), for: .normal)
         editPhoto.addTarget(self, action: #selector(ProfileViewController.openPhoto), for: .touchUpInside)
-        
+          profileImage.image = UIImage(named:"profileLoad")
+
         self.currentUsername.text = "Your username is \(CurrentUser.username)"
         
         

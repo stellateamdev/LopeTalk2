@@ -93,7 +93,9 @@ extension FriendListViewController:UITableViewDelegate,UITableViewDataSource {
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             self.tableView.deselectRow(at: indexPath, animated: false)
-            self.pushView(self,"sendMessage")
+            let sendMessageController = UIViewController.getStoryboardInstance("sendMessage") as! SendMessageViewController
+            sendMessageController.user = CurrentUser.friendlist[indexPath.row]
+            self.navigationController?.pushViewController(sendMessageController, animated: true)
             self.tabBarController?.tabBar.isHidden = true
         }
     
@@ -259,7 +261,7 @@ extension FriendListViewController:ActionSheetDelegate {
         self.present(alertVC, animated: true, completion: nil)
     }
     func thirdAction() {
-        self.pushView(self, "friendRequest")
+        self.pushView("friendRequest")
     }
 }
 

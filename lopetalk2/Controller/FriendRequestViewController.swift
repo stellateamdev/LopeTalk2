@@ -10,10 +10,14 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import Firebase
+import SCLAlertView
+
 class FriendRequestViewController: UIViewController {
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var headerView:UIView!
     private let refreshControl = UIRefreshControl()
+    
+    var selectedRow = 0
     override func viewWillAppear(_ animated: Bool) {
 
             self.tabBarController?.tabBar.isHidden = true
@@ -56,11 +60,28 @@ class FriendRequestViewController: UIViewController {
 }
 extension FriendRequestViewController: UITableViewDataSource,UITableViewDelegate,FriendRequestDelegate {
     func accept() {
-        
+        CurrentUser.acceptRequest(CurrentUser.requestlist[selectedRow]["uid"] as! String, completion: {(success) in
+            if success{
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                }
+            }
+            else{
+                let appearance = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                    kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                    kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                    showCloseButton: true
+                )
+                let alert = SCLAlertView(appearance: appearance)
+                alert.showError("Error", subTitle: "Cannot add friend, please try again")
+            }
+        })
     }
     
     @objc func refreshTableView() {
-        CurrentUser.getFriendlist(completion: {(success) in
+        CurrentUser.getRequestList(completion: {(success) in
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
@@ -85,8 +106,34 @@ extension FriendRequestViewController: UITableViewDataSource,UITableViewDelegate
         }
         return cell
     }
+    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        let block = UITableViewRowAction(style: .normal, title: "Block") { action, index in
+            CurrentUser.blockRequest(CurrentUser.requestlist[index.row]["uid"] as! String, completion: {(success) in
+                if success {
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+                else{
+                    let appearance = SCLAlertView.SCLAppearance(
+                        kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                        kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                        kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                        showCloseButton: true
+                    )
+                    let alert = SCLAlertView(appearance: appearance)
+                    alert.showError("Error", subTitle: "cannot block user, please try again")
+                }
+            })
+        }
+        block.backgroundColor = .red
+        
+        return [block]
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: false)
+        selectedRow = indexPath.row
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,3 +144,4 @@ extension FriendRequestViewController: UITableViewDataSource,UITableViewDelegate
         return 1
     }
 }
+

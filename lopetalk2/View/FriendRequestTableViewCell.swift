@@ -24,11 +24,13 @@ class FriendRequestTableViewCell: UITableViewCell {
         profileImage.clipsToBounds = true
         
         edit.setTitle("Accept", for: .normal)
+        edit.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)
         edit.addTarget(self, action: #selector(FriendRequestTableViewCell.accept), for: .touchUpInside)
         edit.setTitleColor(UIColor.white, for: .normal)
         edit.layer.cornerRadius = 5.0
         edit.backgroundColor = UIColor.lopeColor()
         // Initialization code
+          profileImage.image = UIImage(named:"profileLoad")
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

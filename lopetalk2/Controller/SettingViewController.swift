@@ -43,19 +43,19 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         self.indexPath = indexPath
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                self.pushView(self, "profile")
+                self.pushView("profile")
                 self.tabBarController?.tabBar.isHidden = true
             }
             else{
-              self.showActionSheet("Change e-mail","Change password")
+              self.showActionSheet(CurrentUser.email,"Change password")
             }
         }
         else if indexPath.section == 1 {
             if indexPath.row == 0 {
-                self.showActionSheet("SMS","Facebook")
+                self.showActionSheet("SMS","Email")
             }
             else {
-                self.pushView(self, "blockList")
+                self.pushView("blockList")
                 self.tabBarController?.tabBar.isHidden = true
             }
         }
@@ -108,7 +108,9 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
             do {
                 try firebaseAuth.signOut()
                 let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
-                self.present(view, animated: true, completion: nil)
+                self.present(view, animated: true, completion: {
+                    CurrentUser.removeUser()
+                })
             } catch let signOutError as NSError {
                 errorAlert.showError("Error", subTitle: "Error signing out, please try again.")
                 print ("Error signing out: %@", signOutError)
@@ -149,7 +151,7 @@ extension SettingViewController:MFMessageComposeViewControllerDelegate {
     func sendSMSText() {
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
-            controller.body = "Yo dude. Download this app and add me ASAP!"
+            controller.body = "Yo dude. Download this app and add me ASAP!/nMy username is \(CurrentUser.username)"
             controller.recipients = []
             controller.messageComposeDelegate = self
             self.present(controller, animated: true, completion: nil)
@@ -161,9 +163,7 @@ extension SettingViewController:MFMessageComposeViewControllerDelegate {
     }
 }
 extension SettingViewController:ActionSheetDelegate{
-    func thirdAction() {
-        
-    }
+    func thirdAction() {}
     
     func firstAction() {
         if indexPath.section == 0 && indexPath.row == 1 {
@@ -176,14 +176,16 @@ extension SettingViewController:ActionSheetDelegate{
     
     func secondAction() {
         if indexPath.section == 0 && indexPath.row == 1 {
-            
+            CurrentUser.resetPassword()
         }
         else{
-            
+            let composeVC = MFMailComposeViewController()
+            composeVC.mailComposeDelegate = self
+            composeVC.setToRecipients([])
+            composeVC.setMessageBody("Yo dude. Download this app and add me ASAP!/nMy username is \(CurrentUser.username)", isHTML: false)
+            self.present(composeVC, animated: true, completion:nil)
         }
-    }
-    
-    
+        }
     func showActionSheet(_ first:String,_ second:String) {
         let acsheetModel = ActionSheetModel()
         acsheetModel.delegate = self
@@ -192,5 +194,5 @@ extension SettingViewController:ActionSheetDelegate{
         let acsheet = acsheetModel.setUp(false)
         acsheet.show()
     }
-}
+    }
 

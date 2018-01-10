@@ -37,10 +37,16 @@ extension UIFont {
 }
 
 extension UIViewController {
-    func pushView(_ parent:UIViewController,_ identifier:String){
+    
+    class func getStoryboardInstance(_ identifier:String) -> UIViewController {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: identifier)
+    }
+    
+    func pushView(_ identifier:String){
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: identifier)
-        parent.navigationController?.pushViewController(view, animated: true)
+        self.navigationController?.pushViewController(view, animated: true)
     }
 }
 extension UIDevice {

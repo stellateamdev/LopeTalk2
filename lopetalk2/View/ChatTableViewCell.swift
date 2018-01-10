@@ -26,6 +26,7 @@ class ChatTableViewCell: UITableViewCell {
         profileImage.layer.cornerRadius = profileImage.frame.height/2.0
         profileImage.clipsToBounds = true
         profileImage.contentMode = .scaleAspectFill
+          profileImage.image = UIImage(named:"profileLoad")
         
         // Initialization code
     }

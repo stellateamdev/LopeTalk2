@@ -16,6 +16,7 @@ class FriendListTableViewCell: UITableViewCell {
         profileImage.contentMode = .scaleAspectFill
         profileImage.layer.cornerRadius = profileImage.frame.height/2.0
         profileImage.clipsToBounds = true
+        profileImage.image = UIImage(named:"profileLoad")
         // Initialization code
     }
 

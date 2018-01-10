@@ -200,7 +200,7 @@ extension ChatViewController:ActionSheetDelegate {
         self.present(alertVC, animated: true, completion: nil)
     }
     func thirdAction() {
-        self.pushView(self, "friendRequest")
+        self.pushView("friendRequest")
     }
     
     

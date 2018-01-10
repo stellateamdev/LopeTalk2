@@ -87,12 +87,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
             return
         }
          Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            
             if error != nil {
                 alert.showError("Error", subTitle: (error?.localizedDescription)!)
             }
             else {
                 guard let uid = user?.uid else {
+                    
                     print("uid error")
                     return
                 }
@@ -102,15 +102,53 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 }
                 CurrentUser.uid = uid
                 CurrentUser.email = email
-                CurrentUser.register(user!)
-                alert.addButton("Thanks!", action: {
-                    self.performSegue(withIdentifier: "signupSuccess", sender: self)
+                Database.database().reference().child("Users/\(CurrentUser.uid)").observeSingleEvent(of: .value, with: {(snapshot) in
+                    guard let user = snapshot.value as? [String:Any] else {
+                        alert.showError("Error", subTitle: ("There's an error, please try agian"))
+                        let firebaseAuth = Auth.auth()
+                        do {
+                            try firebaseAuth.signOut()
+                            let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
+                            self.present(view, animated: true, completion: nil)
+                        } catch let signOutError as NSError {
+                            alert.showError("Error", subTitle: "Error signing out, please try again.")
+                            print ("Error signing out: %@", signOutError)
+                        }
+                        return
+                    }
+                    guard let username = user["username"] as? String else {
+                        alert.showError("Error", subTitle: ("There's an error, please try agian"))
+                        let firebaseAuth = Auth.auth()
+                        do {
+                            try firebaseAuth.signOut()
+                            let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
+                            self.present(view, animated: true, completion: nil)
+                        } catch let signOutError as NSError {
+                            alert.showError("Error", subTitle: "Error signing out, please try again.")
+                            print ("Error signing out: %@", signOutError)
+                        }
+                        return
+                    }
+                    guard let profilePicture = user["profilePicture"] as? String else {
+                        alert.showError("Error", subTitle: ("There's an error, please try agian"))
+                        let firebaseAuth = Auth.auth()
+                        do {
+                            try firebaseAuth.signOut()
+                            let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
+                            self.present(view, animated: true, completion: nil)
+                        } catch let signOutError as NSError {
+                            alert.showError("Error", subTitle: "Error signing out, please try again.")
+                            print ("Error signing out: %@", signOutError)
+                        }
+                        return
+                    }
+                    CurrentUser.username = username
+                    self.performSegue(withIdentifier: "signinSuccess", sender: self)
+                    
                 })
-                alert.showSuccess("Congratulations!", subTitle: "You've successfully login to LopeTalk")
-                
+              
             }
         }
-        self.performSegue(withIdentifier: "signinSuccess", sender: self)
     }
     
     @IBAction func googleSignin(sender:UIButton) {
@@ -152,7 +190,9 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
-                self.present(alertController, animated: true, completion: nil)
+                self.present(alertController, animated: true, completion: {
+                    CurrentUser.removeUser()
+                })
                 return
             }
             guard let uid = user?.uid else {
@@ -163,15 +203,16 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 print("email error")
                 return
             }
-            guard let friendList = user?.value(forKey: "FriendList") as? [[String:Any]] else {
-                print("email error")
-                return
-            }
             CurrentUser.uid = uid
             CurrentUser.email = email
-            CurrentUser.friendlist = friendList
-            CurrentUser.register(user!)
-            self.performSegue(withIdentifier: "signinSuccess", sender: self)
+            Database.database().reference().child("Users/\(uid)").observeSingleEvent(of: .value, with: {(snapshot) in
+                if !snapshot.exists() {
+                    CurrentUser.register(user!)
+                }
+                 self.performSegue(withIdentifier: "signinSuccess", sender: self)
+            })
+            
+           
             
         }
     }

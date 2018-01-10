@@ -29,6 +29,7 @@ class BlockListTableViewCell: UITableViewCell {
         edit.setTitleColor(UIColor.darkGray, for: .normal)
         edit.layer.cornerRadius = 5.0
         edit.backgroundColor = UIColor.editGreyColor()
+          profileImage.image = UIImage(named:"profileLoad")
         // Initialization code
     }
     

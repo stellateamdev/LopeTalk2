@@ -17,6 +17,7 @@ class SendMessageViewController: UIViewController {
     @IBOutlet weak var location:LGButton!
     @IBOutlet weak var photo:LGButton!
     
+    var user:[String:Any]!
     var gallery:GalleryController!
     private let refreshControl = UIRefreshControl()
     
@@ -63,13 +64,8 @@ class SendMessageViewController: UIViewController {
             let nav = self.navigationController as! NavigationViewController
             nav.titleLabel.text = "LopeTalk"
             self.tabBarController?.tabBar.isHidden = false
-        
-        
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     @objc func edit() {
         if self.navigationItem.rightBarButtonItem?.title == "Edit" {
             self.tableView.setEditing(true, animated: true)
