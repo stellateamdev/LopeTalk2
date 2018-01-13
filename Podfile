@@ -12,6 +12,8 @@ target 'lopetalk2' do
   pod 'LGButton'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Lightbox'
+  pod 'JGProgressHUD'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
@@ -21,6 +23,9 @@ target 'lopetalk2' do
   pod 'FBSDKLoginKit'
   pod 'GoogleSignIn'
   pod 'AlamofireImage', '~> 3.3'
+  pod 'OneSignal', '>= 2.5.2', '< 3.0'
+  pod 'ImagePicker'
+  pod 'NMessenger'
 
   target 'lopetalk2Tests' do
     inherit! :search_paths
@@ -30,5 +35,8 @@ target 'lopetalk2' do
     inherit! :search_paths
     # Pods for testing
   end
-
+end
+target 'OneSignalNotificationServiceExtension' do
+    use_frameworks!
+    pod 'OneSignal', '>= 2.5.2', '< 3.0'
 end

@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
 import SCLAlertView
-
+import JGProgressHUD
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var headerView:LGButton!
     @IBOutlet weak var username:UITextField!
@@ -71,6 +71,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func signin() {
+         self.view.endEditing(true)
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Logging in.."
+        hud.show(in: self.view)
         let appearance = SCLAlertView.SCLAppearance(
             kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
             kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
@@ -79,24 +83,28 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         )
         let alert = SCLAlertView(appearance: appearance)
         guard let email = username.text else{
+            hud.dismiss()
             alert.showError("Error", subTitle: "Please enter your email")
             return
         }
         guard let password = password.text else {
+            hud.dismiss()
             alert.showError("Error", subTitle: "Please enter your password")
             return
         }
          Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error != nil {
+                hud.dismiss()
                 alert.showError("Error", subTitle: (error?.localizedDescription)!)
             }
             else {
                 guard let uid = user?.uid else {
-                    
+                    hud.dismiss()
                     print("uid error")
                     return
                 }
                 guard let email = user?.email else {
+                    hud.dismiss()
                     print("email error")
                     return
                 }
@@ -104,6 +112,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 CurrentUser.email = email
                 Database.database().reference().child("Users/\(CurrentUser.uid)").observeSingleEvent(of: .value, with: {(snapshot) in
                     guard let user = snapshot.value as? [String:Any] else {
+                        hud.dismiss()
                         alert.showError("Error", subTitle: ("There's an error, please try agian"))
                         let firebaseAuth = Auth.auth()
                         do {
@@ -117,6 +126,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                         return
                     }
                     guard let username = user["username"] as? String else {
+                        hud.dismiss()
                         alert.showError("Error", subTitle: ("There's an error, please try agian"))
                         let firebaseAuth = Auth.auth()
                         do {
@@ -124,12 +134,14 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                             let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
                             self.present(view, animated: true, completion: nil)
                         } catch let signOutError as NSError {
+                            
                             alert.showError("Error", subTitle: "Error signing out, please try again.")
                             print ("Error signing out: %@", signOutError)
                         }
                         return
                     }
                     guard let profilePicture = user["profilePicture"] as? String else {
+                        hud.dismiss()
                         alert.showError("Error", subTitle: ("There's an error, please try agian"))
                         let firebaseAuth = Auth.auth()
                         do {
@@ -137,6 +149,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                             let view = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
                             self.present(view, animated: true, completion: nil)
                         } catch let signOutError as NSError {
+                            
                             alert.showError("Error", subTitle: "Error signing out, please try again.")
                             print ("Error signing out: %@", signOutError)
                         }
@@ -152,6 +165,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func googleSignin(sender:UIButton) {
+        
+         self.view.endEditing(true)
         GIDSignIn.sharedInstance().signIn()
     }
     
@@ -167,6 +182,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func facebookLogin(sender: UIButton) {
+         self.view.endEditing(true)
         let fbLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
             if  error != nil {
@@ -184,8 +200,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         }
     }
     func signInFirebaseWithCredential(_ credential:AuthCredential){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading.."
+        hud.show(in: self.view)
         Auth.auth().signIn(with: credential) { (user, error) in
             if let error = error {
+                hud.dismiss()
                 print("Login error: \(error.localizedDescription)")
                 let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -196,10 +216,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 return
             }
             guard let uid = user?.uid else {
+                hud.dismiss()
                 print("uid error")
                 return
             }
             guard let email = user?.email else {
+                hud.dismiss()
                 print("email error")
                 return
             }
@@ -207,8 +229,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
             CurrentUser.email = email
             Database.database().reference().child("Users/\(uid)").observeSingleEvent(of: .value, with: {(snapshot) in
                 if !snapshot.exists() {
+                    hud.dismiss()
                     CurrentUser.register(user!)
                 }
+                hud.dismiss()
                  self.performSegue(withIdentifier: "signinSuccess", sender: self)
             })
             

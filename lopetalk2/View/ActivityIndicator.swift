@@ -15,7 +15,7 @@ class ActivityIndicator {
         indicator.frame = CGRect.init(x: 0.0, y: 0.0, width: 80.0, height: 80.0)
         indicator.hidesWhenStopped = true
         if isCenter! {
-            indicator.center = (view?.center)!
+            indicator.center = CGPoint(x: (view?.center.x)!, y: (view?.center.y)!-50)
         }
         indicator.startAnimating()
         indicator.layer.cornerRadius = 5.0

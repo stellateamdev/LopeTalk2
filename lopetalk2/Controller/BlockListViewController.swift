@@ -18,7 +18,7 @@ class BlockListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refreshControl.addTarget(self, action: #selector(FriendListViewController.refreshTableView), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(BlockListViewController.refreshTableView), for: .valueChanged)
         
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
@@ -58,9 +58,13 @@ class BlockListViewController: UIViewController {
 extension BlockListViewController:UITableViewDataSource,UITableViewDelegate {
     
     @objc func refreshTableView() {
+        self.refreshControl.beginRefreshing()
         CurrentUser.getBlockList(completion: {(success) in
+            if success {
             self.tableView.reloadData()
-            self.refreshControl.endRefreshing()
+            }
+        self.refreshControl.endRefreshing()
+            
         })
     }
     

@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		48B0D8F9BBF0061CB532E6D8 /* Pods_lopetalk2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7082443CFEB55835C96B4507 /* Pods_lopetalk2Tests.framework */; };
 		5C33C1F316C8457F280EB59B /* Pods_lopetalk2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5033E7EDB8006F9A4647D592 /* Pods_lopetalk2UITests.framework */; };
+		7C8722E021B931F277207C72 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B56C4156A3C1D2926540DE /* Pods_OneSignalNotificationServiceExtension.framework */; };
+		B101552CBC830227C836F347 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEF1C68200647DB00A11C96 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		DC6908F73CC0E109B26C3879 /* Pods_lopetalk2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8D04716CB3476E881AA32 /* Pods_lopetalk2.framework */; };
 		EF0014581FE79B9200D5E992 /* SkyFloatingLabelTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0014591FE79B9200D5E992 /* SkyFloatingLabelTextField.framework */; };
 		EF00145B1FE79BA800D5E992 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF00145A1FE79BA800D5E992 /* ProfileViewController.swift */; };
 		EF030F072004CC900071C47C /* FriendRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF030F062004CC900071C47C /* FriendRequestTableViewCell.swift */; };
 		EF030F092004CD640071C47C /* FriendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF030F082004CD640071C47C /* FriendRequestViewController.swift */; };
 		EF094CD01FFFB31700FBD7E7 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF094CCF1FFFB31700FBD7E7 /* ActivityIndicator.swift */; };
+		EF0E22C4200645C200316419 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E22C3200645C200316419 /* NotificationService.swift */; };
+		EF0E22C8200645C200316419 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF0E22C1200645C200316419 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF135BE420065C690029D7F7 /* ImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF135BE520065C690029D7F7 /* ImagePicker.framework */; };
 		EF212D161FE8FFBE00EAF5D7 /* LGButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF212D171FE8FFBE00EAF5D7 /* LGButton.framework */; };
+		EF3B31DB2007AFDB008193FF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3B31DA2007AFDB008193FF /* MapKit.framework */; };
 		EF3EF0C81FFE4BA200BB4353 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3EF0CB1FFE4BA200BB4353 /* Bolts.framework */; };
 		EF3EF0C91FFE4BA200BB4353 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3EF0CC1FFE4BA200BB4353 /* FBSDKCoreKit.framework */; };
 		EF3EF0CA1FFE4BA200BB4353 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3EF0CD1FFE4BA200BB4353 /* FBSDKLoginKit.framework */; };
@@ -23,6 +29,9 @@
 		EF5672061FE65352001A2C73 /* TabViewControllerBackUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5672051FE65352001A2C73 /* TabViewControllerBackUp.swift */; };
 		EF5F353220039C7F006EFDE3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5F353320039C7F006EFDE3 /* AlamofireImage.framework */; };
 		EF5F353420039C83006EFDE3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5F353520039C83006EFDE3 /* Alamofire.framework */; };
+		EF75799120073CE5005F94B8 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75799020073CE5005F94B8 /* ChatRoomViewController.swift */; };
+		EF75799320074134005F94B8 /* SendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75799220074134005F94B8 /* SendTableViewCell.swift */; };
+		EF75799520074143005F94B8 /* ReceivedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75799420074143005F94B8 /* ReceivedTableViewCell.swift */; };
 		EF766CD41FE7E0D70019B167 /* KACircleCropCutterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF766CD11FE7E0D70019B167 /* KACircleCropCutterView.swift */; };
 		EF766CD51FE7E0D70019B167 /* KACircleCropScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF766CD21FE7E0D70019B167 /* KACircleCropScrollView.swift */; };
 		EF766CD61FE7E0D70019B167 /* KACircleCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF766CD31FE7E0D70019B167 /* KACircleCropViewController.swift */; };
@@ -35,6 +44,8 @@
 		EF9BB9461FFFA5A800D47AB1 /* StorageFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BB9451FFFA5A800D47AB1 /* StorageFirebase.swift */; };
 		EF9BFDB51FE805F90026FC2A /* BlockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BFDB41FE805F90026FC2A /* BlockListViewController.swift */; };
 		EF9BFDB71FE806F80026FC2A /* BlockListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BFDB61FE806F80026FC2A /* BlockListTableViewCell.swift */; };
+		EFA56CD12007BEF800BAD69B /* Lightbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA56CD22007BEF800BAD69B /* Lightbox.framework */; };
+		EFA56CD32008978C00BAD69B /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA56CD42008978C00BAD69B /* JGProgressHUD.framework */; };
 		EFB6E4D11FFE2099001E58C2 /* SCLAlertView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB6E4D21FFE2099001E58C2 /* SCLAlertView.framework */; };
 		EFC34A511FE53D880079111B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A501FE53D880079111B /* AppDelegate.swift */; };
 		EFC34A531FE53D880079111B /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC34A521FE53D880079111B /* FriendListViewController.swift */; };
@@ -49,6 +60,8 @@
 		EFCA747E1FEA7C2600276323 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA747D1FEA7C2600276323 /* LoginViewController.swift */; };
 		EFCA74801FEA952E00276323 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA747F1FEA952E00276323 /* SignUpViewController.swift */; };
 		EFCC170B1FE7ACFC00560BD6 /* Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCC170C1FE7ACFC00560BD6 /* Gallery.framework */; };
+		EFE5A7602007132C008C0737 /* NMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE5A7612007132C008C0737 /* NMessenger.framework */; };
+		EFEF1C67200647DB00A11C96 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEF1C68200647DB00A11C96 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		EFEF48191FE67F13002E5A33 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF48181FE67F13002E5A33 /* FriendListTableViewCell.swift */; };
 		EFEF481B1FE685E8002E5A33 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF481A1FE685E8002E5A33 /* HeaderView.swift */; };
 		EFEF481D1FE6889D002E5A33 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF481C1FE6889D002E5A33 /* ChatTableViewCell.swift */; };
@@ -62,6 +75,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EF0E22C6200645C200316419 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFC34A451FE53D880079111B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF0E22C0200645C200316419;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 		EFC34A621FE53D890079111B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EFC34A451FE53D880079111B /* Project object */;
@@ -85,6 +105,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				EF0E22C8200645C200316419 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +119,10 @@
 		5033E7EDB8006F9A4647D592 /* Pods_lopetalk2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lopetalk2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D23D62D30C5614FFA0BD63A /* Pods-lopetalk2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2.debug.xcconfig"; sourceTree = "<group>"; };
 		7082443CFEB55835C96B4507 /* Pods_lopetalk2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lopetalk2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F7DEB1ABE5642AB11CA82DE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		83A8D04716CB3476E881AA32 /* Pods_lopetalk2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lopetalk2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8856F15493585810878F1BFF /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		A1B56C4156A3C1D2926540DE /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6481C6055436E0DAFD5E986 /* Pods-lopetalk2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2.release.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2.release.xcconfig"; sourceTree = "<group>"; };
 		EE8347DC254867492132CBCF /* Pods-lopetalk2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lopetalk2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF0014591FE79B9200D5E992 /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,8 +130,13 @@
 		EF030F062004CC900071C47C /* FriendRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestTableViewCell.swift; sourceTree = "<group>"; };
 		EF030F082004CD640071C47C /* FriendRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestViewController.swift; sourceTree = "<group>"; };
 		EF094CCF1FFFB31700FBD7E7 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		EF0E22C1200645C200316419 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0E22C3200645C200316419 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		EF0E22C5200645C200316419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF135BE520065C690029D7F7 /* ImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1DC0371FFE1EF300D8B138 /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF212D171FE8FFBE00EAF5D7 /* LGButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LGButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3B31DA2007AFDB008193FF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EF3EF0CB1FFE4BA200BB4353 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3EF0CC1FFE4BA200BB4353 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3EF0CD1FFE4BA200BB4353 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +144,10 @@
 		EF5672051FE65352001A2C73 /* TabViewControllerBackUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewControllerBackUp.swift; sourceTree = "<group>"; };
 		EF5F353320039C7F006EFDE3 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5F353520039C83006EFDE3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF75799020073CE5005F94B8 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		EF75799220074134005F94B8 /* SendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTableViewCell.swift; sourceTree = "<group>"; };
+		EF75799420074143005F94B8 /* ReceivedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedTableViewCell.swift; sourceTree = "<group>"; };
+		EF7595D320061B75002C652B /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleAPIClientForREST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF766CD11FE7E0D70019B167 /* KACircleCropCutterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropCutterView.swift; sourceTree = "<group>"; };
 		EF766CD21FE7E0D70019B167 /* KACircleCropScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropScrollView.swift; sourceTree = "<group>"; };
 		EF766CD31FE7E0D70019B167 /* KACircleCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KACircleCropViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +161,8 @@
 		EF9BB9451FFFA5A800D47AB1 /* StorageFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFirebase.swift; sourceTree = "<group>"; };
 		EF9BFDB41FE805F90026FC2A /* BlockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListViewController.swift; sourceTree = "<group>"; };
 		EF9BFDB61FE806F80026FC2A /* BlockListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListTableViewCell.swift; sourceTree = "<group>"; };
+		EFA56CD22007BEF800BAD69B /* Lightbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lightbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA56CD42008978C00BAD69B /* JGProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JGProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB57D63200602CE00827E59 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB57D65200603D100827E59 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB6E4D21FFE2099001E58C2 /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,9 +183,12 @@
 		EFC34A811FE540CE0079111B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		EFC34A831FE540D70079111B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		EFC34A861FE5429E0079111B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EFC4149020065F360051AFDD /* Fusuma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fusuma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCA747D1FEA7C2600276323 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EFCA747F1FEA952E00276323 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EFCC170C1FE7ACFC00560BD6 /* Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE5A7612007132C008C0737 /* NMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEF1C68200647DB00A11C96 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEF47F91FE67845002E5A33 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
 		EFEF47FA1FE67846002E5A33 /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
 		EFEF47FB1FE67846002E5A33 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
@@ -178,10 +216,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EF0E22BE200645C200316419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C8722E021B931F277207C72 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+				B101552CBC830227C836F347 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFC34A4A1FE53D880079111B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA56CD32008978C00BAD69B /* JGProgressHUD.framework in Frameworks */,
+				EFA56CD12007BEF800BAD69B /* Lightbox.framework in Frameworks */,
+				EF3B31DB2007AFDB008193FF /* MapKit.framework in Frameworks */,
+				EFE5A7602007132C008C0737 /* NMessenger.framework in Frameworks */,
+				EF135BE420065C690029D7F7 /* ImagePicker.framework in Frameworks */,
+				EFEF1C67200647DB00A11C96 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
 				EF5F353420039C83006EFDE3 /* Alamofire.framework in Frameworks */,
 				EF5F353220039C7F006EFDE3 /* AlamofireImage.framework in Frameworks */,
 				EF3EF0C81FFE4BA200BB4353 /* Bolts.framework in Frameworks */,
@@ -226,6 +279,8 @@
 				F2B051E39C3655744CAC2936 /* Pods-lopetalk2Tests.release.xcconfig */,
 				07190A396C8A30B032FD3DD6 /* Pods-lopetalk2UITests.debug.xcconfig */,
 				43E75F1873AFFFC4CC1850B6 /* Pods-lopetalk2UITests.release.xcconfig */,
+				7F7DEB1ABE5642AB11CA82DE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				8856F15493585810878F1BFF /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -233,6 +288,14 @@
 		B8EE2BC49BA0D26D0FD47C4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFA56CD42008978C00BAD69B /* JGProgressHUD.framework */,
+				EFA56CD22007BEF800BAD69B /* Lightbox.framework */,
+				EF3B31DA2007AFDB008193FF /* MapKit.framework */,
+				EFE5A7612007132C008C0737 /* NMessenger.framework */,
+				EFC4149020065F360051AFDD /* Fusuma.framework */,
+				EF135BE520065C690029D7F7 /* ImagePicker.framework */,
+				EFEF1C68200647DB00A11C96 /* Pods_OneSignalNotificationServiceExtension.framework */,
+				EF7595D320061B75002C652B /* GoogleAPIClientForREST.framework */,
 				EFB57D65200603D100827E59 /* FBSDKShareKit.framework */,
 				EFB57D63200602CE00827E59 /* FBSDKShareKit.framework */,
 				EF5F353520039C83006EFDE3 /* Alamofire.framework */,
@@ -253,8 +316,18 @@
 				7082443CFEB55835C96B4507 /* Pods_lopetalk2Tests.framework */,
 				5033E7EDB8006F9A4647D592 /* Pods_lopetalk2UITests.framework */,
 				32247D1A2FE0C278880E1BBF /* Pods_lopetalk2_OneSignalNotificationServiceExtension.framework */,
+				A1B56C4156A3C1D2926540DE /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF0E22C2200645C200316419 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EF0E22C3200645C200316419 /* NotificationService.swift */,
+				EF0E22C5200645C200316419 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		EFC34A441FE53D880079111B = {
@@ -264,6 +337,7 @@
 				EFC34A4F1FE53D880079111B /* lopetalk2 */,
 				EFC34A641FE53D890079111B /* lopetalk2Tests */,
 				EFC34A6F1FE53D890079111B /* lopetalk2UITests */,
+				EF0E22C2200645C200316419 /* OneSignalNotificationServiceExtension */,
 				EFC34A4E1FE53D880079111B /* Products */,
 				297F032497CD7A0AA818700A /* Pods */,
 				B8EE2BC49BA0D26D0FD47C4C /* Frameworks */,
@@ -276,6 +350,7 @@
 				EFC34A4D1FE53D880079111B /* lopetalk2.app */,
 				EFC34A611FE53D890079111B /* lopetalk2Tests.xctest */,
 				EFC34A6C1FE53D890079111B /* lopetalk2UITests.xctest */,
+				EF0E22C1200645C200316419 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,6 +406,7 @@
 				EFCA747F1FEA952E00276323 /* SignUpViewController.swift */,
 				EF9BB9431FFF981900D47AB1 /* SetupProfileViewController.swift */,
 				EF030F082004CD640071C47C /* FriendRequestViewController.swift */,
+				EF75799020073CE5005F94B8 /* ChatRoomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -381,6 +457,8 @@
 				EF9BFDB61FE806F80026FC2A /* BlockListTableViewCell.swift */,
 				EF094CCF1FFFB31700FBD7E7 /* ActivityIndicator.swift */,
 				EF030F062004CC900071C47C /* FriendRequestTableViewCell.swift */,
+				EF75799220074134005F94B8 /* SendTableViewCell.swift */,
+				EF75799420074143005F94B8 /* ReceivedTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,6 +475,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EF0E22C0200645C200316419 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF0E22CB200645C200316419 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				5C5F8D310641A0BCA8C51018 /* [CP] Check Pods Manifest.lock */,
+				EF0E22BD200645C200316419 /* Sources */,
+				EF0E22BE200645C200316419 /* Frameworks */,
+				EF0E22BF200645C200316419 /* Resources */,
+				4CA54A5DCAA16BB71830ED8F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = EF0E22C1200645C200316419 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		EFC34A4C1FE53D880079111B /* lopetalk2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFC34A751FE53D890079111B /* Build configuration list for PBXNativeTarget "lopetalk2" */;
@@ -412,6 +509,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EF0E22C7200645C200316419 /* PBXTargetDependency */,
 			);
 			name = lopetalk2;
 			productName = lopetalk2;
@@ -470,6 +568,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "marky RE";
 				TargetAttributes = {
+					EF0E22C0200645C200316419 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					EFC34A4C1FE53D880079111B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -510,11 +612,19 @@
 				EFC34A4C1FE53D880079111B /* lopetalk2 */,
 				EFC34A601FE53D890079111B /* lopetalk2Tests */,
 				EFC34A6B1FE53D890079111B /* lopetalk2UITests */,
+				EF0E22C0200645C200316419 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EF0E22BF200645C200316419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFC34A4B1FE53D880079111B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,6 +688,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2UITests/Pods-lopetalk2UITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4CA54A5DCAA16BB71830ED8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4F67BA0B7627448143DBBE71 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -591,6 +716,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2Tests/Pods-lopetalk2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C5F8D310641A0BCA8C51018 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		620496D37EE85B3C1BC3ACF2 /* [CP] Copy Pods Resources */ = {
@@ -617,42 +760,64 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AsyncDisplayKit/AsyncDisplayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/Gallery/Gallery.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Hokusai/Hokusai.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/Imaginary/Imaginary.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
+				"${BUILT_PRODUCTS_DIR}/Lightbox/Lightbox.framework",
+				"${BUILT_PRODUCTS_DIR}/NMessenger/NMessenger.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SlidingTabBar/SlidingTabBar.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gallery.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hokusai.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Imaginary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lightbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NMessenger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlidingTabBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -718,8 +883,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-lopetalk2/Pods-lopetalk2-resources.sh",
-				"${PODS_ROOT}/FirebaseInvites/Resources/GINInviteResources.bundle",
-				"${PODS_ROOT}/FirebaseInvites/Resources/GPPACLPickerResources.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -734,10 +897,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EF0E22BD200645C200316419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF0E22C4200645C200316419 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFC34A491FE53D880079111B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF75799520074143005F94B8 /* ReceivedTableViewCell.swift in Sources */,
 				EFEF48261FE6BEAE002E5A33 /* TabViewController.swift in Sources */,
 				EF9BFDB71FE806F80026FC2A /* BlockListTableViewCell.swift in Sources */,
 				EFCA747E1FEA7C2600276323 /* LoginViewController.swift in Sources */,
@@ -755,12 +927,14 @@
 				EF766CD51FE7E0D70019B167 /* KACircleCropScrollView.swift in Sources */,
 				EFEF48221FE6A826002E5A33 /* SettingViewModel.swift in Sources */,
 				EF094CD01FFFB31700FBD7E7 /* ActivityIndicator.swift in Sources */,
+				EF75799120073CE5005F94B8 /* ChatRoomViewController.swift in Sources */,
 				EF7C491B1FE8C30E00B83D2E /* SendMessageViewController.swift in Sources */,
 				EF8363731FE6CB6700274257 /* ActionSheetModel.swift in Sources */,
 				EF030F092004CD640071C47C /* FriendRequestViewController.swift in Sources */,
 				EF766CD41FE7E0D70019B167 /* KACircleCropCutterView.swift in Sources */,
 				EFC34A511FE53D880079111B /* AppDelegate.swift in Sources */,
 				EF766CD61FE7E0D70019B167 /* KACircleCropViewController.swift in Sources */,
+				EF75799320074134005F94B8 /* SendTableViewCell.swift in Sources */,
 				EF030F072004CC900071C47C /* FriendRequestTableViewCell.swift in Sources */,
 				EF00145B1FE79BA800D5E992 /* ProfileViewController.swift in Sources */,
 				EF8363751FE6D48B00274257 /* NavigationViewController.swift in Sources */,
@@ -789,6 +963,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EF0E22C7200645C200316419 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF0E22C0200645C200316419 /* OneSignalNotificationServiceExtension */;
+			targetProxy = EF0E22C6200645C200316419 /* PBXContainerItemProxy */;
+		};
 		EFC34A631FE53D890079111B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EFC34A4C1FE53D880079111B /* lopetalk2 */;
@@ -821,6 +1000,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EF0E22C9200645C200316419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7DEB1ABE5642AB11CA82DE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 877839YT4B;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF0E22CA200645C200316419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8856F15493585810878F1BFF /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 877839YT4B;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stella.lopetalk2.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EFC34A731FE53D890079111B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -932,6 +1145,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D23D62D30C5614FFA0BD63A /* Pods-lopetalk2.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lopetalk2/lopetalk2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -950,6 +1164,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6481C6055436E0DAFD5E986 /* Pods-lopetalk2.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lopetalk2/lopetalk2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1037,6 +1252,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EF0E22CB200645C200316419 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF0E22C9200645C200316419 /* Debug */,
+				EF0E22CA200645C200316419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EFC34A481FE53D880079111B /* Build configuration list for PBXProject "lopetalk2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

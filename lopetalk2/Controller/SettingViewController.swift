@@ -151,7 +151,7 @@ extension SettingViewController:MFMessageComposeViewControllerDelegate {
     func sendSMSText() {
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
-            controller.body = "Yo dude. Download this app and add me ASAP!/nMy username is \(CurrentUser.username)"
+            controller.body = "Yo dude. Download this app and add me ASAP!\nMy username is \(CurrentUser.username)"
             controller.recipients = []
             controller.messageComposeDelegate = self
             self.present(controller, animated: true, completion: nil)
@@ -182,7 +182,7 @@ extension SettingViewController:ActionSheetDelegate{
             let composeVC = MFMailComposeViewController()
             composeVC.mailComposeDelegate = self
             composeVC.setToRecipients([])
-            composeVC.setMessageBody("Yo dude. Download this app and add me ASAP!/nMy username is \(CurrentUser.username)", isHTML: false)
+            composeVC.setMessageBody("Yo dude. Download this app and add me ASAP!\nMy username is \(CurrentUser.username)", isHTML: false)
             self.present(composeVC, animated: true, completion:nil)
         }
         }

@@ -11,7 +11,7 @@ import Firebase
 import Alamofire
 import AlamofireImage
 import SCLAlertView
-
+import OneSignal
 typealias signInCompletion = (Bool) -> Void
 
 class CurrentUser {
@@ -26,6 +26,9 @@ class CurrentUser {
     private static var blocklistUid:[String] = []
     private static var _requestlist:[[String:Any]] = []
     private static var _profilePicture:String = ""
+    private static var _pushid:String = ""
+    private static var _notilist:[[String:Any]] = []
+    static var imageCache = AutoPurgingImageCache()
     
     class func isSignin() -> Bool {
         guard let uid = Auth.auth().currentUser?.uid else { return false }
@@ -44,6 +47,23 @@ class CurrentUser {
                 return
             }
             completion(name)
+        })
+    }
+    class func getNotiList(completion:@escaping(_ success:Bool) -> ()) {
+        Database.database().reference().child("Users/\(CurrentUser.uid)/Notifications").observeSingleEvent(of: .value, with: {(snapshot) in
+            
+            guard let notis = snapshot.value as? [String:Any] else {
+                completion(false)
+                return
+            }
+            notilist.removeAll()
+            for noti in notis {
+                print("cast noti wrong \(noti)")
+                notilist.append(noti.value as! [String : Any])
+                if notilist.count == notis.count {
+                    completion(true)
+                }
+            }
         })
     }
 
@@ -150,7 +170,9 @@ class CurrentUser {
             Alamofire.request(imageURL).responseImage { response in
                 debugPrint(response)
                 if let image = response.result.value {
+                    print("image is here")
                     let aspectScaledToFitImage = image.af_imageAspectScaled(toFit: size)
+                    
                     completion(aspectScaledToFitImage)
                     
                     
@@ -179,6 +201,9 @@ class CurrentUser {
             }
         }
     }
+    class func queryBlockList(_ username:String,completion:@escaping(_ found:Bool)->()){
+        
+    }
     class func addMessage(_ message:String, completion: @escaping (_ finish:Bool) -> ()){
         Database.database().reference().child("Users/\(CurrentUser.uid)/Messages").childByAutoId().setValue(message, withCompletionBlock:{ (error , ref) in
             if error != nil {
@@ -188,6 +213,52 @@ class CurrentUser {
             completion(true)
             }
         })
+    }
+
+    class func sendMessage(_ uid:String, _ user:[String:Any],_ lat:String,_ long:String,_ message:String,_ picture:String,_ pushid:String, completion: @escaping(_ success:Bool) -> ()) {
+        if (OneSignal.getPermissionSubscriptionState().permissionStatus.status == .notDetermined ||
+            OneSignal.getPermissionSubscriptionState().permissionStatus.status == .denied) {
+            completion(false)
+            return
+        }
+        else {
+            isInBlockList(uid, completion: {(isBlock) in
+                if !isBlock{
+                    completion(true)
+                }
+                else{
+                    let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
+                    let pushToken = status.subscriptionStatus.pushToken
+                    let userId = status.subscriptionStatus.userId
+                    
+                    if pushToken != nil {
+                        let message = message
+                        
+                        let notificationContent = [
+                            "include_player_ids": [user["pushid"] as! String],
+                            "contents": ["en": message], // Required unless "content_available": true or "template_id" is set
+                            "headings": ["en": "LopeTalk"],
+                            "subtitle": ["en": CurrentUser.username as! String],
+                            // If want to open a url with in-app browser
+                            //"url": "https://google.com",
+                            // If you want to deep link and pass a URL to your webview, use "data" parameter and use the key in the AppDelegate's notificationOpenedBlock
+                            "data": ["picture": picture,"lat":lat,"long":long],
+                            //                "ios_attachments": ["id" : "https://cdn.pixabay.com/photo/2017/01/16/15/17/hot-air-balloons-1984308_1280.jpg"],
+                            "ios_badgeType": "Increase",
+                            "ios_badgeCount": 1
+                            ] as [String : Any]
+                        
+                        OneSignal.postNotification(notificationContent)
+                        Database.database().reference().child("Users/\(user["uid"] as! String)/Notifications").childByAutoId().setValue(["uid":user["uid"],"profilePicture":user["profilePicture"] as! String, "username":CurrentUser.username,"message":message,"picture":picture,"lat":lat,"long":long])
+                        completion(true)
+                    }else{
+                        print("cannot send noti \(status)")
+                        completion(false)
+                    }
+                }
+            })
+        }
+       
     }
     class func getMessageList(completion: @escaping (_ finish:Bool) -> ()) {
         Database.database().reference().child("Users/\(CurrentUser.uid)/Messages").observeSingleEvent(of: .value, with: {(snapshot) in
@@ -308,6 +379,15 @@ class CurrentUser {
         })
     }
     class func removeUser() {
+       uid = ""
+       email = ""
+    username = ""
+        friendlistUid = []
+        blocklistUid = []
+        profilePicture = ""
+        pushid = ""
+        notilist.removeAll()
+        
         friendlist.removeAll()
         blocklist.removeAll()
         requestlist.removeAll()
@@ -340,6 +420,15 @@ class CurrentUser {
             }
         })
     }
+    class func isInBlockList(_ uid: String, completion: @escaping (_ exists: Bool) -> ()) {
+        Database.database().reference().child("Users/\(CurrentUser.uid)/Blocklist").queryEqual(toValue: uid).observeSingleEvent(of: .value, with: {(snapshot) in
+            if snapshot.exists() {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        })
+    }
     class func setUsername(_ username:String){
         self.username = username
         Database.database().reference().child("Users/\(_uid)/username").setValue(username)
@@ -363,6 +452,7 @@ class CurrentUser {
         })
 
     }
+
 
     static var uid:String{
         get{
@@ -435,6 +525,22 @@ class CurrentUser {
         }
         set{
             _requestlist = newValue
+        }
+    }
+    static var pushid:String {
+        get{
+            return _pushid
+        }
+        set{
+            _pushid = newValue
+        }
+    }
+    static var notilist:[[String:Any]]{
+        get{
+            return _notilist
+        }
+        set{
+            _notilist = newValue
         }
     }
 }

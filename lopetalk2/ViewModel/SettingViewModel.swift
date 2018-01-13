@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MessageUI
 class SettingViewModel{
-    var settings = [["Profile","Account"],["Invite","Block List"],["Privacy Policy","Terms","Open Source Libraries","Contact Us"],["Log Out"]]
+    var settings = [["Profile","Account"],["Invite","Block List"],["Contact Us"],["Log Out"]]
     
    
 }

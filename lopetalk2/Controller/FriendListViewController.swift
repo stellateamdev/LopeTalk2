@@ -13,6 +13,7 @@ import Firebase
 import SCLAlertView
 import Alamofire
 import AlamofireImage
+import OneSignal
 
 class FriendListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -20,7 +21,9 @@ class FriendListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        let initialViewController = self.storyboard?.instantiateViewController(withIdentifier: "tabView")
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = initialViewController
         refreshControl.addTarget(self, action: #selector(FriendListViewController.refreshTableView), for: .valueChanged)
         
         if #available(iOS 10.0, *) {
@@ -37,12 +40,52 @@ class FriendListViewController: UIViewController {
         let nav = self.navigationController as! NavigationViewController
         nav.titleLabel.text = "LopeTalk"
         nav.titleLabel.font = UIFont.systemFont(ofSize: 38, weight: UIFont.Weight.heavy)
+        promptNotification()
    
     }
     override func viewWillAppear(_ animated: Bool) {
         self.refreshTableView()
+        
     }
-}
+    func promptNotification() {
+        if (OneSignal.getPermissionSubscriptionState().permissionStatus.status == .notDetermined ||
+            OneSignal.getPermissionSubscriptionState().permissionStatus.status == .denied) {
+        let alertVC = PMAlertController(title: "Don't miss out!", description: "Turn on push notifications to see who is messaging you.", image: UIImage(named:"promptnoti"), style: .alert)
+        alertVC.dismissWithBackgroudTouch = true
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
+            print("Capture action Cancel")
+        }))
+        alertVC.addAction(PMAlertAction(title: "OK", style: .default, action: { () -> Void in
+            OneSignal.promptForPushNotifications(userResponse: { accepted in
+                print("User accepted notifications: \(accepted)")
+                let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
+                
+                let userID = status.subscriptionStatus.userId
+                print("userID = \(String(describing: userID))")
+                let pushToken = status.subscriptionStatus.pushToken
+                print("pushToken = \(String(describing: pushToken))")
+                
+                if pushToken != nil {
+                    if let playerID = userID {
+                        CurrentUser.pushid = playerID
+                        Database.database().reference().child("Users/\(CurrentUser.uid)/pushid").setValue(playerID, withCompletionBlock: {(error,ref) in
+                            if error != nil {
+                                return
+                            }
+                            else{
+                                print("push noti \(OneSignal.getPermissionSubscriptionState())")
+                            }
+                        })
+                    }
+                }
+            })
+        }))
+        self.present(alertVC, animated: true, completion: nil)
+    
+        }
+   }
+ }
+
 extension FriendListViewController {
     
     @objc func showActionSheet(){
@@ -83,10 +126,14 @@ extension FriendListViewController:UITableViewDelegate,UITableViewDataSource {
             Alamofire.request(imageURL).responseImage { response in
                 debugPrint(response)
                 print(imageURL)
+                print("imageURL \(imageURL)")
                 if let image = response.result.value {
                     let aspectScaledToFitImage = image.af_imageAspectScaled(toFit: cell.profileImage.frame.size)
                     cell.profileImage.image = aspectScaledToFitImage
                     print("image downloaded: \(image)")
+                }
+                else{
+                    print("goodbye image \(response)")
                 }
             }
             return cell
@@ -94,6 +141,7 @@ extension FriendListViewController:UITableViewDelegate,UITableViewDataSource {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             self.tableView.deselectRow(at: indexPath, animated: false)
             let sendMessageController = UIViewController.getStoryboardInstance("sendMessage") as! SendMessageViewController
+            print("check array currentUser \(CurrentUser.friendlist)")
             sendMessageController.user = CurrentUser.friendlist[indexPath.row]
             self.navigationController?.pushViewController(sendMessageController, animated: true)
             self.tabBarController?.tabBar.isHidden = true
@@ -114,7 +162,6 @@ extension FriendListViewController:UITableViewDelegate,UITableViewDataSource {
                     print("enter block")
                     CurrentUser.blockUser(CurrentUser.friendlist[index.row]["uid"] as! String, completion: {(success) in
                         if success {
-//                            CurrentUser.friendlist.remove(at: CurrentUser.friendlist.index(where: {$0["uid"] as! String == CurrentUser.friendlist[index.row]["uid"] as! String})!)
                             DispatchQueue.main.async {
                             self.tableView.reloadData()
                             }

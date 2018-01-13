@@ -10,22 +10,38 @@ import UIKit
 import LGButton
 import Gallery
 import SCLAlertView
+import MapKit
+import CoreLocation
+import JGProgressHUD
+import OneSignal
 
 class SendMessageViewController: UIViewController {
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var headerView:UIView!
     @IBOutlet weak var location:LGButton!
     @IBOutlet weak var photo:LGButton!
+    @IBOutlet weak var close:LGButton!
     
-    var user:[String:Any]!
+    var user:[String:Any]?
     var gallery:GalleryController!
     private let refreshControl = UIRefreshControl()
+    private let locationManager = CLLocationManager()
+    private var isLocate = false
     
     override func viewWillAppear(_ animated: Bool) {
+        self.refreshTableView()
         headerView.backgroundColor = UIColor.lopeColor()
-        let nav = self.navigationController as! NavigationViewController
-        nav.titleLabel.text = "Send Message"
-        nav.changeFontSize(30)
+        if let nav = self.navigationController as? NavigationViewController {
+            nav.titleLabel.text = "Send Message"
+            nav.changeFontSize(30)
+            close.isHidden = true
+        }
+        else{
+            close.isHidden = false
+            headerView.isHidden = true
+            
+        }
+  
         self.tabBarController?.tabBar.isHidden = true
     }
 //    override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +53,7 @@ class SendMessageViewController: UIViewController {
 //    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
         refreshControl.addTarget(self, action: #selector(SendMessageViewController.refreshTableView), for: .valueChanged)
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
@@ -47,12 +64,11 @@ class SendMessageViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
-        refreshTableView()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(SendMessageViewController.edit))
         
         location.isUserInteractionEnabled = true
         photo.isUserInteractionEnabled = true
-        location.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SendMessageViewController.sendLocation)))
+        location.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SendMessageViewController.tapLocation)))
         photo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SendMessageViewController.showPhotoGallery)))
         
     
@@ -60,10 +76,15 @@ class SendMessageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func dismiss() {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewWillDisappear(_ animated: Bool) {
-            let nav = self.navigationController as! NavigationViewController
+        if let nav = self.navigationController as? NavigationViewController {
             nav.titleLabel.text = "LopeTalk"
             self.tabBarController?.tabBar.isHidden = false
+        }
+       
     }
 
     @objc func edit() {
@@ -95,6 +116,37 @@ extension SendMessageViewController:UITableViewDataSource,UITableViewDelegate {
         cell.textLabel?.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.medium)
         cell.textLabel?.textAlignment = .center
         return cell
+    }
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading.."
+        hud.show(in: self.view)
+        let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+            kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+            kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+            showCloseButton: true
+        )
+        let alert = SCLAlertView(appearance: appearance)
+        CurrentUser.sendMessage(user!["uid"] as! String ,user!, "", "", CurrentUser.messages[indexPath.row], "", user!["pushid"] as! String, completion: {(success) in
+             hud.dismiss()
+            if success {
+            }
+            else{
+               
+              
+                if (OneSignal.getPermissionSubscriptionState().permissionStatus.status == .notDetermined ||
+                    OneSignal.getPermissionSubscriptionState().permissionStatus.status == .denied) {
+                alert.showError("Error", subTitle: "Please enable push notification")
+                }
+                else{
+                    alert.showError("Error", subTitle: "Cannot send, please try again.")
+                }
+            }
+        })
+       
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return CurrentUser.messages.count
@@ -140,9 +192,6 @@ extension SendMessageViewController:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    @objc func sendLocation() {
-        location.isLoading = true
-    }
     @objc func showPhotoGallery() {
         
         gallery = GalleryController()
@@ -150,8 +199,43 @@ extension SendMessageViewController:UITableViewDataSource,UITableViewDelegate {
         self.present(gallery, animated: true, completion: nil)
     }
      func sendPhoto(_ image:UIImage) {
-        
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading.."
+        hud.show(in: self.view)
+        let newImg = image.resizeWithWidth(width: 375)
+        StorageFirebase.uploadImage(image, CurrentUser.uid, completion:{ url in
+            guard let downloadURL = url?.absoluteString else{
+                hud.dismiss()
+                let appearance = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                    kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                    kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                    showCloseButton: true
+                )
+                let alert = SCLAlertView(appearance: appearance)
+                alert.showError("Error", subTitle: "Cannot send photo, please try again")
+                return
+            }
+            CurrentUser.sendMessage(self.user!["uid"] as! String,self.user!, "", "", "Send you a photo", downloadURL, self.user!["pushid"] as! String, completion: {(success) in
+                if success {
+                    hud.dismiss()
+                }
+                else{
+                    hud.dismiss()
+                    let appearance = SCLAlertView.SCLAppearance(
+                        kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                        kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                        kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                        showCloseButton: true
+                    )
+                    let alert = SCLAlertView(appearance: appearance)
+                    alert.showError("Error", subTitle: "Cannot send location, please try again")
+                }
+            })
+        })
+      
     }
+
     
 }
 extension SendMessageViewController:GalleryControllerDelegate {
@@ -179,3 +263,63 @@ extension SendMessageViewController:GalleryControllerDelegate {
     
     
 }
+extension SendMessageViewController:CLLocationManagerDelegate {
+    @objc func tapLocation() {
+        print("click this shit")
+        if (CLLocationManager.locationServicesEnabled())
+        {
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+                            self.isLocate = false
+            locationManager.requestLocation()
+        }
+        else
+        {
+            #if debug
+                println("Location services are not enabled");
+            #endif
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
+    }
+   
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("location did update")
+        
+        let locationArray = locations as NSArray
+        let locationObj = locationArray.lastObject as! CLLocation
+        let coord = locationObj.coordinate
+        if !isLocate {
+            sendLocation(coord)
+            locationManager.stopUpdatingLocation()
+        }
+    }
+    func sendLocation(_ location:CLLocationCoordinate2D) {
+        isLocate = true
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading.."
+        hud.show(in: self.view)
+        CurrentUser.sendMessage(self.user!["uid"] as! String,user!,"\(location.latitude)", "\(location.longitude)", "Send you a location", "", self.user!["pushid"] as! String, completion: {(success) in
+             hud.dismiss()
+            if success {
+               
+            }
+            else{
+                
+                self.isLocate = false
+                let appearance = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                    kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                    kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                    showCloseButton: true
+                )
+                let alert = SCLAlertView(appearance: appearance)
+                alert.showError("Error", subTitle: "Cannot send location, please try again")
+            }
+        })
+    }
+}
+
+

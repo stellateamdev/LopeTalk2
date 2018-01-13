@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0751F2444B010744B911712930503D1"
+               BlueprintIdentifier = "69EAA072841032F82394B99D8B8EA9FB"
                BuildableName = "Pods_lopetalk2.framework"
                BlueprintName = "Pods-lopetalk2"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C0751F2444B010744B911712930503D1"
+            BlueprintIdentifier = "69EAA072841032F82394B99D8B8EA9FB"
             BuildableName = "Pods_lopetalk2.framework"
             BlueprintName = "Pods-lopetalk2"
             ReferencedContainer = "container:Pods.xcodeproj">

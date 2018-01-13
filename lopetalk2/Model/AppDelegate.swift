@@ -11,33 +11,87 @@ import Firebase
 import FBSDKCoreKit
 import UserNotifications
 import GoogleSignIn
+import OneSignal
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, OSSubscriptionObserver {
+    func onOSSubscriptionChanged(_ stateChanges: OSSubscriptionStateChanges!) {
+        // Example of detecting answering the permission prompt
+            if stateChanges.from.subscribed == false && stateChanges.to.subscribed {
+
+                let userID = stateChanges.to.userId
+                let pushToken = stateChanges.to.pushToken
+                print("pushToken = \(String(describing: pushToken))")
+
+                if pushToken != nil {
+                    if let playerID = userID {
+                        CurrentUser.pushid = playerID
+                        Database.database().reference().child("Users/\(CurrentUser.uid)/pushid").setValue(playerID, withCompletionBlock: {(error,ref) in
+                            if error != nil {
+                                return
+                            }
+                            else{
+                                print("push noti \(OneSignal.getPermissionSubscriptionState())")
+                            }
+                        })
+                    }
+                }
+            }
+        }
+    
 
     var window: UIWindow?
-   let gcmMessageIDKey = "gcm.message_id"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UIApplication.shared.statusBarStyle = .lightContent
         
-        FirebaseApp.configure()
-        // [START set_messaging_delegate]
-        Messaging.messaging().delegate = self
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().delegate = self
-            
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-            UNUserNotificationCenter.current().requestAuthorization(
-                options: authOptions,
-                completionHandler: {_, _ in })
-        } else {
-            let settings: UIUserNotificationSettings =
-                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
+        let notificationReceivedBlock: OSHandleNotificationReceivedBlock = { notification in
+            print("Received Notification: \(notification!.payload.notificationID)")
         }
         
-        application.registerForRemoteNotifications()
+        let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
+            // This block gets called when the user reacts to a notification received
+            let payload: OSNotificationPayload = result!.notification.payload
+            
+            let fullMessage = payload.body!
+            print("Message = \(fullMessage)")
+            let title = payload.title
+            
+            if payload.additionalData != nil {
+                if payload.title != nil {
+                    if self.window!.rootViewController as? UITabBarController != nil {
+                        var tababarController = self.window!.rootViewController as! UITabBarController
+                        tababarController.selectedIndex = 1
+                    }
+                }
+            }
+        }
+        
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false,
+                                     kOSSettingsKeyInAppLaunchURL: true]
+        
+        OneSignal.initWithLaunchOptions(launchOptions,
+                                        appId: "452b985a-33bb-4a43-ac60-629feb07f04c",
+                                        handleNotificationReceived: notificationReceivedBlock,
+                                        handleNotificationAction: notificationOpenedBlock,
+                                        settings: onesignalInitSettings)
+        
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification
+      // OneSignal.add(self as! OSPermissionObserver)
+//        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+//
+//        OneSignal.initWithLaunchOptions(launchOptions,
+//                                        appId: "452b985a-33bb-4a43-ac60-629feb07f04c",
+//                                        handleNotificationAction: nil,
+//                                        settings: onesignalInitSettings)
+//
+//        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        
+        
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        let all = Database.database().reference()
+        all.keepSynced(true)
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
@@ -56,7 +110,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         self.window?.makeKeyAndVisible()
         return true
     }
-    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         // ...
         if let error = error {
@@ -107,61 +160,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
 }
 
 // [START ios_10_message_handling]
-@available(iOS 10, *)
-extension AppDelegate : UNUserNotificationCenterDelegate {
-    
-    // Receive displayed notifications for iOS 10 devices.
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                willPresent notification: UNNotification,
-                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        let userInfo = notification.request.content.userInfo
-        
-        // With swizzling disabled you must let Messaging know about the message, for Analytics
-        // Messaging.messaging().appDidReceiveMessage(userInfo)
-        // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
-        }
-        
-        // Print full message.
-        print(userInfo)
-        
-        // Change this to your preferred presentation option
-        completionHandler([])
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                didReceive response: UNNotificationResponse,
-                                withCompletionHandler completionHandler: @escaping () -> Void) {
-        let userInfo = response.notification.request.content.userInfo
-        // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
-        }
-        
-        // Print full message.
-        print(userInfo)
-        
-        completionHandler()
-    }
-}
 // [END ios_10_message_handling]
-
-extension AppDelegate : MessagingDelegate {
-    // [START refresh_token]
-    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
-        print("Firebase registration token: \(fcmToken)")
-        
-        // TODO: If necessary send token to application server.
-        // Note: This callback is fired at each app startup and whenever a new token is generated.
-    }
-    // [END refresh_token]
-    // [START ios_10_data_message]
-    // Receive data messages on iOS 10+ directly from FCM (bypassing APNs) when the app is in the foreground.
-    // To enable direct data messages, you can set Messaging.messaging().shouldEstablishDirectChannel to true.
-    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
-        print("Received data message: \(remoteMessage.appData)")
-    }
-    // [END ios_10_data_message]
-}
 

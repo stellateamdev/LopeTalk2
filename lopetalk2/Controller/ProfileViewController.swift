@@ -13,6 +13,8 @@ import Firebase
 import SCLAlertView
 import Alamofire
 import AlamofireImage
+import ImagePicker
+import JGProgressHUD
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var currentUsername: UILabel!
@@ -29,10 +31,12 @@ class ProfileViewController: UIViewController {
         
         name.returnKeyType = UIReturnKeyType.done
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        name.becomeFirstResponder()
+        //name.becomeFirstResponder()
         
         profileImage.layer.cornerRadius = profileImage.frame.size.height/2.0
         profileImage.clipsToBounds = true
@@ -78,17 +82,22 @@ class ProfileViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     @objc func openPhoto() {
-        gallery = GalleryController()
-        gallery.delegate = self
-        self.present(gallery, animated: true, completion: nil)
+        self.showActionSheet("Camera", "Photo Library")
+        
+        //        gallery = GalleryController()
+        //        gallery.delegate = self
+        //        self.present(gallery, animated: true, completion: nil)
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        finishEdit()
-        return true
-    }
+//    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+//        finishEdit()
+//        return true
+//    }
     
     @objc func finishEdit() {
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading.."
+        hud.show(in: self.view)
         if name.text == "" {
             let appearance = SCLAlertView.SCLAppearance(
                 kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
@@ -98,8 +107,10 @@ class ProfileViewController: UIViewController {
             )
             let alert = SCLAlertView(appearance: appearance)
             alert.showError("Error", subTitle: "Please add your display name")
+            
             return
         }
+
         Database.database().reference().child("Users/\(CurrentUser.uid)/displayName").setValue(name.text, withCompletionBlock: {(error,ref) in
             if error != nil {
                 let appearance = SCLAlertView.SCLAppearance(
@@ -109,14 +120,29 @@ class ProfileViewController: UIViewController {
                     showCloseButton: true
                 )
                 let alert = SCLAlertView(appearance: appearance)
+                hud.dismiss()
                  alert.showError("Error", subTitle: "Cannot change display name, please try again later")
             }
             else{
-                self.navigationController?.popViewController(animated: true)
+                if self.image != nil {
+                    print("uploading image")
+                    let newImg = self.image.resizeWithWidth(width: 150)
+                    StorageFirebase.uploadImage(newImg!, CurrentUser.uid, completion:{ url in
+                        guard let downloadURL = url?.absoluteString else{
+                            return
+                        }
+                        CurrentUser.setProfilePicture(downloadURL)
+                        hud.dismiss()
+                         self.navigationController?.popViewController(animated: true)
+                    })
+                    
+                }
+               
             }
         })
     }
 }
+
 extension ProfileViewController:GalleryControllerDelegate {
     func galleryController(_ controller: GalleryController, didSelectImages images: [UIImage]) {
         gallery.cart.images.removeAll()
@@ -141,7 +167,21 @@ extension ProfileViewController:GalleryControllerDelegate {
         gallery = nil
     }
 }
-
+extension ProfileViewController:ImagePickerDelegate {
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
+        
+    }
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
+        imagePicker.dismiss(animated: true, completion: {
+            self.image = images[0]
+            self.presentCircleCrop()
+        })
+        
+    }
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController){
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+}
 extension ProfileViewController:KACircleCropViewControllerDelegate{
     func presentCircleCrop() {
         let circleCropController = KACircleCropViewController(withImage:image)
@@ -159,3 +199,54 @@ extension ProfileViewController:KACircleCropViewControllerDelegate{
     
     
 }
+extension ProfileViewController:ActionSheetDelegate{
+    func thirdAction() {}
+    
+    func firstAction() {
+        var configuration = Configuration()
+        configuration.doneButtonTitle = "Done"
+        configuration.noImagesTitle = "Sorry! There are no images here"
+        configuration.recordLocation = false
+        let imagePickerController = ImagePickerController(configuration: configuration)
+        imagePickerController.delegate = self
+        imagePickerController.imageLimit = 1
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func secondAction() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    func showActionSheet(_ first:String,_ second:String) {
+        self.view.endEditing(true)
+        let acsheetModel = ActionSheetModel()
+        acsheetModel.delegate = self
+        acsheetModel.firstBtnTitle = first
+        acsheetModel.secondBtnTitle = second
+        let acsheet = acsheetModel.setUp(false)
+        acsheet.show()
+    }
+}
+extension ProfileViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let image0 = info[UIImagePickerControllerOriginalImage] as! UIImage
+        self.image = image0
+        picker.dismiss(animated: true, completion: {
+            print("present circle")
+              self.presentCircleCrop()
+        })
+      
+        
+        
+    }
+}
+
+
+
+

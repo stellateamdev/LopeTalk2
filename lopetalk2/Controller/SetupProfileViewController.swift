@@ -11,7 +11,8 @@ import SkyFloatingLabelTextField
 import Gallery
 import Firebase
 import SCLAlertView
-
+import ImagePicker
+import JGProgressHUD
 class SetupProfileViewController: UIViewController {
 
     @IBOutlet weak var profileImage:UIImageView!
@@ -20,9 +21,12 @@ class SetupProfileViewController: UIViewController {
     @IBOutlet weak var checkUsername:UIButton!
     @IBOutlet weak var done:UIButton!
     var gallery:GalleryController!
-    var image:UIImage?
+    var image = UIImage()
     var username:String!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         checkUsername.backgroundColor = UIColor.lopeColor()
@@ -34,6 +38,7 @@ class SetupProfileViewController: UIViewController {
         profileImage.contentMode = .scaleAspectFill
         profileImage.isUserInteractionEnabled = true
         profileImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.openPhoto)))
+        
         
         editPhoto.setTitleColor(UIColor.lopeColor(), for: .normal)
         editPhoto.addTarget(self, action: #selector(ProfileViewController.openPhoto), for: .touchUpInside)
@@ -55,12 +60,19 @@ class SetupProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @objc func openPhoto() {
-        gallery = GalleryController()
-        gallery.delegate = self
-        self.present(gallery, animated: true, completion: nil)
+        self.showActionSheet("Camera", "Photo Library")
+
+//        gallery = GalleryController()
+//        gallery.delegate = self
+//        self.present(gallery, animated: true, completion: nil)
     }
     @IBAction func checkUsername(sender:UIButton) {
+        let indicator = ActivityIndicator.showActivityIndicatory(self.view, true)
+        self.view.addSubview(indicator)
+        self.view.bringSubview(toFront: indicator)
+        self.view.endEditing(true)
         guard let temp = name.text else {
+            indicator.removeFromSuperview()
             return
         }
         username = temp
@@ -73,6 +85,7 @@ class SetupProfileViewController: UIViewController {
             )
             let alert = SCLAlertView(appearance: appearance)
             if !isUserRegistered {
+                indicator.removeFromSuperview()
                 alert.showSuccess("Good to go!", subTitle: "You can use this username")
                 self.name.textColor = UIColor.green
                 UIView.animate(withDuration: 0.5, animations: {
@@ -81,29 +94,18 @@ class SetupProfileViewController: UIViewController {
                 print("can register")
             }
             else{
+                indicator.removeFromSuperview()
                 alert.showError("Error", subTitle: "Username already taken")
                 self.name.textColor = UIColor.red
                 print("can't register")
             }
             
         })
-//            guard let value = snapshot.value as? NSDictionary else {
-//                return
-//            }
-//            for data in value {
-//                let name = data.value as! String
-//                if name == self.username {
-//                    return
-//                }
-//            }
     }
     @IBAction func done(sender:UIButton){
-      let indicator = ActivityIndicator.showActivityIndicatory(self.view, true)
-        
-        self.view.addSubview(indicator)
-        self.view.bringSubview(toFront: indicator)
-        indicator.startAnimating()
-        print(Storage.storage().reference())
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading.."
+        hud.show(in: self.view)
         
         if name.textColor != UIColor.green {
             let appearance = SCLAlertView.SCLAppearance(
@@ -118,31 +120,30 @@ class SetupProfileViewController: UIViewController {
         
         if image != nil {
               print("uploading image")
-            StorageFirebase.uploadImage(image!, CurrentUser.uid, completion:{ url in
+            let newImg = image.af_imageScaled(to: CGSize(width: image.size.width/2.0, height: image.size.height/2.0))
+            StorageFirebase.uploadImage(newImg, CurrentUser.uid, completion:{ url in
                 guard let downloadURL = url?.absoluteString else{
                     return
                 }
                 CurrentUser.setProfilePicture(downloadURL)
                 CurrentUser.setUsername(self.username.lowercased())
-                indicator.stopAnimating()
-                indicator.removeFromSuperview()
+                hud.dismiss()
                 self.performSegue(withIdentifier: "signupSuccess", sender: self)
             })
             
         }
         else{
             CurrentUser.setUsername(self.username)
-            indicator.stopAnimating()
-            indicator.removeFromSuperview()
+            hud.dismiss()
         }
         //self.performSegue(withIdentifier: "signupSuccess", sender: self)
     }
 }
+
 extension SetupProfileViewController:GalleryControllerDelegate {
     func galleryController(_ controller: GalleryController, didSelectImages images: [UIImage]) {
         gallery.cart.images.removeAll()
         gallery.dismiss(animated: true, completion: nil)
-        //refreshPhoto(images[0])
         image = images[0]
         gallery = nil
         presentCircleCrop()
@@ -165,9 +166,24 @@ extension SetupProfileViewController:GalleryControllerDelegate {
     
     
 }
+extension SetupProfileViewController:ImagePickerDelegate {
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
+        
+    }
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
+        imagePicker.dismiss(animated: true, completion: {
+            self.image = images[0]
+            self.presentCircleCrop()
+        })
+        
+    }
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController){
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+}
 extension SetupProfileViewController:KACircleCropViewControllerDelegate{
     func presentCircleCrop() {
-        let circleCropController = KACircleCropViewController(withImage:image!)
+        let circleCropController = KACircleCropViewController(withImage:image)
         circleCropController.delegate = self
         present(circleCropController, animated: false, completion: nil)
     }
@@ -188,4 +204,50 @@ extension SetupProfileViewController:UITextFieldDelegate {
         name.textColor = UIColor.darkGray
     }
 }
+extension SetupProfileViewController:ActionSheetDelegate{
+    func thirdAction() {}
+    
+    func firstAction() {
+        var configuration = Configuration()
+        configuration.doneButtonTitle = "Done"
+        configuration.noImagesTitle = "Sorry! There are no images here"
+        configuration.recordLocation = false
+        let imagePickerController = ImagePickerController(configuration: configuration)
+        imagePickerController.delegate = self
+        imagePickerController.imageLimit = 1
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func secondAction() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    func showActionSheet(_ first:String,_ second:String) {
+        self.view.endEditing(true)
+        let acsheetModel = ActionSheetModel()
+        acsheetModel.delegate = self
+        acsheetModel.firstBtnTitle = first
+        acsheetModel.secondBtnTitle = second
+        let acsheet = acsheetModel.setUp(false)
+        acsheet.show()
+    }
+}
+extension SetupProfileViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let image0 = info[UIImagePickerControllerOriginalImage] as! UIImage
+        self.image = image0
+        picker.dismiss(animated: true, completion: {
+            print("present circle")
+            self.presentCircleCrop()
+        })
+    }
+}
+
+
 

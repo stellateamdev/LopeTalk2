@@ -2,121 +2,124 @@ PODS:
   - Alamofire (4.6.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - AsyncDisplayKit (2.2):
+    - AsyncDisplayKit/PINRemoteImage (= 2.2)
+  - AsyncDisplayKit/Core (2.2)
+  - AsyncDisplayKit/PINRemoteImage (2.2):
+    - AsyncDisplayKit/Core
+    - PINRemoteImage/iOS (= 3.0.0-beta.8)
+    - PINRemoteImage/PINCache
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - Cache (4.1.2)
   - FBSDKCoreKit (4.25.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.25.0):
     - FBSDKCoreKit
-  - Firebase/Auth (4.0.4):
+  - Firebase/Auth (4.8.0):
     - Firebase/Core
-    - FirebaseAuth (= 4.0.0)
-  - Firebase/Core (4.0.4):
-    - FirebaseAnalytics (= 4.0.2)
-    - FirebaseCore (= 4.0.4)
-  - Firebase/Database (4.0.4):
+    - FirebaseAuth (= 4.4.1)
+  - Firebase/Core (4.8.0):
+    - FirebaseAnalytics (= 4.0.5)
+    - FirebaseCore (= 4.0.13)
+  - Firebase/Database (4.8.0):
     - Firebase/Core
-    - FirebaseDatabase (= 4.0.0)
-  - Firebase/Invites (4.0.4):
+    - FirebaseDatabase (= 4.1.3)
+  - Firebase/Messaging (4.8.0):
     - Firebase/Core
-    - FirebaseInvites (= 2.0.0)
-  - Firebase/Messaging (4.0.4):
+    - FirebaseMessaging (= 2.0.8)
+  - Firebase/Storage (4.8.0):
     - Firebase/Core
-    - FirebaseMessaging (= 2.0.0)
-  - Firebase/Storage (4.0.4):
-    - Firebase/Core
-    - FirebaseStorage (= 2.0.0)
-  - FirebaseAnalytics (4.0.2):
+    - FirebaseStorage (= 2.1.1)
+  - FirebaseAnalytics (4.0.5):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseAuth (4.0.0):
-    - FirebaseAnalytics (~> 4.0)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
-    - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (4.0.4):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
-  - FirebaseDatabase (4.0.0):
+  - FirebaseAuth (4.4.1):
     - FirebaseAnalytics (~> 4.0)
-  - FirebaseDynamicLinks (2.3.1):
-    - FirebaseAnalytics (~> 4.0)
-  - FirebaseInstanceID (2.0.0):
-    - FirebaseCore (~> 4.0)
-  - FirebaseInvites (2.0.0):
-    - FirebaseAnalytics (~> 4.0)
-    - FirebaseDynamicLinks (~> 2.0)
-    - GoogleAPIClientForREST (~> 1.0)
-    - GoogleSignIn (~> 4.0)
-    - GoogleToolboxForMac/Logger (~> 2.1)
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
-    - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
-    - GoogleToolboxForMac/StringEncoding (~> 2.1)
-    - GoogleToolboxForMac/URLBuilder (~> 2.1)
-    - GTMOAuth2 (~> 1.0)
     - GTMSessionFetcher/Core (~> 1.1)
-    - GTMSessionFetcher/Full (~> 1.1)
-    - Protobuf (~> 3.1)
-  - FirebaseMessaging (2.0.0):
+  - FirebaseCore (4.0.13):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (4.1.3):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
+  - FirebaseInstanceID (2.0.8):
+    - FirebaseCore (~> 4.0)
+  - FirebaseMessaging (2.0.8):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - Protobuf (~> 3.1)
-  - FirebaseStorage (2.0.0):
+  - FirebaseStorage (2.1.1):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
   - Gallery (1.2.0)
-  - GoogleAPIClientForREST (1.3.2):
-    - GoogleAPIClientForREST/Core (= 1.3.2)
-    - GTMSessionFetcher (>= 1.1.7)
-  - GoogleAPIClientForREST/Core (1.3.2):
-    - GTMSessionFetcher (>= 1.1.7)
-  - GoogleSignIn (4.0.2):
+  - GoogleSignIn (4.1.1):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
     - GTMOAuth2 (~> 1.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - GoogleToolboxForMac/Core (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/DebugUtils (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/Logger (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.1):
-    - GoogleToolboxForMac/DebugUtils (= 2.1.1)
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
-  - GoogleToolboxForMac/StringEncoding (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/URLBuilder (2.1.1):
-    - GoogleToolboxForMac/Core (= 2.1.1)
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (= 2.1.1)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
-  - GTMOAuth2 (1.1.4):
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/Logger (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
+  - GTMOAuth2 (1.1.6):
     - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.1.11):
-    - GTMSessionFetcher/Full (= 1.1.11)
-  - GTMSessionFetcher/Core (1.1.11)
-  - GTMSessionFetcher/Full (1.1.11):
-    - GTMSessionFetcher/Core (= 1.1.11)
+  - GTMSessionFetcher (1.1.12):
+    - GTMSessionFetcher/Full (= 1.1.12)
+  - GTMSessionFetcher/Core (1.1.12)
+  - GTMSessionFetcher/Full (1.1.12):
+    - GTMSessionFetcher/Core (= 1.1.12)
   - Hokusai (0.4.0)
+  - Hue (3.0.1)
+  - ImagePicker (3.0.0)
+  - Imaginary (3.0.3):
+    - Cache (~> 4.0)
+  - JGProgressHUD (2.0)
+  - leveldb-library (1.20)
   - LGButton (1.0.2)
+  - Lightbox (2.1.2):
+    - Hue (~> 3.0)
+    - Imaginary (~> 3.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - NMessenger (1.0.80):
+    - AsyncDisplayKit (= 2.2)
+  - OneSignal (2.6.1)
+  - PINCache (3.0.1-beta.4):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
+    - PINCache/Core (= 3.0.1-beta.4)
+  - PINCache/Arc-exception-safe (3.0.1-beta.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.4):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.8)
+  - PINRemoteImage/iOS (3.0.0-beta.8):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.8):
+    - PINCache (= 3.0.1-beta.4)
+    - PINRemoteImage/Core
   - PMAlertController (2.1.2)
   - Protobuf (3.5.0)
   - SCLAlertView (0.7.0)
@@ -131,13 +134,17 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
-  - Firebase/Invites
   - Firebase/Messaging
   - Firebase/Storage
   - Gallery
   - GoogleSignIn
   - Hokusai
+  - ImagePicker
+  - JGProgressHUD
   - LGButton
+  - Lightbox
+  - NMessenger
+  - OneSignal (< 3.0, >= 2.5.2)
   - PMAlertController
   - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`)
   - SkyFloatingLabelTextField (~> 3.0)
@@ -155,34 +162,44 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  AsyncDisplayKit: 1585f6cd0531ae9b30476f5912f577b73ebcb0e4
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Cache: bd0233fc688b5e83a27bcd87807db7e6f23adcc5
   FBSDKCoreKit: 53e3f4bfb64e80c5f229dd30ae33ff57fbbbd2d1
   FBSDKLoginKit: f628c09684dae9c17f071cf90b014e886f5093ea
-  Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
-  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
-  FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
-  FirebaseCore: cfc042628ef9f20debe09c0eb683135fcd404cb4
-  FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
-  FirebaseDynamicLinks: b708fbc1e9bd77c2d992812736b206820e283203
-  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
-  FirebaseInvites: 1940225e620b0423cf04fb4e4c7eb2a1b0b7595b
-  FirebaseMessaging: 227406c05b0dc9290702d2e9f18ab5528f0c2cf2
-  FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
+  Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
+  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
+  FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
+  FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
+  FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
+  FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
+  FirebaseMessaging: dfdcd307c2382290a1e297a81d0f18370f5b1bcd
+  FirebaseStorage: ab08d1c93a2feffa038fdd6693088b310ab1e6c6
   Gallery: 925b8133efa9d8fe933918f242b64110c6478b98
-  GoogleAPIClientForREST: 4fa84fc61fdeea48dd7088de5c1a864ace18125b
-  GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
-  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
-  GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
+  GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   Hokusai: aa3c38a5f02af0eff35aa69fdd8249c234c956c0
+  Hue: 93e852fa6211ab35922ad8c293f51c43d6c79eb2
+  ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
+  Imaginary: 9b45836a5af881f452a86e0a1215772ae4712d00
+  JGProgressHUD: c402c0f41fc291ca7e33bba2f999118d9682dd9c
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   LGButton: 44ce49b10deb84a2a8bd6fe5c763a65ff78a3180
+  Lightbox: 2dc267df8be2285bc7724cb11cbbf4aaaf59dced
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NMessenger: ca6a89073ca40d3868cf45505f6f8318853afd40
+  OneSignal: 5143194173b05027f89ce5c4481943ce000c87cd
+  PINCache: a89c8f609232afac77128557bd12c861844423d7
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: c4f9f16932840c597f32e69dd288e10e111a1929
   PMAlertController: 0fbcc3d1cee86ee0bd85f693ca85f6388e504ec8
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SkyFloatingLabelTextField: 4e2d2f7160af660ed1da6bb9d0027b5c474b4b79
   SlidingTabBar: 027224f312efeb1a76de93e1d9a108b8318d6494
 
-PODFILE CHECKSUM: e774fe57c6b8cce6ed6a4c750510dc0eaaeba733
+PODFILE CHECKSUM: abd6685c6ae9072fcbf926174ada0ddc7c27bc4e
 
 COCOAPODS: 1.3.1

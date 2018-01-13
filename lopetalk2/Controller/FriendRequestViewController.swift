@@ -25,7 +25,7 @@ class FriendRequestViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        refreshControl.addTarget(self, action: #selector(FriendListViewController.refreshTableView), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(FriendRequestViewController.refreshTableView), for: .valueChanged)
         
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
@@ -60,11 +60,15 @@ class FriendRequestViewController: UIViewController {
 }
 extension FriendRequestViewController: UITableViewDataSource,UITableViewDelegate,FriendRequestDelegate {
     func accept() {
+        let indicator = ActivityIndicator.showActivityIndicatory(self.view, true)
+        self.view.addSubview(indicator)
+        self.view.bringSubview(toFront: indicator)
         CurrentUser.acceptRequest(CurrentUser.requestlist[selectedRow]["uid"] as! String, completion: {(success) in
             if success{
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.refreshControl.endRefreshing()
+                    indicator.removeFromSuperview()
                 }
             }
             else{
@@ -75,7 +79,9 @@ extension FriendRequestViewController: UITableViewDataSource,UITableViewDelegate
                     showCloseButton: true
                 )
                 let alert = SCLAlertView(appearance: appearance)
+                indicator.removeFromSuperview()
                 alert.showError("Error", subTitle: "Cannot add friend, please try again")
+                
             }
         })
     }

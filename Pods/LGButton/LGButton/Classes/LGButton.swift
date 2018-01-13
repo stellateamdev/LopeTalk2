@@ -430,7 +430,7 @@ public class LGButton: UIControl {
         if titleFontName != nil {
             titleLbl.font = UIFont.init(name:titleFontName! , size:titleFontSize)
         }else{
-            titleLbl.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
+            titleLbl.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold)
         }
     }
     

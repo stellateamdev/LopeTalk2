@@ -12,6 +12,7 @@ import Firebase
 import SCLAlertView
 import FBSDKLoginKit
 import GoogleSignIn
+import JGProgressHUD
 class SignupViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var headerView:LGButton!
@@ -81,6 +82,10 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate {
         self.performSegue(withIdentifier: "setupProfile", sender: self)
     }
     @IBAction func signup() {
+         self.view.endEditing(true)
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Signing up.."
+        hud.show(in: self.view)
         let appearance = SCLAlertView.SCLAppearance(
             kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
             kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
@@ -89,32 +94,39 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate {
         )
         let alert = SCLAlertView(appearance: appearance)
         guard let email = username.text else{
+            hud.dismiss()
             alert.showError("Error", subTitle: "Please enter your email")
             return
         }
         guard let password = password.text else {
+            hud.dismiss()
             alert.showError("Error", subTitle: "Please enter your password")
             return
         }
         guard let confirmPassword = confirmPassword.text else {
+            hud.dismiss()
             alert.showError("Error", subTitle: "Please confirm your password")
             return
         }
         if password != confirmPassword {
+            hud.dismiss()
             alert.showError("Error", subTitle: "Your passwords do not match")
             return
         }
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
            
             if error != nil {
+                hud.dismiss()
                 alert.showError("Error", subTitle: (error?.localizedDescription)!)
             }
             else {
                 guard let uid = user?.uid else {
+                    hud.dismiss()
                     print("uid error")
                     return
                 }
                 guard let email = user?.email else {
+                    hud.dismiss()
                     print("email error")
                     return
                 }
@@ -127,8 +139,10 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate {
                     kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
                     showCloseButton: false
                 )
+                hud.dismiss()
                 let alertSuccess = SCLAlertView(appearance: appearanceSuccess)
                 alertSuccess.addButton("Thanks!", action: {
+                    
                     CurrentUser.register(user!)
                     self.performSegue(withIdentifier: "setupProfile", sender: self)
                 })
@@ -145,6 +159,7 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        
         if error != nil {
             return
         }
@@ -173,8 +188,12 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate {
         }
     }
     func signInFirebaseWithCredential(_ credential:AuthCredential){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading.."
+        hud.show(in: self.view)
         Auth.auth().signIn(with: credential) { (user, error) in
             if let error = error {
+                hud.dismiss()
                 print("Login error: \(error.localizedDescription)")
                 let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -183,13 +202,16 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate {
                 return
             }
             guard let uid = user?.uid else {
+                hud.dismiss()
                 print("uid error")
                 return
             }
             guard let email = user?.email else {
+                hud.dismiss()
                 print("email error")
                 return
             }
+            hud.dismiss()
             CurrentUser.uid = uid
             CurrentUser.email = email
             CurrentUser.register(user!)

@@ -10,74 +10,137 @@ import UIKit
 import PMAlertController
 import Firebase
 import SCLAlertView
-
-class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+import Alamofire
+import AlamofireImage
+import Lightbox
+import MapKit
+import JGProgressHUD
+class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    private let refreshControl = UIRefreshControl()
+    private var openmap = false
+    private var lat:Double = 0.0
+    private var long:Double = 0.0
+    let notificationCenter = NotificationCenter.default
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(ChatViewController.edit))
+        refreshControl.addTarget(self, action: #selector(ChatViewController.refreshTableView), for: .valueChanged)
+        
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(ChatViewController.edit))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(FriendListViewController.showActionSheet))
         let nav = self.navigationController as! NavigationViewController
-        nav.titleLabel.text = "Messages"
+        nav.titleLabel.text = "Notifications"
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.refreshTableView()
+    }
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @objc func refreshTableView() {
+        CurrentUser.getNotiList(completion: {(success) in
+            if success {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
+                
+            }
+            else{
+                print("fucked up")
+                self.refreshControl.endRefreshing()
+            }
+        })
+    }
+}
+extension ChatViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as! ChatTableViewCell
-        cell.name.text = "Dorajuneyaki"
-        cell.message.text = "I Love You"
-        cell.profileImage.image = UIImage(named:"obama")
+        cell.name.text = CurrentUser.notilist[indexPath.row]["username"] as! String
+        cell.message.text = CurrentUser.notilist[indexPath.row]["message"] as! String
+        let imageURL = CurrentUser.notilist[indexPath.row]["profilePicture"] as! String
+        Alamofire.request(imageURL).responseImage { response in
+            debugPrint(response)
+            print(imageURL)
+            if let image = response.result.value {
+                let aspectScaledToFitImage = image.af_imageAspectScaled(toFit: cell.profileImage.frame.size)
+                cell.profileImage.image = aspectScaledToFitImage
+
+                print("image downloaded: \(image)")
+            }
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return CurrentUser.notilist.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-        
-        let block = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-            let alert = UIAlertController(title: "", message: "Are you sure you want to\ndelete this chat?", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .destructive, handler: {_ in
-                
-            })
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
-                alert.dismiss(animated: true, completion: nil)
-            })
-            alert.addAction(action)
-            alert.addAction(cancel)
-            self.present(alert, animated: true, completion: nil)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+       if CurrentUser.notilist[indexPath.row]["picture"] as! String != "" {
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Downloading.."
+        hud.show(in: self.view)
+        let imageURL = CurrentUser.notilist[indexPath.row]["picture"] as! String
+        Alamofire.request(imageURL).responseImage { response in
+            debugPrint(response)
+            if let image = response.result.value {
+                hud.dismiss()
+                print("image is received 3425")
+                self.showLightbox(image)
+            }
         }
-        block.backgroundColor = .red
+        }
+       else if CurrentUser.notilist[indexPath.row]["lat"] as! String != "" && CurrentUser.notilist[indexPath.row]["long"] as! String != "" {
+        lat = Double(CurrentUser.notilist[indexPath.row]["lat"] as! String)!
+        long = Double(CurrentUser.notilist[indexPath.row]["long"] as! String)!
+            openmap = true
+            showActionSheet()
+       }
+        else {
+        let view = self.storyboard?.instantiateViewController(withIdentifier: "sendMessage") as! SendMessageViewController
+            view.user = CurrentUser.notilist[indexPath.row]
+        self.present(view, animated: true, completion: nil)
+        }
         
-        return [block]
     }
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    
 }
 extension ChatViewController {
 
     @objc func showActionSheet(){
         let acsheetModel = ActionSheetModel()
         acsheetModel.delegate = self
-        acsheetModel.firstBtnTitle = "Add Friend"
-        acsheetModel.secondBtnTitle = "Add Message"
-        acsheetModel.thirdBtnTitle = "Friend Request"
-        let acsheet = acsheetModel.setUp(true)
-        acsheet.show()
+        if openmap {
+            acsheetModel.firstBtnTitle = "Open in Google maps"
+            acsheetModel.secondBtnTitle = "Open in Apple maps"
+             let acsheet = acsheetModel.setUp(false)
+            acsheet.show()
+        }
+        else{
+            acsheetModel.firstBtnTitle = "Add Friend"
+            acsheetModel.secondBtnTitle = "Add Message"
+            acsheetModel.thirdBtnTitle = "Friend Request"
+             let acsheet = acsheetModel.setUp(true)
+            acsheet.show()
+        }
+
+       
+        
     }
     @objc func edit() {
         if self.navigationItem.leftBarButtonItem?.title == "Edit" {
@@ -90,11 +153,10 @@ extension ChatViewController {
         }
     }
 }
-extension ChatViewController:ActionSheetDelegate {
 
-    
-    
+extension ChatViewController:ActionSheetDelegate {
     func firstAction() {
+        if !openmap {
         let alertVC = PMAlertController(title: "Add new friend", description: "Add new friend now \nso you and your friend can communicate!", image: UIImage(named:"addFriend"), style: .alert)
         alertVC.dismissWithBackgroudTouch = true
         alertVC.alertImage.tintColor = UIColor.lopeColor()
@@ -141,9 +203,35 @@ extension ChatViewController:ActionSheetDelegate {
             
         }))
         self.present(alertVC, animated: true, completion: nil)
+        }
+        else{
+            openmap = false
+            let googleMapsInstalled = UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)
+            if googleMapsInstalled {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(URL(string: "comgooglemaps-x-callback://" +
+                        "?daddr=\(lat),\(long)&directionsmode=bicycling&zoom=17")!)
+                } else {
+                    // Fallback on earlier versions
+                }
+            }
+            else{
+                let appearance = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold),
+                    kTextFont:  UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium),
+                    kButtonFont:  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold),
+                    showCloseButton: true
+                )
+                let alert = SCLAlertView(appearance: appearance)
+                lat = 0.0
+                long = 0.0
+                alert.showError("Error", subTitle: "Google maps is not installed in your device, Please try again")
+            }
+        }
     }
     
     func secondAction() {
+        if !openmap {
         let alertVC = PMAlertController(title: "Add message", description: "Add new message now \nso it's easier to communicate!", image: UIImage(named:"addMessage"), style: .alert)
         alertVC.dismissWithBackgroudTouch = true
         alertVC.alertImage.tintColor = UIColor.lopeColor()
@@ -198,10 +286,34 @@ extension ChatViewController:ActionSheetDelegate {
             }
         }))
         self.present(alertVC, animated: true, completion: nil)
+        }
+        else{
+            openmap = false
+            let coordinates = CLLocationCoordinate2DMake(lat, long)
+            let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+            let mapItem = MKMapItem(placemark: placemark)
+            mapItem.openInMaps(launchOptions: nil)
+            lat = 0.0
+            long = 0.0
+        }
     }
     func thirdAction() {
         self.pushView("friendRequest")
     }
+    func showLightbox(_ image:UIImage) {
+        let images = [
+            LightboxImage(
+                image: image,
+                text: ""
+            )
+        ]
+        
+        let controller = LightboxController(images: images)
+        controller.dynamicBackground = true
+        
+        present(controller, animated: true, completion: nil)
+    }
     
     
 }
+

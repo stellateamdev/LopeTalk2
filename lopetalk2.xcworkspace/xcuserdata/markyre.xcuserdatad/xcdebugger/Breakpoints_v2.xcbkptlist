@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lopetalk2/Controller/BlockListViewController.swift"
-            timestampString = "537261793.418853"
+            timestampString = "537555896.211517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "firstAction()"
             landmarkType = "7">
          </BreakpointContent>
@@ -25,13 +25,77 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "lopetalk2/Controller/FriendListViewController.swift"
-            timestampString = "537261793.41898"
+            filePath = "Pods/SwiftyCam/Source/SwiftyCamViewController.swift"
+            timestampString = "537287372.644031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "914"
+            endingLineNumber = "914"
+            landmarkName = "deviceWithMediaType(_:preferringPosition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lopetalk2/Controller/ProfileViewController.swift"
+            timestampString = "537561200.502653"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "lopetalk2.SetupProfileViewController.imagePickerController(__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "lopetalk2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markyre/MyDocument/XcodeProject/lopetalk2/lopetalk2/Controller/ProfileViewController.swift"
+                  timestampString = "537293581.266615"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
+                  offsetFromSymbolStart = "592">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in lopetalk2.SetupProfileViewController.imagePickerController(__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "lopetalk2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markyre/MyDocument/XcodeProject/lopetalk2/lopetalk2/Controller/ProfileViewController.swift"
+                  timestampString = "537293581.269697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lopetalk2/Model/CurrentUser.swift"
+            timestampString = "537561200.5027291"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "getNotiList(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
